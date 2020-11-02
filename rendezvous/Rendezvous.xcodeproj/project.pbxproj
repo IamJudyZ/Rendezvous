@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */; };
+		4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */; };
+		9E9AAF4E254FD4E200995C76 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AAF4D254FD4E200995C76 /* login.storyboard */; };
+		9E9AAF54254FD7B800995C76 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF53254FD7B800995C76 /* user.swift */; };
+		9E9AAF56254FFDB100995C76 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF55254FFDB100995C76 /* loginViewController.swift */; };
+		9E9AAF58254FFDC400995C76 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF57254FFDC400995C76 /* signUpViewController.swift */; };
+		9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AAF59255009A200995C76 /* GoogleService-Info.plist */; };
 		9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4760254744B20018F291 /* AppDelegate.swift */; };
 		9EBE4763254744B20018F291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4762254744B20018F291 /* SceneDelegate.swift */; };
 		9EBE4765254744B20018F291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4764254744B20018F291 /* ViewController.swift */; };
@@ -16,6 +23,7 @@
 		9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBE476E254744B30018F291 /* LaunchScreen.storyboard */; };
 		9EBE477B254744B30018F291 /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE477A254744B30018F291 /* RendezvousTests.swift */; };
 		9EBE4786254744B40018F291 /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4785254744B40018F291 /* RendezvousUITests.swift */; };
+		B0806DA855A8D7663E4FFE9A /* Pods_RendezvousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
+		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
+		36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.debug.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.debug.xcconfig"; sourceTree = "<group>"; };
+		5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9E9AAF4D254FD4E200995C76 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		9E9AAF53254FD7B800995C76 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		9E9AAF55254FFDB100995C76 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		9E9AAF57254FFDC400995C76 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		9E9AAF59255009A200995C76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EBE475D254744B20018F291 /* Rendezvous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rendezvous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBE4760254744B20018F291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBE4762254744B20018F291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +70,9 @@
 		9EBE4781254744B40018F291 /* RendezvousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBE4785254744B40018F291 /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
 		9EBE4787254744B40018F291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous_RendezvousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0806DA855A8D7663E4FFE9A /* Pods_RendezvousTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +96,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FADE9B6F547917457CC757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */,
+				FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */,
+				5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E9AAF4C254FD4B300995C76 /* Sign Up & Login */ = {
+			isa = PBXGroup;
+			children = (
+				9E9AAF4D254FD4E200995C76 /* login.storyboard */,
+				9E9AAF53254FD7B800995C76 /* user.swift */,
+				9E9AAF55254FFDB100995C76 /* loginViewController.swift */,
+				9E9AAF57254FFDC400995C76 /* signUpViewController.swift */,
+			);
+			path = "Sign Up & Login";
+			sourceTree = "<group>";
+		};
 		9EBE4754254744B20018F291 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 				9EBE4779254744B30018F291 /* RendezvousTests */,
 				9EBE4784254744B40018F291 /* RendezvousUITests */,
 				9EBE475E254744B20018F291 /* Products */,
+				DABA9A5B07D632A724D4E551 /* Pods */,
+				37FADE9B6F547917457CC757 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +149,7 @@
 		9EBE475F254744B20018F291 /* Rendezvous */ = {
 			isa = PBXGroup;
 			children = (
+				9E9AAF4C254FD4B300995C76 /* Sign Up & Login */,
 				9EBE4760254744B20018F291 /* AppDelegate.swift */,
 				9EBE4762254744B20018F291 /* SceneDelegate.swift */,
 				9EBE4764254744B20018F291 /* ViewController.swift */,
@@ -109,6 +158,7 @@
 				9EBE476E254744B30018F291 /* LaunchScreen.storyboard */,
 				9EBE4771254744B30018F291 /* Info.plist */,
 				9EBE4769254744B20018F291 /* Rendezvous.xcdatamodeld */,
+				9E9AAF59255009A200995C76 /* GoogleService-Info.plist */,
 			);
 			path = Rendezvous;
 			sourceTree = "<group>";
@@ -131,6 +181,20 @@
 			path = RendezvousUITests;
 			sourceTree = "<group>";
 		};
+		DABA9A5B07D632A724D4E551 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */,
+				02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */,
+				ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */,
+				8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */,
+				36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */,
+				1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EBE478A254744B40018F291 /* Build configuration list for PBXNativeTarget "Rendezvous" */;
 			buildPhases = (
+				E2DDF7B634706570FF25F964 /* [CP] Check Pods Manifest.lock */,
 				9EBE4759254744B20018F291 /* Sources */,
 				9EBE475A254744B20018F291 /* Frameworks */,
 				9EBE475B254744B20018F291 /* Resources */,
+				CC8C08C4A0FAD2190CFAC22F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EBE478D254744B40018F291 /* Build configuration list for PBXNativeTarget "RendezvousTests" */;
 			buildPhases = (
+				C97487151C1DC9A3F15615A2 /* [CP] Check Pods Manifest.lock */,
 				9EBE4772254744B30018F291 /* Sources */,
 				9EBE4773254744B30018F291 /* Frameworks */,
 				9EBE4774254744B30018F291 /* Resources */,
@@ -173,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EBE4790254744B40018F291 /* Build configuration list for PBXNativeTarget "RendezvousUITests" */;
 			buildPhases = (
+				5BD497E836FA7ADF9E1DA4C4 /* [CP] Check Pods Manifest.lock */,
 				9EBE477D254744B40018F291 /* Sources */,
 				9EBE477E254744B40018F291 /* Frameworks */,
 				9EBE477F254744B40018F291 /* Resources */,
+				81981D7307419940303AD058 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */,
+				9E9AAF4E254FD4E200995C76 /* login.storyboard in Resources */,
 				9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */,
 				9EBE476D254744B30018F291 /* Assets.xcassets in Resources */,
 				9EBE4768254744B20018F291 /* Main.storyboard in Resources */,
@@ -257,14 +328,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5BD497E836FA7ADF9E1DA4C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rendezvous-RendezvousUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81981D7307419940303AD058 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C97487151C1DC9A3F15615A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RendezvousTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8C08C4A0FAD2190CFAC22F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rendezvous/Pods-Rendezvous-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rendezvous/Pods-Rendezvous-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rendezvous/Pods-Rendezvous-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2DDF7B634706570FF25F964 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rendezvous-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9EBE4759254744B20018F291 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9AAF58254FFDC400995C76 /* signUpViewController.swift in Sources */,
 				9EBE476B254744B20018F291 /* Rendezvous.xcdatamodeld in Sources */,
 				9EBE4765254744B20018F291 /* ViewController.swift in Sources */,
+				9E9AAF56254FFDB100995C76 /* loginViewController.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
+				9E9AAF54254FD7B800995C76 /* user.swift in Sources */,
 				9EBE4763254744B20018F291 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +613,7 @@
 		};
 		9EBE478B254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +632,7 @@
 		};
 		9EBE478C254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +651,7 @@
 		};
 		9EBE478E254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +674,7 @@
 		};
 		9EBE478F254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +697,7 @@
 		};
 		9EBE4791254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +718,7 @@
 		};
 		9EBE4792254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
