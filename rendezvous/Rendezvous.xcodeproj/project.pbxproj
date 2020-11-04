@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBE476E254744B30018F291 /* LaunchScreen.storyboard */; };
 		9EBE477B254744B30018F291 /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE477A254744B30018F291 /* RendezvousTests.swift */; };
 		9EBE4786254744B40018F291 /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4785254744B40018F291 /* RendezvousUITests.swift */; };
+		9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9865825534E7000540CD6 /* Messages.storyboard */; };
 		B0806DA855A8D7663E4FFE9A /* Pods_RendezvousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		9EBE4781254744B40018F291 /* RendezvousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBE4785254744B40018F291 /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
 		9EBE4787254744B40018F291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE9865825534E7000540CD6 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
 		E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous_RendezvousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,11 +151,11 @@
 		9EBE475F254744B20018F291 /* Rendezvous */ = {
 			isa = PBXGroup;
 			children = (
+				9EE9865725534E4E00540CD6 /* Messages Flow */,
+				9EE9865525534CE300540CD6 /* Main User Flow */,
 				9E9AAF4C254FD4B300995C76 /* Sign Up & Login */,
 				9EBE4760254744B20018F291 /* AppDelegate.swift */,
 				9EBE4762254744B20018F291 /* SceneDelegate.swift */,
-				9EBE4764254744B20018F291 /* ViewController.swift */,
-				9EBE4766254744B20018F291 /* Main.storyboard */,
 				9EBE476C254744B30018F291 /* Assets.xcassets */,
 				9EBE476E254744B30018F291 /* LaunchScreen.storyboard */,
 				9EBE4771254744B30018F291 /* Info.plist */,
@@ -181,6 +183,23 @@
 			path = RendezvousUITests;
 			sourceTree = "<group>";
 		};
+		9EE9865525534CE300540CD6 /* Main User Flow */ = {
+			isa = PBXGroup;
+			children = (
+				9EBE4766254744B20018F291 /* Main.storyboard */,
+				9EBE4764254744B20018F291 /* ViewController.swift */,
+			);
+			path = "Main User Flow";
+			sourceTree = "<group>";
+		};
+		9EE9865725534E4E00540CD6 /* Messages Flow */ = {
+			isa = PBXGroup;
+			children = (
+				9EE9865825534E7000540CD6 /* Messages.storyboard */,
+			);
+			path = "Messages Flow";
+			sourceTree = "<group>";
+		};
 		DABA9A5B07D632A724D4E551 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +210,6 @@
 				36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */,
 				1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -304,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */,
 				9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */,
 				9E9AAF4E254FD4E200995C76 /* login.storyboard in Resources */,
 				9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */,
