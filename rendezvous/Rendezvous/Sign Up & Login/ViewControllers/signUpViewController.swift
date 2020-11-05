@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class signUpViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     
     @IBOutlet weak var firstName: UITextField!

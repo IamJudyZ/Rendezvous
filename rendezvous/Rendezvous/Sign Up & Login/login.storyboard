@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Um3-MV-BFU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Um3-MV-BFU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--loginViewController-->
+        <!--Login View Controller-->
         <scene sceneID="I0q-Zn-Vut">
             <objects>
-                <viewController storyboardIdentifier="loginVC" title="loginViewController" id="Um3-MV-BFU" customClass="loginViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="loginViewController" id="Um3-MV-BFU" userLabel="Login View Controller" customClass="LoginViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qB1-9R-KjC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +56,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVd-8M-wZQ" userLabel="login">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVd-8M-wZQ" userLabel="login">
                                 <rect key="frame" x="132.5" y="641.5" width="149" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.1176470588" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -67,7 +70,7 @@
                                     <action selector="loginPressed:" destination="Um3-MV-BFU" eventType="touchUpInside" id="8l7-Ba-bQW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pva-f8-CTY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pva-f8-CTY">
                                 <rect key="frame" x="93" y="696.5" width="228" height="45"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
                                 <state key="normal" title="don't have an account yet? sign up">
@@ -84,6 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nt4-xu-dK7"/>
                         <color key="backgroundColor" red="1" green="0.90588235294117647" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -107,7 +111,6 @@
                             <constraint firstItem="AoP-di-uOE" firstAttribute="width" secondItem="nt4-xu-dK7" secondAttribute="width" multiplier="0.8" id="xYY-jK-7iO"/>
                             <constraint firstItem="AoP-di-uOE" firstAttribute="centerX" secondItem="qB1-9R-KjC" secondAttribute="centerX" id="xwh-4K-tvt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nt4-xu-dK7"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="KJo-aM-Mby" id="tkt-RV-7jw"/>
@@ -123,7 +126,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="0ln-U0-y9T">
             <objects>
-                <viewController storyboardIdentifier="signUpVC" id="ujN-mo-ai4" customClass="signUpViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpVC" id="ujN-mo-ai4" customClass="SignUpViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2y-Sf-q9m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,7 +202,7 @@
                                 <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-sO-VUF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-sO-VUF">
                                 <rect key="frame" x="132.5" y="592.5" width="149" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.1176470588" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -211,6 +214,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="ujN-mo-ai4" eventType="touchUpInside" id="YmM-Es-XL0"/>
+                                    <segue destination="Drq-fc-Wl0" kind="showDetail" id="Jrt-kv-7WL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6L-rK-SxC">
@@ -220,10 +224,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="a3S-t3-yIC"/>
                         <color key="backgroundColor" red="1" green="0.90588235294117647" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pYW-dZ-IIt" firstAttribute="centerX" secondItem="b2y-Sf-q9m" secondAttribute="centerX" id="6Fl-kK-dlQ"/>
-                            <constraint firstItem="hcI-sO-VUF" firstAttribute="centerX" secondItem="b2y-Sf-q9m" secondAttribute="centerX" id="96h-7c-gyL"/>
                             <constraint firstItem="M6L-rK-SxC" firstAttribute="centerX" secondItem="b2y-Sf-q9m" secondAttribute="centerX" id="9Rw-2m-XhV"/>
                             <constraint firstItem="pYW-dZ-IIt" firstAttribute="width" secondItem="a3S-t3-yIC" secondAttribute="width" multiplier="0.72" id="9dM-zG-hc4"/>
                             <constraint firstItem="hcI-sO-VUF" firstAttribute="top" secondItem="pYW-dZ-IIt" secondAttribute="bottom" constant="10" id="CHp-eq-FQq"/>
@@ -236,7 +240,6 @@
                             <constraint firstItem="hcI-sO-VUF" firstAttribute="centerX" secondItem="b2y-Sf-q9m" secondAttribute="centerX" id="tC3-j6-oEB"/>
                             <constraint firstItem="pYW-dZ-IIt" firstAttribute="centerY" secondItem="b2y-Sf-q9m" secondAttribute="centerY" id="trc-2R-ek0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="a3S-t3-yIC"/>
                     </view>
                     <navigationItem key="navigationItem" id="3uU-Bf-dpz"/>
                     <connections>
@@ -253,8 +256,118 @@
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="81.696428571428569"/>
         </scene>
+        <!--Setup Profile View Controller-->
+        <scene sceneID="YUh-6y-rsd">
+            <objects>
+                <viewController id="Drq-fc-Wl0" customClass="SetupProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MTf-Sb-Gul">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ix4-5h-vPU" userLabel="setupProfileStackView">
+                                <rect key="frame" x="58" y="219" width="298" height="404"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="placeholder for picker" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-eM-ph5" userLabel="genderText">
+                                        <rect key="frame" x="0.0" y="0.0" width="298" height="46"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-EW-r9T" userLabel="ageText">
+                                        <rect key="frame" x="0.0" y="61" width="298" height="45.5"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="placeholder for picker" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-ey-b2Z" userLabel="heightText">
+                                        <rect key="frame" x="0.0" y="121.5" width="298" height="46"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-1c-v9Q" userLabel="cityText">
+                                        <rect key="frame" x="0.0" y="182.5" width="298" height="46"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-SW-F9a" userLabel="stateText">
+                                        <rect key="frame" x="0.0" y="243.5" width="298" height="45.5"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="profession" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-Ck-cAc" userLabel="professionText">
+                                        <rect key="frame" x="0.0" y="304" width="298" height="46"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="describe yourself..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqI-hA-8cg" userLabel="descriptionText">
+                                        <rect key="frame" x="0.0" y="365" width="298" height="39"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="setup your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8x-2Z-6hr">
+                                <rect key="frame" x="73.5" y="122.5" width="267.5" height="76.5"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="35"/>
+                                <color key="textColor" name="blueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdo-M7-3l8" userLabel="select your interests &gt;&gt;">
+                                <rect key="frame" x="80.5" y="643" width="253" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.1176470588" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="pZk-Lu-tuV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="26" maxY="0.0"/>
+                                <state key="normal" title="select your interests &gt;&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="ujN-mo-ai4" eventType="touchUpInside" id="5wK-Rk-EdK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUj-6i-Q75" userLabel="errorLabel">
+                                <rect key="frame" x="173.5" y="698" width="67.5" height="33"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
+                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4QA-rH-Las"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ix4-5h-vPU" firstAttribute="height" secondItem="4QA-rH-Las" secondAttribute="height" multiplier="0.5" id="6kB-Yy-pb6"/>
+                            <constraint firstItem="ix4-5h-vPU" firstAttribute="top" secondItem="A8x-2Z-6hr" secondAttribute="bottom" constant="20" id="BHx-HV-vTq"/>
+                            <constraint firstItem="A8x-2Z-6hr" firstAttribute="centerX" secondItem="MTf-Sb-Gul" secondAttribute="centerX" id="DhD-Hc-fZ7"/>
+                            <constraint firstItem="ix4-5h-vPU" firstAttribute="centerY" secondItem="MTf-Sb-Gul" secondAttribute="centerY" id="FyJ-5A-y5I"/>
+                            <constraint firstItem="ix4-5h-vPU" firstAttribute="width" secondItem="4QA-rH-Las" secondAttribute="width" multiplier="0.72" id="Jfv-HC-lI4"/>
+                            <constraint firstItem="cdo-M7-3l8" firstAttribute="top" secondItem="ix4-5h-vPU" secondAttribute="bottom" constant="20" id="dlY-uS-GSp"/>
+                            <constraint firstItem="ix4-5h-vPU" firstAttribute="centerX" secondItem="MTf-Sb-Gul" secondAttribute="centerX" id="mHX-Bd-ZFM"/>
+                            <constraint firstItem="QUj-6i-Q75" firstAttribute="centerX" secondItem="MTf-Sb-Gul" secondAttribute="centerX" id="nAP-FY-1ip"/>
+                            <constraint firstItem="QUj-6i-Q75" firstAttribute="top" secondItem="cdo-M7-3l8" secondAttribute="bottom" constant="10" id="pME-gF-Yds"/>
+                            <constraint firstItem="cdo-M7-3l8" firstAttribute="centerX" secondItem="MTf-Sb-Gul" secondAttribute="centerX" id="tfA-uO-TNz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zs5-zU-Ywe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1j-ch-LFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="81.696428571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="rLogoNoBackGround" width="2500" height="2500"/>
+        <namedColor name="blueColor">
+            <color red="0.0" green="0.11764705882352941" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
