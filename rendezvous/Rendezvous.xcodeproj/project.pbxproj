@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884B625546F4100F151A7 /* SetupProfileViewController.swift */; };
-		37E2A4BC2553510D00CE5BB6 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2A4BB2553510D00CE5BB6 /* ViewController2.swift */; };
+		370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */; };
+		370884D62554ADC700F151A7 /* InterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884D42554ADC700F151A7 /* InterestCell.swift */; };
+		370884D72554ADC700F151A7 /* InterestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370884D52554ADC700F151A7 /* InterestCell.xib */; };
+		37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */; };
 		4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */; };
 		4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */; };
 		9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AAF4D254FD4E200995C76 /* Login.storyboard */; };
@@ -51,7 +54,10 @@
 		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
 		36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.debug.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
-		37E2A4BB2553510D00CE5BB6 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestsViewController.swift; sourceTree = "<group>"; };
+		370884D42554ADC700F151A7 /* InterestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCell.swift; sourceTree = "<group>"; };
+		370884D52554ADC700F151A7 /* InterestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestCell.xib; sourceTree = "<group>"; };
+		37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePictureViewController.swift; sourceTree = "<group>"; };
 		39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.debug.xcconfig"; sourceTree = "<group>"; };
 		5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 				9E9AAF55254FFDB100995C76 /* LoginViewController.swift */,
 				9E9AAF57254FFDC400995C76 /* SignUpViewController.swift */,
 				370884B625546F4100F151A7 /* SetupProfileViewController.swift */,
+				370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */,
+				370884D42554ADC700F151A7 /* InterestCell.swift */,
+				370884D52554ADC700F151A7 /* InterestCell.xib */,
+				37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -130,7 +140,6 @@
 		37E2A4BA255350EC00CE5BB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				37E2A4BB2553510D00CE5BB6 /* ViewController2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */,
+				370884D72554ADC700F151A7 /* InterestCell.xib in Resources */,
 				9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */,
 				9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */,
 				9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */,
@@ -487,12 +497,14 @@
 			files = (
 				370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */,
 				9E9AAF58254FFDC400995C76 /* SignUpViewController.swift in Sources */,
+				37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */,
 				9EBE476B254744B20018F291 /* Rendezvous.xcdatamodeld in Sources */,
+				370884D62554ADC700F151A7 /* InterestCell.swift in Sources */,
 				9EBE4765254744B20018F291 /* ViewController.swift in Sources */,
 				9E9AAF56254FFDB100995C76 /* LoginViewController.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
-				37E2A4BC2553510D00CE5BB6 /* ViewController2.swift in Sources */,
+				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,
 				9EBE4763254744B20018F291 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
