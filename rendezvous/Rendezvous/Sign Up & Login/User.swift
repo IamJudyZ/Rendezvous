@@ -22,6 +22,8 @@ class User: NSObject, Codable {
     var state: String
     var profession: String
     var selfDescription: String
+    var interests: Array<String>
+    var profilePic: String
     
     //First Init with info
     init(fName: String, lName: String, eMail: String){
@@ -35,6 +37,8 @@ class User: NSObject, Codable {
         self.state = ""
         self.profession = ""
         self.selfDescription = ""
+        self.interests = []
+        self.profilePic = ""
     }
     
     //Init with no parameters
@@ -50,6 +54,8 @@ class User: NSObject, Codable {
         self.state = ""
         self.profession = ""
         self.selfDescription = ""
+        self.interests = []
+        self.profilePic = ""
     }
     
 }
