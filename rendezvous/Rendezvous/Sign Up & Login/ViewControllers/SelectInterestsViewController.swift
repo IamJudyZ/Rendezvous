@@ -42,7 +42,7 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //Num of cells
         //BING: should be changed to be the size of interests list imported from database
-        return 42
+        return 100
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
