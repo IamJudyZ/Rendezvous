@@ -121,8 +121,9 @@ class SignUpViewController: UIViewController {
     
     func isValidPassword(password: String) -> Bool {
         //Password requires 1 uppercase, 1 lowercase, one special char, one number, length 8
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Z])(?=.*[$@$#!%*?&])(?=.*[0-9])[A-Za-z\\d$@$#!%*?&]{8,}")
-        return passwordTest.evaluate(with: password)
+//        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Z])(?=.*[$@$#!%*?&])(?=.*[0-9])[A-Za-z\\d$@$#!%*?&]{8,}")
+//        return passwordTest.evaluate(with: password)
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

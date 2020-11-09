@@ -12,6 +12,7 @@ import UIKit
 class SelectInterestsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
+    var currentUser: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()

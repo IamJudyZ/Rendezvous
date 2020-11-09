@@ -51,7 +51,8 @@ class SetupProfileViewController: UIViewController {
             } catch {
                 print("Unable to update user data on Firebase")
             }
-            transitionToHomeScreen()
+            //transitionToHomeScreen()
+            self.performSegue(withIdentifier: "interestsSegue", sender: nil)
         }
     }
     
@@ -80,12 +81,19 @@ class SetupProfileViewController: UIViewController {
         errorLabel.isHidden = false;
     }
     
-    func transitionToHomeScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "interestsSegue") {
+            let destinationVC = segue.destination as! SelectInterestsViewController
+            destinationVC.currentUser = self.currentUser
+        }
     }
+    
+//    func transitionToHomeScreen() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
+//    }
 }
 
 //BING: The below is for selecting age, gender, and height from a selection of choices but it cause a weird erryr so I had to comment it out. Just uncomment the regular one
