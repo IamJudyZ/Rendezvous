@@ -18,7 +18,9 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        makeDashedBorder(imageView: imageView1)
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
             imageView1.isUserInteractionEnabled = true
             imageView1.addGestureRecognizer(tapGestureRecognizer)
@@ -47,6 +49,7 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
         // check to see if uploaded image can be converted to a UIImage
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView1.image = image
+            
             // BING: This is where you send the image to firebase
             }
         else {
@@ -57,6 +60,17 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
         self.dismiss(animated: true, completion: nil)
     }
     
+    func makeDashedBorder(imageView: UIImageView) {
+        let border = CAShapeLayer()
+        border.strokeColor = UIColor.gray.cgColor
+        border.lineDashPattern = [4, 4]
+        border.lineWidth = 3
+        border.cornerCurve = CALayerCornerCurve.circular
+        border.frame = imageView.bounds
+        border.fillColor = nil
+        border.path = UIBezierPath(rect: imageView.bounds).cgPath
+        imageView.layer.addSublayer(border)
+    }
     /*
     // MARK: - Navigation
 
