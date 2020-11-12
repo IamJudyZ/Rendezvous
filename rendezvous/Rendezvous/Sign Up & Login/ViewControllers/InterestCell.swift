@@ -37,6 +37,10 @@ class InterestCell: UICollectionViewCell {
         interest.text = cellText.text
     }
     
+    public func getText() -> String? {
+        return self.interest.text
+    }
+    
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
     }

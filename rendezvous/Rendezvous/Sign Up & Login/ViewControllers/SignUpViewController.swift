@@ -55,9 +55,8 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
     @IBAction func signUp(_ sender: Any) {
-        if (checkFields()) {
+        if checkFields() {
             //If all fields are filled trim white spaces and new line characters from all text fields
             let fName = firstName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lName = lastName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -72,18 +71,18 @@ class SignUpViewController: UIViewController {
             //If an issue occurs connecting to firebase display the error
             //Else create a new user with the info from the User object created above
             Auth.auth().createUser(withEmail: em, password: pword) { (result, error) in
-                if (error != nil) {
+                if error != nil {
                     self.callError(errorText: error!.localizedDescription)
                 }
                 else {
                     let db = Firestore.firestore()
-                    do{
-                        try _ = db.collection("users").document(result!.user.uid).setData(from:self.user)
-                    } catch {
+                    do {
+                        try db.collection("users").document(result!.user.uid).setData(from:self.user)
+                    }
+                    catch {
                         print("Unable to add new user to firestore")
                     }
-                    //If all else successful, transition to the home screen
-                    //self.transitionToHomeScreen()
+                    //If all else successful, transition to the setup profile
                     self.performSegue(withIdentifier: "setupSegue", sender: nil)
                 }
             }
@@ -94,23 +93,22 @@ class SignUpViewController: UIViewController {
     //Else return false
     func checkFields() -> Bool {
         //Ensure all fields filled out
-        if(firstName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""){
+        if firstName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             callError(errorText: "One or more fields have been left empty")
             return false
         }
 
         //Calls isValidPassword to make sure it is a Strong password
-        if(isValidPassword(password: password.text!) == false) {
+        if isValidPassword(password: password.text!) == false {
             callError(errorText: "Password must include at least one number, a special character ($@$#!%?&), and an uppercase letter.")
             return false
         }
         
         //Make sure the two password text fields match
-        if(confirmPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) != password.text?.trimmingCharacters(in: .whitespacesAndNewlines)) {
+        if confirmPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) != password.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
             callError(errorText: "Passwords do not match")
             return false
         }
-        
         return true
     }
     
@@ -127,28 +125,9 @@ class SignUpViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "setupSegue") {
+        if segue.identifier == "setupSegue" {
             let destinationVC = segue.destination as! SetupProfileViewController
             destinationVC.currentUser = self.user
         }
     }
-//    func transitionToHomeScreen() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-//        
-//    }
-//    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

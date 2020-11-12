@@ -7,20 +7,29 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 
-//BING: This is where you implement the logic to retrieve a list of interests from the database and assign each interest to a cell in the UICollectionView. The code I've added is for setting up the collectionView to store each interest item
 class SelectInterestsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
     
     let columnLayout = CustomViewFlowLayout()
+    
+    //BING: it works fine with the list hardcoded here, so you don't need to retrieve from database if you don't want. 
     var interestsCatalog = ["vegan", "women in tech", "elections", "music", "gaming",
                             "running", "gym", "dogs", "cats", "technology",
                             "basketball", "football", "chinese food", "beach",
                             "traveling", "baseball", "italian food", "daredevil",
                             "trivia", "cycling", "cars", "kids"]
     
+    var userInterests = [String]()
+    
     var currentUser: User!
+    let userID = Auth.auth().currentUser!.uid
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +53,28 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
         return interestsCatalog[indexPath.row]
     }
     
+    @IBAction func setupProfile(_ sender: Any) {
+        if checkFields() {
+            updateUser()
+            do {
+                try db.collection("users").document(userID).setData(from:self.currentUser)
+            }
+            catch {
+                print("Unable to update user data on Firebase")
+            }
+            self.performSegue(withIdentifier: "uploadSegue", sender: nil)
+        }
+    }
+    
+    func updateUser() {
+        currentUser.interests = userInterests
+    }
+    
+    func checkFields() -> Bool {
+        //BING: user has to choose 3 interests before moving on
+        return true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //When an item is selected
         //First deselect what was selected before
@@ -52,12 +83,12 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
         print("you tapped me")
         
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCell {
-//            cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
-//            print(cell)
-            cell.backgroundColor = UIColor.blue
+            //BING: changing background color here doesn't work, changing it in the collection view cell (InterestCell.swift) doesn't work, changing it in storyboard doesn't work either
+            //cell.backgroundColor = UIColor.blue
+            
+            //BING: some sort of check so that user can only have 3 interests at a time if userInterests.size is less than 3, then add to userInterests
+            userInterests.append(cell.getText()!)
         }
-        // BING: This is where you implement what happens when an interest item is selected => indexPath.item
-        // should be added to the user's profile
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,14 +106,10 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "uploadSegue" {
+            let destinationVC = segue.destination as! UploadProfilePictureViewController
+            destinationVC.currentUser = self.currentUser
+        }
     }
-    */
-
 }

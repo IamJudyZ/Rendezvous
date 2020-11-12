@@ -15,6 +15,7 @@ import FirebaseFirestore
 class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var genderText: UITextField!
+    @IBOutlet weak var preferenceText: UITextField!
     @IBOutlet weak var ageText: UITextField!
     @IBOutlet weak var heightFeetText: UITextField!
     @IBOutlet weak var heightInchText: UITextField!
@@ -28,6 +29,9 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     var selectedGender: String?
     var selectedGenderRow: Int = 0
     var genderList = ["", "Woman", "Man", "Other"]
+    var selectedPreference: String?
+    var selectedPreferenceRow: Int = 0
+    var preferenceList = ["", "Woman", "Man", "Everyone"]
     var selectedAge: String?
     var selectedAgeRow: Int = 0
     var ageList = [""]
@@ -46,7 +50,6 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     let userID = Auth.auth().currentUser!.uid
     let db = Firestore.firestore()
         
-    
     override func viewDidLoad() {
         errorLabel.isHidden = true
         super.viewDidLoad()
@@ -72,20 +75,21 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func setupProfile(_ sender: Any) {
-        if (checkFields()) {
+        if checkFields() {
             updateUser()
             do {
-                try _ = db.collection("users").document(userID).setData(from:self.currentUser)
-            } catch {
+                try db.collection("users").document(userID).setData(from:self.currentUser)
+            }
+            catch {
                 print("Unable to update user data on Firebase")
             }
-            //transitionToHomeScreen()
             self.performSegue(withIdentifier: "interestsSegue", sender: nil)
         }
     }
     
     func updateUser() {
         currentUser.gender = genderText.text!
+        currentUser.preference = preferenceText.text!
         currentUser.age = ageText.text!
         currentUser.heightFeet = heightFeetText.text!
         currentUser.heightInch = heightInchText.text!
@@ -97,8 +101,8 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func checkFields() -> Bool {
         //Ensure all fields filled out
-        if(genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+        if genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || preferenceText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             callError(errorText: "One or more fields have been left empty")
             return false
         }
@@ -111,7 +115,7 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "interestsSegue") {
+        if segue.identifier == "interestsSegue" {
             let destinationVC = segue.destination as! SelectInterestsViewController
             destinationVC.currentUser = self.currentUser
         }
@@ -125,6 +129,7 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch currentTextField {
             case genderText: return genderList.count
+            case preferenceText: return preferenceList.count
             case ageText: return ageList.count
             case heightFeetText: return heightFeetList.count
             case heightInchText: return heightInchList.count
@@ -135,6 +140,7 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch currentTextField {
             case genderText: return genderList[row]
+            case preferenceText: return preferenceList[row]
             case ageText: return ageList[row]
             case heightFeetText: return heightFeetList[row]
             case heightInchText: return heightInchList[row]
@@ -148,6 +154,10 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
                 selectedGender = genderList[row]
                 genderText.text = selectedGender
                 selectedGenderRow = row
+            case preferenceText:
+                selectedPreference = preferenceList[row]
+                preferenceText.text = selectedPreference
+                selectedPreferenceRow = row
             case ageText:
                 selectedAge = ageList[row]
                 ageText.text = selectedAge
@@ -198,6 +208,10 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
                 if selectedRow != selectedGenderRow {
                     pickerView.selectRow(selectedGenderRow, inComponent: 0, animated: false)
                 }
+            case preferenceText:
+                if selectedRow != selectedPreferenceRow {
+                    pickerView.selectRow(selectedPreferenceRow, inComponent: 0, animated: false)
+                }
             case ageText:
                 if selectedRow != selectedAgeRow {
                     pickerView.selectRow(selectedAgeRow, inComponent: 0, animated: false)
@@ -216,11 +230,4 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
         createPickerView(textField: currentTextField)
         dismissPickerView(textField: currentTextField)
     }
-    
-//    func transitionToHomeScreen() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-//            vc.modalPresentationStyle = .fullScreen
-//            self.present(vc, animated: true, completion: nil)
-//    }
 }

@@ -94,7 +94,7 @@
                                     <color key="titleColor" white="0.4608572345890411" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ujN-mo-ai4" kind="show" id="pwa-Wt-L6d"/>
+                                    <segue destination="ujN-mo-ai4" kind="show" identifier="createAccountSegue" id="pwa-Wt-L6d"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y1-2L-QEs" userLabel="errorLabel">
@@ -103,14 +103,6 @@
                                 <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izx-58-CgW">
-                                <rect key="frame" x="299" y="61" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test"/>
-                                <connections>
-                                    <segue destination="kaQ-tm-WPs" kind="presentation" modalPresentationStyle="fullScreen" id="tRH-14-ttH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nt4-xu-dK7"/>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -531,8 +523,8 @@
                                 <color key="textColor" name="blueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select the topics you are interested in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-1h-umm">
-                                <rect key="frame" x="70.666666666666686" y="288.33333333333331" width="234" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select 3 topics you are interested in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-1h-umm" userLabel="select 3 topics you are interested in:">
+                                <rect key="frame" x="76.666666666666686" y="288.33333333333331" width="222" height="31"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
                                 <color key="textColor" name="blueColor"/>
                                 <nil key="highlightedColor"/>
@@ -549,7 +541,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="w05-6b-AGm" kind="presentation" modalPresentationStyle="fullScreen" id="8XA-nE-F5M"/>
+                                    <action selector="setupProfile:" destination="kaQ-tm-WPs" eventType="touchUpInside" id="Xw6-Z2-V6e"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-vG-Q8g">
@@ -590,6 +582,7 @@
                     <navigationItem key="navigationItem" id="Lh2-E9-eVD"/>
                     <connections>
                         <outlet property="collectionView" destination="yMN-aW-o3V" id="wa2-NC-LZp"/>
+                        <segue destination="w05-6b-AGm" kind="presentation" identifier="uploadSegue" modalPresentationStyle="fullScreen" id="PMX-fx-Tys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DE3-Fp-uG5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -642,6 +635,9 @@
                                 <state key="normal" title="DONE!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="setupProfile:" destination="w05-6b-AGm" eventType="touchUpInside" id="l0X-1G-idc"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="guI-Gm-LUJ">
                                 <rect key="frame" x="93.666666666666671" y="67" width="187.66666666666663" height="73.666666666666686"/>
@@ -678,9 +674,6 @@
             <point key="canvasLocation" x="3236" y="82"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="FU6-xP-2Yk"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="greenCircle" width="533.33331298828125" height="533.33331298828125"/>
         <image name="logo" width="375" height="375"/>
