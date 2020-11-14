@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268443912560659F008785DB /* SwipeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268443902560659F008785DB /* SwipeScreen.swift */; };
+		26844396256065A9008785DB /* DatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26844395256065A8008785DB /* DatingTests.swift */; };
+		2684439B256067C6008785DB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2684439A256067C5008785DB /* Media.xcassets */; };
 		370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884B625546F4100F151A7 /* SetupProfileViewController.swift */; };
 		370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */; };
 		370884D62554ADC700F151A7 /* InterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884D42554ADC700F151A7 /* InterestCell.swift */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
 		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
+		268443902560659F008785DB /* SwipeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeScreen.swift; path = "Rendezvous/New Group/SwipeScreen.swift"; sourceTree = SOURCE_ROOT; };
+		26844395256065A8008785DB /* DatingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatingTests.swift; path = "Rendezvous/New Group/DatingTests.swift"; sourceTree = SOURCE_ROOT; };
+		2684439A256067C5008785DB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.debug.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestsViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2684438F25606583008785DB /* Swiping Screen */ = {
+			isa = PBXGroup;
+			children = (
+				26844395256065A8008785DB /* DatingTests.swift */,
+				268443902560659F008785DB /* SwipeScreen.swift */,
+				2684439A256067C5008785DB /* Media.xcassets */,
+			);
+			path = "Swiping Screen";
+			sourceTree = "<group>";
+		};
 		37E2A4B5255350D400CE5BB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +205,7 @@
 		9EBE475F254744B20018F291 /* Rendezvous */ = {
 			isa = PBXGroup;
 			children = (
+				2684438F25606583008785DB /* Swiping Screen */,
 				9EE9865725534E4E00540CD6 /* Messages Flow */,
 				9EE9865525534CE300540CD6 /* Main User Flow */,
 				9E9AAF4C254FD4B300995C76 /* Sign Up & Login */,
@@ -363,6 +380,7 @@
 			files = (
 				9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */,
 				370884D72554ADC700F151A7 /* InterestCell.xib in Resources */,
+				2684439B256067C6008785DB /* Media.xcassets in Resources */,
 				9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */,
 				9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */,
 				9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */,
@@ -495,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268443912560659F008785DB /* SwipeScreen.swift in Sources */,
 				370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */,
 				9E9AAF58254FFDC400995C76 /* SignUpViewController.swift in Sources */,
 				37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */,
@@ -502,6 +521,7 @@
 				370884D62554ADC700F151A7 /* InterestCell.swift in Sources */,
 				9EBE4765254744B20018F291 /* ViewController.swift in Sources */,
 				9E9AAF56254FFDB100995C76 /* LoginViewController.swift in Sources */,
+				26844396256065A9008785DB /* DatingTests.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,
