@@ -124,8 +124,8 @@
 		370C6CA5255F574C008F2E72 /* Account Management Flow */ = {
 			isa = PBXGroup;
 			children = (
-				370C6CC625632852008F2E72 /* ViewControllers */,
 				370C6CA7255F5767008F2E72 /* Settings.storyboard */,
+				370C6CC625632852008F2E72 /* ViewControllers */,
 			);
 			path = "Account Management Flow";
 			sourceTree = "<group>";
