@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tc1-Pg-CcS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,16 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="n79-B0-mEF">
+            <objects>
+                <navigationController storyboardIdentifier="settingsVC" id="tc1-Pg-CcS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j7r-r3-owT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="blueColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="blueColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mwp-HZ-Lp2" kind="relationship" relationship="rootViewController" id="YQH-nm-xMh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXl-ht-YBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="-133"/>
+        </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="vgk-Ib-QrZ">
             <objects>
-                <viewController storyboardIdentifier="settingsVC" id="mwp-HZ-Lp2" userLabel="Edit Profile View Controller" customClass="EditProfileViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mwp-HZ-Lp2" userLabel="Edit Profile View Controller" customClass="EditProfileViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTE-3f-Snh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwI-Np-kcU">
-                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-rz-WCc">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1093"/>
@@ -194,45 +217,21 @@
                                     <constraint firstAttribute="bottom" secondItem="Fhf-rz-WCc" secondAttribute="bottom" id="xvx-ot-HUn"/>
                                 </constraints>
                             </scrollView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-Hv-aXJ" userLabel="barBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
-                                <color key="backgroundColor" name="backgroundColor"/>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOJ-St-gne">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" name="backgroundColor"/>
-                                <color key="barTintColor" name="backgroundColor"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" name="blueColor"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" name="blueColor"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Edit Profile" id="lIm-av-NYj">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="8l4-sr-1XQ"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AJ6-zL-3wd"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="ZwI-Np-kcU" firstAttribute="centerX" secondItem="WTE-3f-Snh" secondAttribute="centerX" id="2ub-fV-UWS"/>
-                            <constraint firstItem="hOJ-St-gne" firstAttribute="centerX" secondItem="AJ6-zL-3wd" secondAttribute="centerX" id="HDr-vi-ogG"/>
-                            <constraint firstItem="ZwI-Np-kcU" firstAttribute="top" secondItem="hOJ-St-gne" secondAttribute="bottom" constant="20" id="QAd-BB-RAj"/>
-                            <constraint firstItem="hOJ-St-gne" firstAttribute="width" secondItem="AJ6-zL-3wd" secondAttribute="width" id="Zsx-4A-jQS"/>
-                            <constraint firstItem="uQh-Hv-aXJ" firstAttribute="centerX" secondItem="WTE-3f-Snh" secondAttribute="centerX" id="dZz-jj-S4N"/>
-                            <constraint firstItem="ZwI-Np-kcU" firstAttribute="top" secondItem="uQh-Hv-aXJ" secondAttribute="bottom" constant="20" id="eeh-Og-9eG"/>
-                            <constraint firstItem="uQh-Hv-aXJ" firstAttribute="top" secondItem="WTE-3f-Snh" secondAttribute="top" id="fxh-iK-ZWx"/>
+                            <constraint firstItem="ZwI-Np-kcU" firstAttribute="top" secondItem="AJ6-zL-3wd" secondAttribute="top" id="5kI-am-S0I"/>
                             <constraint firstItem="AJ6-zL-3wd" firstAttribute="bottom" secondItem="ZwI-Np-kcU" secondAttribute="bottom" id="gDd-Pm-Fh1"/>
-                            <constraint firstItem="hOJ-St-gne" firstAttribute="top" secondItem="AJ6-zL-3wd" secondAttribute="top" id="l37-wf-pLw"/>
                             <constraint firstItem="ZwI-Np-kcU" firstAttribute="width" secondItem="AJ6-zL-3wd" secondAttribute="width" id="lo4-5W-3YU"/>
-                            <constraint firstItem="uQh-Hv-aXJ" firstAttribute="width" secondItem="AJ6-zL-3wd" secondAttribute="width" id="u6b-DI-luB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="GE0-UW-seS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="6wT-Xt-eTZ"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="1oN-y5-ZGj" kind="presentation" identifier="accountSegue" modalPresentationStyle="fullScreen" id="oy4-dn-8OX"/>
+                        <segue destination="1oN-y5-ZGj" kind="show" identifier="accountSegue" id="nFR-wA-Nmu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aB-oT-4Sk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qPt-GS-1Ng">
-                                <rect key="frame" x="0.0" y="128" width="414" height="442.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="442.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikW-JS-Zb9" userLabel="firstNameLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
@@ -317,39 +316,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-SQ-8mD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" name="backgroundColor"/>
-                                <color key="barTintColor" name="backgroundColor"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" name="blueColor"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" name="blueColor"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Manage Account" id="A6e-K0-uQA">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="EQh-Xl-RlT"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-Wo-UkC" userLabel="barBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="backgroundColor"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LAg-vF-gjO"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="6nv-yB-Q9j"/>
-                            <constraint firstItem="fjZ-SQ-8mD" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="C6b-jM-s6y"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="YaY-xi-jYG"/>
-                            <constraint firstItem="fjZ-SQ-8mD" firstAttribute="top" secondItem="LAg-vF-gjO" secondAttribute="top" id="aGw-pU-KNm"/>
-                            <constraint firstItem="qPt-GS-1Ng" firstAttribute="top" secondItem="fjZ-SQ-8mD" secondAttribute="bottom" constant="40" id="qcQ-Lu-c1a"/>
-                            <constraint firstItem="fjZ-SQ-8mD" firstAttribute="centerX" secondItem="LAg-vF-gjO" secondAttribute="centerX" id="x0A-Mn-7Hh"/>
+                            <constraint firstItem="qPt-GS-1Ng" firstAttribute="top" secondItem="LAg-vF-gjO" secondAttribute="top" id="zK0-O7-Mjd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Manage Account" id="eGX-r1-us2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="aaZ-eM-X9R"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anP-yO-OGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
