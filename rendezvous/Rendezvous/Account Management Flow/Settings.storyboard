@@ -13,7 +13,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="vgk-Ib-QrZ">
             <objects>
-                <viewController storyboardIdentifier="settingsVC" id="mwp-HZ-Lp2" userLabel="Edit Profile View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsVC" id="mwp-HZ-Lp2" userLabel="Edit Profile View Controller" customClass="EditProfileViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTE-3f-Snh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,7 @@
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1oN-y5-ZGj" kind="presentation" modalPresentationStyle="fullScreen" id="lYI-Hs-ucd"/>
+                                                    <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="qEd-m8-mos"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -231,6 +231,9 @@
                             <constraint firstItem="uQh-Hv-aXJ" firstAttribute="width" secondItem="AJ6-zL-3wd" secondAttribute="width" id="u6b-DI-luB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="1oN-y5-ZGj" kind="presentation" identifier="accountSegue" modalPresentationStyle="fullScreen" id="oy4-dn-8OX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aB-oT-4Sk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +242,7 @@
         <!--Manage Account View Controller-->
         <scene sceneID="lEt-vg-9eQ">
             <objects>
-                <viewController id="1oN-y5-ZGj" userLabel="Manage Account View Controller" sceneMemberID="viewController">
+                <viewController id="1oN-y5-ZGj" userLabel="Manage Account View Controller" customClass="ManageAccountViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WeZ-t7-MHx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,15 +319,23 @@
                             </stackView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-SQ-8mD">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                                 <color key="barTintColor" name="backgroundColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" name="blueColor"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" name="blueColor"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Manage Account" id="A6e-K0-uQA">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="EQh-Xl-RlT"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-Wo-UkC" userLabel="barBackground">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-Wo-UkC" userLabel="barBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                             </imageView>
                         </subviews>
@@ -332,11 +343,7 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="6nv-yB-Q9j"/>
-                            <constraint firstItem="Ydv-Wo-UkC" firstAttribute="top" secondItem="WeZ-t7-MHx" secondAttribute="top" id="Bh6-ZB-Hux"/>
                             <constraint firstItem="fjZ-SQ-8mD" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="C6b-jM-s6y"/>
-                            <constraint firstItem="qPt-GS-1Ng" firstAttribute="top" secondItem="Ydv-Wo-UkC" secondAttribute="bottom" constant="40" id="L9f-1y-jLE"/>
-                            <constraint firstItem="Ydv-Wo-UkC" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="NYD-9l-exw"/>
-                            <constraint firstItem="Ydv-Wo-UkC" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="RH2-Qf-wr7"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="YaY-xi-jYG"/>
                             <constraint firstItem="fjZ-SQ-8mD" firstAttribute="top" secondItem="LAg-vF-gjO" secondAttribute="top" id="aGw-pU-KNm"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="top" secondItem="fjZ-SQ-8mD" secondAttribute="bottom" constant="40" id="qcQ-Lu-c1a"/>
