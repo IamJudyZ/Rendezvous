@@ -12,8 +12,9 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-
+class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var genderText: UITextField!
     @IBOutlet weak var preferenceText: UITextField!
     @IBOutlet weak var ageText: UITextField!
@@ -42,8 +43,8 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var selectedHeightInch: String?
     var selectedHeightInchRow: Int = 0
     var heightInchList = ["", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-//
-//    //Keeps track of which PickerView TextField is selected
+    
+    //Keeps track of which PickerView TextField is selected
     var currentTextField: UITextField!
     var pickerView = UIPickerView()
     
@@ -58,6 +59,10 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         createAgeList()
         getUserInfo()
         errorLabel.isHidden = true
+        makeDashedBorder(imageView: imageView1)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView1.isUserInteractionEnabled = true
+        imageView1.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func createAgeList() {
@@ -86,6 +91,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func initText() {
+        //BING: Need to initialize imageView1 with the photo stored as profile picture in database
         genderText.text! = currentUser.gender
         preferenceText.text! = currentUser.preference
         ageText.text! = currentUser.age
@@ -121,6 +127,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func updateUser() {
+        //BING: need to update profile image
         currentUser.gender = genderText.text!
         currentUser.preference = preferenceText.text!
         currentUser.age = ageText.text!
@@ -133,6 +140,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func checkFields() -> Bool {
+        //BING: need to make sure there is a profile image
         //Ensure all fields filled out
         if(genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || preferenceText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
@@ -266,6 +274,51 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         createPickerView(textField: currentTextField)
         dismissPickerView(textField: currentTextField)
+    }
+    
+    //BING: you will need to copy over what you did for the upload image from login/register
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        // this has to do with letting users click on the imageview to upload a photo. Not sure if it is needed tho
+        //let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image.allowsEditing = false
+        
+        // starts the screen to access photo library
+        self.present(image, animated: true) {
+            // TODO
+        }
+    }
+    //BING: Same as above
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        // check to see if uploaded image can be converted to a UIImage
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView1.image = image
+            
+            // TODO
+            }
+        else {
+            // TODO
+            print("error")
+        }
+        // leaves the screen to access photo library
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func makeDashedBorder(imageView: UIImageView) {
+        let border = CAShapeLayer()
+        border.strokeColor = UIColor.gray.cgColor
+        border.lineDashPattern = [4, 4]
+        border.lineWidth = 3
+        border.cornerCurve = CALayerCornerCurve.circular
+        border.frame = imageView.bounds
+        border.fillColor = nil
+        border.path = UIBezierPath(rect: imageView.bounds).cgPath
+        imageView.layer.addSublayer(border)
     }
     
     func transitionToHomeScreen() {
