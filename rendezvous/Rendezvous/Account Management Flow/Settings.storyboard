@@ -283,11 +283,28 @@
                         <outlet property="professionText" destination="Rh8-m7-18Y" id="cPX-jh-POS"/>
                         <outlet property="stateText" destination="iIA-Lk-wzy" id="MF8-HH-ob5"/>
                         <segue destination="1oN-y5-ZGj" kind="show" identifier="accountSegue" id="nFR-wA-Nmu"/>
+                        <segue destination="45p-ua-SQe" kind="show" identifier="interestsSegue" id="V7V-S6-PfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aB-oT-4Sk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-234.78260869565219" y="-132.58928571428572"/>
+        </scene>
+        <!--Change Interests View Controller-->
+        <scene sceneID="UTu-i1-Jg1">
+            <objects>
+                <viewController id="45p-ua-SQe" userLabel="Change Interests View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xFt-CL-g6h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wvj-Af-al3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fcV-u0-uFJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAQ-mo-0Z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="-813"/>
         </scene>
         <!--Manage Account View Controller-->
         <scene sceneID="lEt-vg-9eQ">
@@ -408,10 +425,10 @@
             </objects>
             <point key="canvasLocation" x="627.536231884058" y="-133.25892857142856"/>
         </scene>
-        <!--Change Password-->
+        <!--Change Password View Controller-->
         <scene sceneID="rwQ-HK-789">
             <objects>
-                <viewController id="mo8-lA-seQ" customClass="ChangePasswordViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mo8-lA-seQ" userLabel="Change Password View Controller" customClass="ChangePasswordViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehe-nw-nGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

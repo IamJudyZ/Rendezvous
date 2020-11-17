@@ -31,6 +31,7 @@ class ChangePasswordViewController: UIViewController {
     }
     
     @IBAction func changePassword(_ sender: Any) {
+        //BING: should check oldPasswordText is == the user's password. If it is, then they can change it to newPassword (provided newPasswordText == confirmPasswordText
     }
     
     /*
