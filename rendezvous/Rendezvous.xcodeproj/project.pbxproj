@@ -14,6 +14,7 @@
 		370C6CA8255F5767008F2E72 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370C6CA7255F5767008F2E72 /* Settings.storyboard */; };
 		370C6CC825632861008F2E72 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370C6CC725632861008F2E72 /* EditProfileViewController.swift */; };
 		370C6CD025632870008F2E72 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370C6CCF25632870008F2E72 /* ManageAccountViewController.swift */; };
+		370C6CDE2563624D008F2E72 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370C6CDD2563624D008F2E72 /* ChangePasswordViewController.swift */; };
 		37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */; };
 		4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */; };
 		4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */; };
@@ -63,6 +64,7 @@
 		370C6CA7255F5767008F2E72 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		370C6CC725632861008F2E72 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		370C6CCF25632870008F2E72 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
+		370C6CDD2563624D008F2E72 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePictureViewController.swift; sourceTree = "<group>"; };
 		39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.debug.xcconfig"; sourceTree = "<group>"; };
 		5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			children = (
 				370C6CC725632861008F2E72 /* EditProfileViewController.swift */,
 				370C6CCF25632870008F2E72 /* ManageAccountViewController.swift */,
+				370C6CDD2563624D008F2E72 /* ChangePasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,
 				9EBE4763254744B20018F291 /* SceneDelegate.swift in Sources */,
+				370C6CDE2563624D008F2E72 /* ChangePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

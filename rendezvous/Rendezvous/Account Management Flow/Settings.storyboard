@@ -50,43 +50,67 @@
                                             <constraint firstAttribute="height" constant="150" id="uj1-gW-pWd"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coz-E9-mad">
+                                        <rect key="frame" x="103.5" y="170" width="207" height="45"/>
+                                        <color key="backgroundColor" name="blueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Ij0-Km-nAB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <state key="normal" title="Save Changes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveChanges:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="SFQ-GY-2Zp"/>
+                                            <action selector="saveChanges:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="wQO-Oe-voY"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-rz-WCc">
-                                        <rect key="frame" x="0.0" y="170" width="414" height="915"/>
+                                        <rect key="frame" x="0.0" y="215" width="414" height="1077"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98g-gf-vb2" userLabel="errorLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
+                                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about myself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecY-hU-USA" userLabel="descriptionLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="33" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Syz-We-THh" userLabel="descriptionText">
-                                                <rect key="frame" x="0.0" y="39.5" width="414" height="49"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ekm-aS-Ll8" userLabel="descriptionTextView">
+                                                <rect key="frame" x="0.0" y="72.5" width="414" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="U36-fD-ky4"/>
+                                                </constraints>
                                                 <color key="textColor" name="blueColor"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="interests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-ZJ-G1p" userLabel="interestsLabel">
-                                                <rect key="frame" x="0.0" y="88.5" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHX-rS-mUb" userLabel="interestsText">
-                                                <rect key="frame" x="0.0" y="128" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="240" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1k-HN-rQK" userLabel="genderLabel">
-                                                <rect key="frame" x="0.0" y="177" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="289" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L4R-bs-50Q" userLabel="genderText">
-                                                <rect key="frame" x="0.0" y="216.5" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="328.5" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -96,13 +120,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preference" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49S-nZ-eQR" userLabel="preferenceLabel">
-                                                <rect key="frame" x="0.0" y="265.5" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="377.5" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K3f-6m-btp" userLabel="preferenceText">
-                                                <rect key="frame" x="0.0" y="305" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="417" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -112,13 +136,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6C-UP-wUB" userLabel="ageLabel">
-                                                <rect key="frame" x="0.0" y="354" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="466" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R0S-VT-QXa" userLabel="ageText">
-                                                <rect key="frame" x="0.0" y="393.5" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="505.5" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -128,13 +152,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-5B-sPm" userLabel="feetLabel">
-                                                <rect key="frame" x="0.0" y="442.5" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="554.5" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHx-cv-dvJ" userLabel="feetText">
-                                                <rect key="frame" x="0.0" y="482" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="594" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -144,13 +168,13 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWh-6Z-cPJ" userLabel="inchesLabel">
-                                                <rect key="frame" x="0.0" y="531" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="643" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-5v-CdQ" userLabel="inchesText">
-                                                <rect key="frame" x="0.0" y="570.5" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="682.5" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -160,59 +184,71 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-oA-fJa" userLabel="cityLabel">
-                                                <rect key="frame" x="0.0" y="619.5" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="731.5" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxt-ub-Duq" userLabel="cityText">
-                                                <rect key="frame" x="0.0" y="659" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="771" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6f-3Q-sew" userLabel="stateLabel">
-                                                <rect key="frame" x="0.0" y="708" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="820" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-Lk-wzy" userLabel="stateText">
-                                                <rect key="frame" x="0.0" y="747.5" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="859.5" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="profession" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-ld-xrs" userLabel="professionLabel">
-                                                <rect key="frame" x="0.0" y="796.5" width="414" height="39.5"/>
+                                                <rect key="frame" x="0.0" y="908.5" width="414" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rh8-m7-18Y" userLabel="professionText">
-                                                <rect key="frame" x="0.0" y="836" width="414" height="49"/>
+                                                <rect key="frame" x="0.0" y="948" width="414" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Dk-2yN">
-                                                <rect key="frame" x="0.0" y="885" width="414" height="30"/>
-                                                <state key="normal" title="Account Settings">
-                                                    <color key="titleColor" systemColor="labelColor"/>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Dk-2yN">
+                                                <rect key="frame" x="0.0" y="997" width="414" height="30"/>
+                                                <state key="normal" title="Account Settings"/>
                                                 <connections>
                                                     <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="qEd-m8-mos"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7R-Hy-r75" userLabel="placeholder">
+                                                <rect key="frame" x="0.0" y="1027" width="414" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                                <color key="textColor" name="blueColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Ekm-aS-Ll8" secondAttribute="trailing" id="f67-2G-i27"/>
+                                            <constraint firstItem="Ekm-aS-Ll8" firstAttribute="leading" secondItem="Fhf-rz-WCc" secondAttribute="leading" id="vgD-mA-cPS"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Fhf-rz-WCc" firstAttribute="width" secondItem="ZwI-Np-kcU" secondAttribute="width" id="COG-Qz-n2O"/>
-                                    <constraint firstItem="Fhf-rz-WCc" firstAttribute="top" secondItem="eVo-tl-h89" secondAttribute="bottom" constant="10" id="Q9V-eW-NFG"/>
+                                    <constraint firstItem="coz-E9-mad" firstAttribute="centerX" secondItem="ZwI-Np-kcU" secondAttribute="centerX" id="GJD-Rp-LIJ"/>
+                                    <constraint firstItem="coz-E9-mad" firstAttribute="top" secondItem="eVo-tl-h89" secondAttribute="bottom" constant="10" id="JPb-5m-qTu"/>
+                                    <constraint firstItem="coz-E9-mad" firstAttribute="bottom" secondItem="Fhf-rz-WCc" secondAttribute="top" id="OVk-Lw-yEc"/>
+                                    <constraint firstItem="coz-E9-mad" firstAttribute="width" secondItem="Fhf-rz-WCc" secondAttribute="width" multiplier="0.5" id="U3a-De-PtP"/>
                                     <constraint firstItem="eVo-tl-h89" firstAttribute="centerX" secondItem="ZwI-Np-kcU" secondAttribute="centerX" id="YLu-r9-lYW"/>
                                     <constraint firstItem="eVo-tl-h89" firstAttribute="top" secondItem="ZwI-Np-kcU" secondAttribute="top" constant="10" id="guA-ts-pgB"/>
                                     <constraint firstItem="eVo-tl-h89" firstAttribute="width" secondItem="ZwI-Np-kcU" secondAttribute="width" id="mdk-KP-Xm1"/>
@@ -237,10 +273,12 @@
                     <connections>
                         <outlet property="ageText" destination="R0S-VT-QXa" id="qUi-Ts-ESq"/>
                         <outlet property="cityText" destination="Gxt-ub-Duq" id="kVB-3J-Nly"/>
-                        <outlet property="descriptionText" destination="Syz-We-THh" id="tdL-mI-Kmd"/>
+                        <outlet property="descriptionText" destination="Ekm-aS-Ll8" id="plc-bL-h2L"/>
+                        <outlet property="errorLabel" destination="98g-gf-vb2" id="3xm-Oa-yj1"/>
                         <outlet property="genderText" destination="L4R-bs-50Q" id="h3H-zl-zJS"/>
                         <outlet property="heightFeetText" destination="kHx-cv-dvJ" id="B92-Uy-dB1"/>
                         <outlet property="heightInchText" destination="lHN-5v-CdQ" id="Rzb-gg-5vJ"/>
+                        <outlet property="interestsText" destination="IHX-rS-mUb" id="5Fx-zb-pMy"/>
                         <outlet property="preferenceText" destination="K3f-6m-btp" id="xKy-zK-S97"/>
                         <outlet property="professionText" destination="Rh8-m7-18Y" id="cPX-jh-POS"/>
                         <outlet property="stateText" destination="iIA-Lk-wzy" id="MF8-HH-ob5"/>
@@ -260,13 +298,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="Gzk-AO-zrr" userLabel="r">
-                                <rect key="frame" x="19.5" y="88" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="NGk-pw-g2q"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qPt-GS-1Ng">
-                                <rect key="frame" x="0.0" y="248" width="414" height="531"/>
+                                <rect key="frame" x="0.0" y="258" width="414" height="295.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikW-JS-Zb9" userLabel="firstNameLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
@@ -300,76 +338,57 @@
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="470-62-6N7" userLabel="emailText">
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="470-62-6N7" userLabel="emailText">
                                         <rect key="frame" x="0.0" y="216.5" width="414" height="49"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="old password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj8-ih-5os" userLabel="passwordLabel">
-                                        <rect key="frame" x="0.0" y="265.5" width="414" height="39.5"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-eN-OaL" userLabel="passwordText">
-                                        <rect key="frame" x="0.0" y="305" width="414" height="49"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn9-FK-BnK" userLabel="password2Label">
-                                        <rect key="frame" x="0.0" y="354" width="414" height="39.5"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="It9-9a-Kcg" userLabel="password2Text">
-                                        <rect key="frame" x="0.0" y="393.5" width="414" height="49"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confirm password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yf-oX-ham" userLabel="password3Label">
-                                        <rect key="frame" x="0.0" y="442.5" width="414" height="39.5"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3u-sV-qKf" userLabel="password3Text">
-                                        <rect key="frame" x="0.0" y="482" width="414" height="49"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" name="blueColor"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5C-fR-CPN">
+                                        <rect key="frame" x="0.0" y="265.5" width="414" height="30"/>
+                                        <state key="normal" title="Change Password"/>
+                                        <connections>
+                                            <action selector="changePassword:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="vbr-WV-0v0"/>
+                                            <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="bSu-Rh-ies"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3D8-RA-QdM">
-                                <rect key="frame" x="103.5" y="794" width="207" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-P8-FKn">
+                                <rect key="frame" x="103.5" y="568.5" width="207" height="45"/>
                                 <color key="backgroundColor" name="blueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="aKA-3C-K8U"/>
+                                    <constraint firstAttribute="height" constant="45" id="vis-O0-6r7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="18"/>
-                                <state key="normal" title="Update Settings">
+                                <state key="normal" title="Save Changes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveChanges:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="peh-S8-GC3"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9p-Dc-sN8" userLabel="errorLabel">
+                                <rect key="frame" x="0.0" y="623.5" width="414" height="33"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
+                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LAg-vF-gjO"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="3D8-RA-QdM" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="3Nz-Eu-3AC"/>
+                            <constraint firstItem="d9p-Dc-sN8" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="55q-3o-I06"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="6nv-yB-Q9j"/>
-                            <constraint firstItem="Gzk-AO-zrr" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" multiplier="0.905797" id="Dga-fw-kSd"/>
-                            <constraint firstItem="3D8-RA-QdM" firstAttribute="top" secondItem="qPt-GS-1Ng" secondAttribute="bottom" constant="15" id="Jeh-qi-QLM"/>
-                            <constraint firstItem="3D8-RA-QdM" firstAttribute="width" secondItem="qPt-GS-1Ng" secondAttribute="width" multiplier="0.5" id="LeO-Yo-B8h"/>
-                            <constraint firstItem="Gzk-AO-zrr" firstAttribute="top" secondItem="LAg-vF-gjO" secondAttribute="top" id="Tse-c4-GR3"/>
+                            <constraint firstItem="Gzk-AO-zrr" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="Dga-fw-kSd"/>
+                            <constraint firstItem="d9p-Dc-sN8" firstAttribute="width" secondItem="qPt-GS-1Ng" secondAttribute="width" id="Em1-OF-aYF"/>
+                            <constraint firstItem="sT6-P8-FKn" firstAttribute="top" secondItem="qPt-GS-1Ng" secondAttribute="bottom" constant="15" id="Emp-YE-1TC"/>
+                            <constraint firstItem="sT6-P8-FKn" firstAttribute="width" secondItem="qPt-GS-1Ng" secondAttribute="width" multiplier="0.5" id="P4L-Y4-RIy"/>
+                            <constraint firstItem="sT6-P8-FKn" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="RUu-nR-IDq"/>
+                            <constraint firstItem="Gzk-AO-zrr" firstAttribute="top" secondItem="LAg-vF-gjO" secondAttribute="top" constant="10" id="Tse-c4-GR3"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="width" secondItem="LAg-vF-gjO" secondAttribute="width" id="YaY-xi-jYG"/>
+                            <constraint firstItem="d9p-Dc-sN8" firstAttribute="top" secondItem="sT6-P8-FKn" secondAttribute="bottom" constant="10" id="eLU-yq-OOZ"/>
                             <constraint firstItem="Gzk-AO-zrr" firstAttribute="centerX" secondItem="WeZ-t7-MHx" secondAttribute="centerX" id="fr9-Sz-nB3"/>
                             <constraint firstItem="qPt-GS-1Ng" firstAttribute="top" secondItem="Gzk-AO-zrr" secondAttribute="bottom" constant="10" id="zK0-O7-Mjd"/>
                         </constraints>
@@ -377,10 +396,126 @@
                     <navigationItem key="navigationItem" title="Manage Account" id="eGX-r1-us2">
                         <barButtonItem key="backBarButtonItem" title="Back" id="aaZ-eM-X9R"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailText" destination="470-62-6N7" id="Nnu-pQ-y0S"/>
+                        <outlet property="errorLabel" destination="d9p-Dc-sN8" id="pQE-tw-4XP"/>
+                        <outlet property="firstNameText" destination="7uI-Ef-bZY" id="8Mx-fU-H8J"/>
+                        <outlet property="lastNameText" destination="viq-7I-43b" id="2Al-yd-cVi"/>
+                        <segue destination="mo8-lA-seQ" kind="show" identifier="passwordSegue" id="agj-km-O9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anP-yO-OGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="627.536231884058" y="-133.25892857142856"/>
+        </scene>
+        <!--Change Password-->
+        <scene sceneID="rwQ-HK-789">
+            <objects>
+                <viewController id="mo8-lA-seQ" customClass="ChangePasswordViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehe-nw-nGS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-y9-XCx" userLabel="r">
+                                <rect key="frame" x="0.0" y="98" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="T4I-J9-FDG"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hAl-Jq-H0I">
+                                <rect key="frame" x="0.0" y="258" width="414" height="262.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="old password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-29-1ei" userLabel="passwordLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSC-Qz-iZ7" userLabel="passwordText">
+                                        <rect key="frame" x="0.0" y="39.5" width="414" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="new password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBZ-yA-aZr" userLabel="password2Label">
+                                        <rect key="frame" x="0.0" y="87.5" width="414" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLf-xh-oq0" userLabel="password2Text">
+                                        <rect key="frame" x="0.0" y="127" width="414" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confirm password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xih-vC-rNN" userLabel="password3Label">
+                                        <rect key="frame" x="0.0" y="175" width="414" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvz-h6-MY1" userLabel="password3Text">
+                                        <rect key="frame" x="0.0" y="214.5" width="414" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ME-Do-GR9">
+                                <rect key="frame" x="103.5" y="535.5" width="207" height="45"/>
+                                <color key="backgroundColor" name="blueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0aW-FP-inH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="18"/>
+                                <state key="normal" title="Change Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePassword:" destination="mo8-lA-seQ" eventType="touchUpInside" id="iet-jW-29V"/>
+                                    <action selector="updateUser:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="SBf-eN-kxs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHi-FX-6aJ" userLabel="errorLabel">
+                                <rect key="frame" x="0.0" y="590.5" width="414" height="33"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
+                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oPP-YL-CQO"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="cMA-y9-XCx" firstAttribute="centerX" secondItem="ehe-nw-nGS" secondAttribute="centerX" id="1Jk-4Z-4c5"/>
+                            <constraint firstItem="6ME-Do-GR9" firstAttribute="width" secondItem="hAl-Jq-H0I" secondAttribute="width" multiplier="0.5" id="5Kc-ro-7TF"/>
+                            <constraint firstItem="hAl-Jq-H0I" firstAttribute="top" secondItem="cMA-y9-XCx" secondAttribute="bottom" constant="10" id="8y2-Hc-ibB"/>
+                            <constraint firstItem="UHi-FX-6aJ" firstAttribute="top" secondItem="6ME-Do-GR9" secondAttribute="bottom" constant="10" id="Gm5-Jw-6bo"/>
+                            <constraint firstItem="6ME-Do-GR9" firstAttribute="centerX" secondItem="ehe-nw-nGS" secondAttribute="centerX" id="P22-cN-rNz"/>
+                            <constraint firstItem="cMA-y9-XCx" firstAttribute="width" secondItem="oPP-YL-CQO" secondAttribute="width" id="Ppj-wk-7Fk"/>
+                            <constraint firstItem="hAl-Jq-H0I" firstAttribute="width" secondItem="oPP-YL-CQO" secondAttribute="width" id="az3-6a-9Te"/>
+                            <constraint firstItem="6ME-Do-GR9" firstAttribute="top" secondItem="hAl-Jq-H0I" secondAttribute="bottom" constant="15" id="e4Z-BV-fu9"/>
+                            <constraint firstItem="hAl-Jq-H0I" firstAttribute="centerX" secondItem="ehe-nw-nGS" secondAttribute="centerX" id="etj-FW-cku"/>
+                            <constraint firstItem="UHi-FX-6aJ" firstAttribute="centerX" secondItem="ehe-nw-nGS" secondAttribute="centerX" id="wPL-ri-1Jn"/>
+                            <constraint firstItem="UHi-FX-6aJ" firstAttribute="width" secondItem="hAl-Jq-H0I" secondAttribute="width" id="wvQ-Ok-7E7"/>
+                            <constraint firstItem="cMA-y9-XCx" firstAttribute="top" secondItem="oPP-YL-CQO" secondAttribute="top" constant="10" id="x9D-Pp-mjg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change Password" id="GfO-M8-V6K"/>
+                    <connections>
+                        <outlet property="confirmPasswordText" destination="hvz-h6-MY1" id="eVq-kE-CaM"/>
+                        <outlet property="errorLabel" destination="UHi-FX-6aJ" id="3gw-xC-mhi"/>
+                        <outlet property="newPasswordText" destination="bLf-xh-oq0" id="Rts-jK-HUU"/>
+                        <outlet property="oldPasswordText" destination="zSC-Qz-iZ7" id="2IX-oG-Ux0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJx-ix-FHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478" y="-133"/>
         </scene>
     </scenes>
     <resources>
@@ -391,8 +526,8 @@
         <namedColor name="blueColor">
             <color red="0.0" green="0.11764705882352941" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

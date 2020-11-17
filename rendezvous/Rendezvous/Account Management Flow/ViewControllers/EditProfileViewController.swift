@@ -22,7 +22,8 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var cityText: UITextField!
     @IBOutlet weak var stateText: UITextField!
     @IBOutlet weak var professionText: UITextField!
-    @IBOutlet weak var descriptionText: UITextField!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var interestsText: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     //Components for PickerViews
@@ -53,10 +54,10 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
         // Do any additional setup after loading the view.
         createAgeList()
+        getUserInfo()
+        errorLabel.isHidden = true
     }
     
     func createAgeList() {
@@ -77,30 +78,14 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
             switch result {
                 case .success(let newUserFromDb):
                     self.currentUser = newUserFromDb
+                    self.initText()
                 case .failure(let error):
                     print(error)
             }
         }
     }
     
-    func initUser(user: User) {
-        let fName = user.firstName
-        let lName = user.lastName
-        let em = user.email
-        
-        self.currentUser = User(fName: fName, lName: lName, eMail: em)
-        currentUser.gender = user.gender
-        currentUser.preference = user.preference
-        currentUser.age = user.age
-        currentUser.heightFeet = user.heightFeet
-        currentUser.heightInch = user.heightInch
-        currentUser.city = user.city
-        currentUser.state = user.state
-        currentUser.profession = user.profession
-        currentUser.selfDescription = user.selfDescription
-    }
-    
-    func updateText() {
+    func initText() {
         genderText.text! = currentUser.gender
         preferenceText.text! = currentUser.preference
         ageText.text! = currentUser.age
@@ -109,7 +94,30 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         cityText.text! = currentUser.city
         stateText.text! = currentUser.state
         professionText.text! = currentUser.profession
+        //let description = String(currentUser.selfDescription)
         descriptionText.text! = currentUser.selfDescription
+        var interestText = ""
+        for interest in currentUser.interests {
+            if interest == currentUser.interests[currentUser.interests.count - 1] {
+                interestText += interest + "..."
+            }
+            else {
+                interestText += interest + ", "
+            }
+        }
+        interestsText.text! = interestText
+    }
+    
+    @IBAction func saveChanges(_ sender: Any) {
+        if (checkFields()) {
+            updateUser()
+            do {
+                try db.collection("users").document(userID).setData(from:self.currentUser)
+            } catch {
+                print("Unable to update user data on Firebase")
+            }
+            transitionToHomeScreen()
+        }
     }
     
     func updateUser() {
@@ -124,14 +132,29 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         currentUser.selfDescription = descriptionText.text!
     }
     
+    func checkFields() -> Bool {
+        //Ensure all fields filled out
+        if(genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || preferenceText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+            callError(errorText: "One or more fields have been left empty")
+            return false
+        }
+        return true
+    }
+    
+    func callError(errorText: String) {
+        errorLabel.text = errorText
+        errorLabel.isHidden = false;
+    }
+    
     @IBAction func manageAccount(_ sender: Any) {
         self.performSegue(withIdentifier: "accountSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "accountSegue") {
-//            let destinationVC = segue.destination as! ManageAccountViewController
-//            destinationVC.currentUser = self.user
+            let destinationVC = segue.destination as! ManageAccountViewController
+            destinationVC.currentUser = self.currentUser
         }
     }
     
@@ -243,5 +266,12 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         createPickerView(textField: currentTextField)
         dismissPickerView(textField: currentTextField)
+    }
+    
+    func transitionToHomeScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
     }
 }
