@@ -11,7 +11,6 @@
 //  Dating
 //
 //  Created by Balaji on 30/06/20.
-//
 
 import SwiftUI
 
@@ -21,7 +20,7 @@ let rendezvousYellow = Color.init(red: 255/255, green: 232/255, blue: 164/255)
 
 struct SwipeScreen: View {
     var body: some View {
-        
+
         Home()
     }
 }

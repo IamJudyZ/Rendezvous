@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26116C342565A979007ECB1D /* SwipeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26116C332565A978007ECB1D /* SwipeScreen.storyboard */; };
+		26116C392565AC02007ECB1D /* SwipeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26116C382565AC02007ECB1D /* SwipeScreenViewController.swift */; };
 		268443912560659F008785DB /* SwipeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268443902560659F008785DB /* SwipeScreen.swift */; };
 		26844396256065A9008785DB /* DatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26844395256065A8008785DB /* DatingTests.swift */; };
 		2684439B256067C6008785DB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2684439A256067C5008785DB /* Media.xcassets */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
 		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
+		26116C332565A978007ECB1D /* SwipeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwipeScreen.storyboard; sourceTree = "<group>"; };
+		26116C382565AC02007ECB1D /* SwipeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeScreenViewController.swift; sourceTree = "<group>"; };
 		268443902560659F008785DB /* SwipeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeScreen.swift; path = "Rendezvous/New Group/SwipeScreen.swift"; sourceTree = SOURCE_ROOT; };
 		26844395256065A8008785DB /* DatingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatingTests.swift; path = "Rendezvous/New Group/DatingTests.swift"; sourceTree = SOURCE_ROOT; };
 		2684439A256067C5008785DB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				26844395256065A8008785DB /* DatingTests.swift */,
 				268443902560659F008785DB /* SwipeScreen.swift */,
 				2684439A256067C5008785DB /* Media.xcassets */,
+				26116C332565A978007ECB1D /* SwipeScreen.storyboard */,
+				26116C382565AC02007ECB1D /* SwipeScreenViewController.swift */,
 			);
 			path = "Swiping Screen";
 			sourceTree = "<group>";
@@ -149,13 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				9EBE4764254744B20018F291 /* ViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		37E2A4BA255350EC00CE5BB6 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -250,7 +249,6 @@
 		9EE9865725534E4E00540CD6 /* Messages Flow */ = {
 			isa = PBXGroup;
 			children = (
-				37E2A4BA255350EC00CE5BB6 /* ViewControllers */,
 				9EE9865825534E7000540CD6 /* Messages.storyboard */,
 			);
 			path = "Messages Flow";
@@ -378,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26116C342565A979007ECB1D /* SwipeScreen.storyboard in Resources */,
 				9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */,
 				370884D72554ADC700F151A7 /* InterestCell.xib in Resources */,
 				2684439B256067C6008785DB /* Media.xcassets in Resources */,
@@ -526,6 +525,7 @@
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,
 				9EBE4763254744B20018F291 /* SceneDelegate.swift in Sources */,
+				26116C392565AC02007ECB1D /* SwipeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
