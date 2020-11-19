@@ -65,6 +65,10 @@ class LoginViewController: UIViewController {
                      self.callError(errorText: "Incorrect Email or Password")
                  }
                  else {
+                    
+                    //Judy added this for the chat
+                    UserDefaults.standard.set(em, forKey: "email")
+                    
                      self.transitionToHomeScreen()
                  }
              }
