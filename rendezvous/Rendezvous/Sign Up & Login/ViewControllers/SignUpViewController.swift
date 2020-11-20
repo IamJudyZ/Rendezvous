@@ -78,6 +78,7 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     do {
                         try db.collection("users").document(result!.user.uid).setData(from:self.user)
+                        
                     }
                     catch {
                         print("Unable to add new user to firestore")

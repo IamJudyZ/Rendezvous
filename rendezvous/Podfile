@@ -15,6 +15,7 @@ target 'Rendezvous' do
 
 
   pod 'MessageKit'
+pod 'SDWebImage'
 
   target 'RendezvousTests' do
     inherit! :search_paths
