@@ -13,6 +13,10 @@
 //  Created by Balaji on 30/06/20.
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 let rendezvousBlue = Color.init(red: 0/255, green: 30/255, blue: 80/255)
 
@@ -20,7 +24,6 @@ let rendezvousYellow = Color.init(red: 255/255, green: 232/255, blue: 164/255)
 
 struct SwipeScreen: View {
     var body: some View {
-
         Home()
     }
 }
@@ -33,28 +36,29 @@ struct SwipeScreen_Previews: PreviewProvider {
 
 struct Home : View {
     
-    @State var profiles = [
-        
-        // Draw the data from firebase
-        
-        Profile(id: 0, name: "Annie Watson", image: "testPicture", age: "27", offset: 0),
-        Profile(id: 1, name: "Clarie", image: "testPicture", age: "19", offset: 0),
-        Profile(id: 2, name: "Catherine", image: "testPicture", age: "25", offset: 0),
-        Profile(id: 3, name: "Emma", image: "testPicture", age: "26", offset: 0),
-        Profile(id: 4, name: "Juliana", image: "testPicture", age: "20", offset: 0),
-        Profile(id: 5, name: "Kaviya", image: "testPicture", age: "22", offset: 0),
-        Profile(id: 6, name: "Jill", image: "testPicture", age: "18", offset: 0),
-        Profile(id: 7, name: "Terasa", image: "testPicture", age: "29", offset: 0),
-    ]
+//    @State var profiles = [
+//
+//        // Draw the data from firebase
+//
+//        Profile(id: 0, name: "Annie Watson", image: "testPicture", age: "27", offset: 0),
+//        Profile(id: 1, name: "Clarie", image: "testPicture", age: "19", offset: 0),
+//        Profile(id: 2, name: "Catherine", image: "testPicture", age: "25", offset: 0),
+//        Profile(id: 3, name: "Emma", image: "testPicture", age: "26", offset: 0),
+//        Profile(id: 4, name: "Juliana", image: "testPicture", age: "20", offset: 0),
+//        Profile(id: 5, name: "Kaviya", image: "testPicture", age: "22", offset: 0),
+//        Profile(id: 6, name: "Jill", image: "testPicture", age: "18", offset: 0),
+//        Profile(id: 7, name: "Terasa", image: "testPicture", age: "29", offset: 0),
+//    ]
     
-    var body: some View{
-        
+    
+    @ObservedObject var profileViewModel = ProfileViewModel()
+    
+    //@State var profiles = []
+    
+    var body: some View {
         VStack{
-            
             HStack(spacing: 15){
-                
                 Button(action: {}, label: {
-                    
                     Image("menu")
                         .renderingMode(.template)
                 })
@@ -63,69 +67,57 @@ struct Home : View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 20.0, height: 20.0, alignment: .center)
 
-                
                 Spacer(minLength: 0)
                 
                 Button(action: {}, label: {
-                    
                     Image("noti")
                         .renderingMode(.template)
                 })
             }
             .foregroundColor(.black)
             .padding()
+            .onAppear() {
+                self.profileViewModel.getProfiles()
+            }
 
             GeometryReader{g in
-                
                 ZStack{
-                    
-                    ForEach(profiles.reversed()){profile in
-                        
-                        ProfileView(profile: profile,frame: g.frame(in: .global))
+                    ForEach(profileViewModel.profiles.reversed()) { profile in
+                        ProfileView(profile: profile, frame: g.frame(in: .global))
                     }
                 }
             }
             .padding([.horizontal,.bottom])
         }
-        
-        
         .background(rendezvousYellow.edgesIgnoringSafeArea(.all))
     }
 }
 
 
-struct ProfileView : View {
+struct ProfileView: View {
     
-    @State var profile : Profile
-    var frame : CGRect
+    @State var profile: Profile
+    var frame: CGRect
     
 //    self.frame.backgroundColor = UIColor.red
     
-    var body: some View{
-
+    var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-            
             Color.white
             
-            Image(profile.image)
+            Image(profile.profilePic)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: frame.width,height: frame.height, alignment: Alignment(horizontal: .center, vertical: .center))
            
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
-                
                 (profile.offset > 0 ? Color.green : Color("Color"))
                     .opacity(profile.offset != 0 ? 0.7 : 0)
                 
                 HStack{
-                    
-                    
                     if profile.offset < 0{
-                        
                         Spacer()
                     }
-                    
-                    
                     
                     Text(profile.offset == 0 ? "" : (profile.offset > 0 ? "Liked" : "Rejected"))
                         .font(.title)
@@ -135,20 +127,15 @@ struct ProfileView : View {
                         .padding(.horizontal)
                     
                     if profile.offset > 0 {
-                        
                         Spacer()
                     }
                 }
             })
-
 //            LinearGradient(gradient: .init(colors: [Color.black.opacity(0),Color.black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
             
             VStack(spacing: 20){
-                
                 HStack{
-                    
                     VStack(alignment: .leading,spacing: 12){
-                        
                         Text(profile.name)
                             .font(.title)
                             .fontWeight(.bold).foregroundColor(.white)
@@ -162,18 +149,13 @@ struct ProfileView : View {
                 }
                 
                 HStack(spacing: 35){
-                    
                     Spacer(minLength: 0)
                     
                     Button(action: {
-                        
-                        withAnimation(Animation.easeIn(duration: 0.8)){
-                            
+                        withAnimation(Animation.easeIn(duration: 0.8)) {
                             profile.offset = -500
                         }
-                        
                     }, label: {
-                        
                         Image(systemName: "xmark")
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.white)
@@ -183,14 +165,10 @@ struct ProfileView : View {
                     })
                     
                     Button(action: {
-                        
-                        withAnimation(Animation.easeIn(duration: 0.8)){
-                            
+                        withAnimation(Animation.easeIn(duration: 0.8)) {
                             profile.offset = 500
                         }
-                        
                     }, label: {
-                        
                         Image(systemName: "checkmark")
                             .font(.system(size: 24))
                             .foregroundColor(.white)
@@ -211,26 +189,19 @@ struct ProfileView : View {
         
             DragGesture()
                 .onChanged({ (value) in
-                    
-                    withAnimation(.default){
-                    
+                    withAnimation(.default) {
                         profile.offset = value.translation.width
                     }
                 })
                 .onEnded({ (value) in
-                    
-                    withAnimation(.easeIn){
-                    
-                        if profile.offset > 150{
-                            
+                    withAnimation(.easeIn) {
+                        if profile.offset > 150 {
                             profile.offset = 500
                         }
-                        else if profile.offset < -150{
-                            
+                        else if profile.offset < -150 {
                             profile.offset = -500
                         }
                         else{
-                            
                             profile.offset = 0
                         }
                     }
@@ -240,10 +211,20 @@ struct ProfileView : View {
 }
 
 struct Profile : Identifiable {
-    
-    var id : Int
-    var name : String
-    var image : String
-    var age : String
-    var offset : CGFloat
+    @DocumentID var id: String?
+//    var firstName: String
+//    var lastName: String
+    var name: String
+    var gender: String
+    var preference: String
+    var age: String
+    var heightFeet: String
+    var heightInch: String
+    var city: String
+    var state: String
+    var profession: String
+    var selfDescription: String
+    var interests: Array<String>
+    var profilePic: String
+    var offset: CGFloat
 }
