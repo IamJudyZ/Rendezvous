@@ -98,10 +98,11 @@ struct ProfileView: View {
     
     @State var profile: Profile
     var frame: CGRect
-    
+
 //    self.frame.backgroundColor = UIColor.red
     
     var body: some View {
+        
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             Color.white
             

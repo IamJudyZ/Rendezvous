@@ -57,7 +57,7 @@
 		02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
 		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
 		26116C382565AC02007ECB1D /* SwipeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeScreenViewController.swift; sourceTree = "<group>"; };
-		268443902560659F008785DB /* SwipeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeScreen.swift; path = "Rendezvous/New Group/SwipeScreen.swift"; sourceTree = SOURCE_ROOT; };
+		268443902560659F008785DB /* SwipeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeScreen.swift; path = "Rendezvous/Swiping Screen/New Group1/SwipeScreen.swift"; sourceTree = SOURCE_ROOT; };
 		26844395256065A8008785DB /* DatingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatingTests.swift; path = "Rendezvous/New Group/DatingTests.swift"; sourceTree = SOURCE_ROOT; };
 		36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.debug.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 		2684438F25606583008785DB /* Swiping Screen */ = {
 			isa = PBXGroup;
 			children = (
+				37EF51DD2567514800B091DE /* SwiftUIViews */,
+				37EF51D92567513A00B091DE /* ViewModels */,
 				26844395256065A8008785DB /* DatingTests.swift */,
-				268443902560659F008785DB /* SwipeScreen.swift */,
-				37EF519A25673DB000B091DE /* ProfileViewModel.swift */,
 			);
 			path = "Swiping Screen";
 			sourceTree = "<group>";
@@ -154,6 +154,22 @@
 				9EBE4764254744B20018F291 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37EF51D92567513A00B091DE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				37EF519A25673DB000B091DE /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		37EF51DD2567514800B091DE /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				268443902560659F008785DB /* SwipeScreen.swift */,
+			);
+			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 		37FADE9B6F547917457CC757 /* Frameworks */ = {
