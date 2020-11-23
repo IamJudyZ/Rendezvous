@@ -18,7 +18,13 @@ import FirebaseAuth
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
 
 
-    var currentUser: User = Auth.auth().currentUser!
+    //var currentUser: User = Auth.auth().currentUser!
+    
+    
+    // MARK: This needs the current user, not a placeholder new instance
+    var currentUser: User!
+    let userID = Auth.auth().currentUser!.uid
+    let db = Firestore.firestore()
     
     var user2Name: String?
     var user2ImgUrl: String?
@@ -32,7 +38,9 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         super.viewDidLoad()
         
         self.title = user2Name ?? "Chat"
-
+        
+        getUserInfo()
+        
         navigationItem.largeTitleDisplayMode = .never
         maintainPositionOnKeyboardFrameChanged = true
         messageInputBar.inputTextView.tintColor = .red
@@ -49,8 +57,27 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - Custom messages handlers
     
+    func getUserInfo() {
+            db.collection("users").document(userID).getDocument { (document, error) in
+                if let error = error {
+                    print(error)
+                    return
+                }
+                let result = Result {
+                    try document?.data(as: User.self)
+                }
+                switch result {
+                    case .success(let newUserFromDb):
+                        self.currentUser = newUserFromDb
+                        //self.initText()
+                    case .failure(let error):
+                        print(error)
+                }
+            }
+        }
+    
     func createNewChat() {
-        let users = [self.currentUser.uid, self.user2UID]
+        let users = [self.userID, self.user2UID]
          let data: [String: Any] = [
              "users":users
          ]
@@ -165,7 +192,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
             func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
 
-                let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: currentUser.uid, senderName: currentUser.firstName!)
+                let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: userID, senderName: currentUser.firstName)
                 
                   //messages.append(message)
                   insertNewMessage(message)
@@ -214,8 +241,12 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         
-        if message.sender.senderId == currentUser.uid {
-            SDWebImageManager.shared.loadImage(with: currentUser.profilePic, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+        if message.sender.senderId == userID {
+            SDWebImageManager.shared.loadImage(with: URL(string: "michael"),
+                                               //currentUser.profilePic
+                                               options: .highPriority,
+                                               progress: nil) {
+                (image, data, error, cacheType, isFinished, imageUrl) in
                 avatarView.image = image
             }
         } else {
