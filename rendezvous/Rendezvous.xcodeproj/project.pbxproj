@@ -19,8 +19,6 @@
 		3711109B256C3D890057EAFC /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3711109A256C3D890057EAFC /* MyProfileViewController.swift */; };
 		376F1B20255BA3D1002A98B4 /* CustomViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F1B1F255BA3D1002A98B4 /* CustomViewFlowLayout.swift */; };
 		37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */; };
-		4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */; };
-		4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */; };
 		9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AAF4D254FD4E200995C76 /* Login.storyboard */; };
 		9E9AAF54254FD7B800995C76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF53254FD7B800995C76 /* User.swift */; };
 		9E9AAF56254FFDB100995C76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF55254FFDB100995C76 /* LoginViewController.swift */; };
@@ -36,7 +34,6 @@
 		9EBE477B254744B30018F291 /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE477A254744B30018F291 /* RendezvousTests.swift */; };
 		9EBE4786254744B40018F291 /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE4785254744B40018F291 /* RendezvousUITests.swift */; };
 		9EE9865925534E7000540CD6 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9865825534E7000540CD6 /* Messages.storyboard */; };
-		B0806DA855A8D7663E4FFE9A /* Pods_RendezvousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
-		1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.release.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.release.xcconfig"; sourceTree = "<group>"; };
-		36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RendezvousTests.debug.xcconfig"; path = "Target Support Files/Pods-RendezvousTests/Pods-RendezvousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		370884CF2554A9E900F151A7 /* SelectInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestsViewController.swift; sourceTree = "<group>"; };
 		370884D42554ADC700F151A7 /* InterestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCell.swift; sourceTree = "<group>"; };
@@ -72,9 +66,6 @@
 		3711109A256C3D890057EAFC /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		376F1B1F255BA3D1002A98B4 /* CustomViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewFlowLayout.swift; sourceTree = "<group>"; };
 		37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePictureViewController.swift; sourceTree = "<group>"; };
-		39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.debug.xcconfig"; sourceTree = "<group>"; };
-		5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E9AAF4D254FD4E200995C76 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9E9AAF53254FD7B800995C76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9E9AAF55254FFDB100995C76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +87,6 @@
 		9EBE4785254744B40018F291 /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
 		9EBE4787254744B40018F291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EE9865825534E7000540CD6 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
-		E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous_RendezvousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B678FAAA4434F7FB53F096B /* Pods_Rendezvous.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0806DA855A8D7663E4FFE9A /* Pods_RendezvousTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB1DA6CC70E95A511BD8443 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,23 +158,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		37E2A4BA255350EC00CE5BB6 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		37FADE9B6F547917457CC757 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E8665DA16507EBE26B3ACBCE /* Pods_Rendezvous.framework */,
-				FA6D7136C3D2ED922D960E37 /* Pods_Rendezvous_RendezvousUITests.framework */,
-				5238CED4B9643FC218690BBD /* Pods_RendezvousTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9E9AAF4C254FD4B300995C76 /* Sign Up & Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,8 +175,6 @@
 				9EBE4779254744B30018F291 /* RendezvousTests */,
 				9EBE4784254744B40018F291 /* RendezvousUITests */,
 				9EBE475E254744B20018F291 /* Products */,
-				DABA9A5B07D632A724D4E551 /* Pods */,
-				37FADE9B6F547917457CC757 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,23 +236,9 @@
 		9EE9865725534E4E00540CD6 /* Messages Flow */ = {
 			isa = PBXGroup;
 			children = (
-				37E2A4BA255350EC00CE5BB6 /* ViewControllers */,
 				9EE9865825534E7000540CD6 /* Messages.storyboard */,
 			);
 			path = "Messages Flow";
-			sourceTree = "<group>";
-		};
-		DABA9A5B07D632A724D4E551 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */,
-				02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */,
-				ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */,
-				8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */,
-				36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */,
-				1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,7 +672,6 @@
 		};
 		9EBE478B254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39D93880D8A1C533CF1C6A55 /* Pods-Rendezvous.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -739,7 +690,6 @@
 		};
 		9EBE478C254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02BA35F75971E90E9751689D /* Pods-Rendezvous.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -758,7 +708,6 @@
 		};
 		9EBE478E254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36DEFC9E50AB9071AF169A16 /* Pods-RendezvousTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -781,7 +730,6 @@
 		};
 		9EBE478F254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FACBC5AE50EBBD6DBD56730 /* Pods-RendezvousTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -804,7 +752,6 @@
 		};
 		9EBE4791254744B40018F291 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED1D05E5891EBE96A1C66B57 /* Pods-Rendezvous-RendezvousUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -825,7 +772,6 @@
 		};
 		9EBE4792254744B40018F291 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8740113C2ED2FC9C32D6C631 /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
