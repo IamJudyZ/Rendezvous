@@ -59,7 +59,8 @@ class SetupProfileViewController: UIViewController {
     func updateUser() {
         currentUser.gender = genderText.text!
         currentUser.age = ageText.text!
-        currentUser.height = heightText.text!
+        // TODO: change this back to currentUser.height = heightText.text! to avoid merge conflicts
+        currentUser.heightFeet = heightText.text!
         currentUser.city = cityText.text!
         currentUser.state = stateText.text!
         currentUser.profession = professionText.text!

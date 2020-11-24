@@ -1,6 +1,0 @@
-framework module Pods_Rendezvous {
-  umbrella header "Pods-Rendezvous-umbrella.h"
-
-  export *
-  module * { export * }
-}

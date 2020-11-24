@@ -16,8 +16,10 @@ class User: NSObject, Codable {
     var lastName: String
     var email: String
     var gender: String
+    var preference: String
     var age: String
-    var height: String
+    var heightFeet: String
+    var heightInch: String
     var city: String
     var state: String
     var profession: String
@@ -31,8 +33,10 @@ class User: NSObject, Codable {
         self.lastName = lName
         self.email = eMail
         self.gender = ""
+        self.preference = ""
         self.age = ""
-        self.height = ""
+        self.heightFeet = ""
+        self.heightInch = ""
         self.city = ""
         self.state = ""
         self.profession = ""
@@ -48,8 +52,10 @@ class User: NSObject, Codable {
         self.lastName = ""
         self.email = ""
         self.gender = ""
+        self.preference = ""
         self.age = ""
-        self.height = ""
+        self.heightFeet = ""
+        self.heightInch = ""
         self.city = ""
         self.state = ""
         self.profession = ""
