@@ -8,52 +8,28 @@
 
 import UIKit
 
+// This lets users upload a picture from their photo library. It currently does not have functionality to take a picture with the camera yet
+//BING: I made this from 2 tutorials: one that shows how to make ImageViews tappable (all the stuff having to do with GestureRecognizer) and one that lets users upload photos (all the ImagePickerController stuff)
+//BING: Also not sure if we decided to go with multiple profile pics, but the one I setup only has one. I named it imageView1 in case we wanted to add more so we can just do imageView2, etc.
 class UploadProfilePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var imageView1: UIImageView!
     
-    var currentUser: User!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        makeDashedBorder(imageView: imageView1)
-        
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        imageView1.isUserInteractionEnabled = true
-        imageView1.addGestureRecognizer(tapGestureRecognizer)
+            imageView1.isUserInteractionEnabled = true
+            imageView1.addGestureRecognizer(tapGestureRecognizer)
         
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func setupProfile(_ sender: Any) {
-        if checkFields() {
-            //BING
-//            updateUser()
-//            do {
-//                try _ = db.collection("users").document(userID).setData(from:self.currentUser)
-//            } catch {
-//                print("Unable to update user data on Firebase")
-//            }
-            transitionToHomeScreen()
-        }
-    }
-    
-    func updateUser() {
-        //BING: the below doesn't work, need type conversion
-        //currentUser.profilePic = imageView1.image
-    }
-    
-    func checkFields() -> Bool {
-        //BING: user need a profile picture before moving on
-        return true
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         // this has to do with letting users click on the imageview to upload a photo. Not sure if it is needed tho
-        //let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
 
         let image = UIImagePickerController()
         image.delegate = self
@@ -71,7 +47,6 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
         // check to see if uploaded image can be converted to a UIImage
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView1.image = image
-            
             // BING: This is where you send the image to firebase
             }
         else {
@@ -82,22 +57,14 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
         self.dismiss(animated: true, completion: nil)
     }
     
-    func makeDashedBorder(imageView: UIImageView) {
-        let border = CAShapeLayer()
-        border.strokeColor = UIColor.gray.cgColor
-        border.lineDashPattern = [4, 4]
-        border.lineWidth = 3
-        border.cornerCurve = CALayerCornerCurve.circular
-        border.frame = imageView.bounds
-        border.fillColor = nil
-        border.path = UIBezierPath(rect: imageView.bounds).cgPath
-        imageView.layer.addSublayer(border)
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    func transitionToHomeScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
+    */
+
 }

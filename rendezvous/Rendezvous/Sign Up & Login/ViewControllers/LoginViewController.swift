@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
         setUpTextField(email)
         login.layer.cornerRadius = 15
         login.clipsToBounds = true
-        
     }
     
     func setUpTextField(_ textField: UITextField) {
@@ -41,24 +40,20 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_textField: UITextField) -> Bool
-    {
-        _textField.resignFirstResponder();
-
+    func textFieldShouldReturn(_textField: UITextField) -> Bool {
+        _textField.resignFirstResponder()
     }
     
     func checkFields() -> Bool {
-        if(email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+        if email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             callError(errorText: "One or more fields have been left empty")
             return false
         }
-        
         return true
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-         if checkFields()
-         {
+         if checkFields() {
              //Remove spaces and new line characters from the email and password textfields
              let em = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
              let pword = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -66,12 +61,10 @@ class LoginViewController: UIViewController {
              //If error while authenticating, display error
              //Else transition to home screen
              Auth.auth().signIn(withEmail: em, password: pword) { (result, error) in
-                 if error != nil
-                 {
+                 if error != nil {
                      self.callError(errorText: "Incorrect Email or Password")
                  }
-                 else
-                 {
+                 else {
                      self.transitionToHomeScreen()
                  }
              }
@@ -83,29 +76,10 @@ class LoginViewController: UIViewController {
         errorLabel.text = errorText
     }
     
-    func transitionToHomeScreen()
-    {
+    func transitionToHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-//    func transitionToHomeScreen()
-//    {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

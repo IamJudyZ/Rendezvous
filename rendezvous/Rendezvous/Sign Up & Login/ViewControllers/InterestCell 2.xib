@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,23 +19,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sh4-8n-Axa" userLabel="cellText">
-                        <rect key="frame" x="0.0" y="17.5" width="50" height="15"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" notEnabled="YES"/>
-                        </accessibility>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="12"/>
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="textColor" name="blueColor"/>
+                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="width" secondItem="Sh4-8n-Axa" secondAttribute="width" id="3w5-Tx-9XO"/>
+                <constraint firstAttribute="bottom" secondItem="Sh4-8n-Axa" secondAttribute="bottom" id="7tQ-bJ-gZx"/>
                 <constraint firstItem="Sh4-8n-Axa" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="aFN-X7-Yxy"/>
+                <constraint firstItem="Sh4-8n-Axa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eoc-zN-SlI"/>
                 <constraint firstItem="Sh4-8n-Axa" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fQs-w2-9Bc"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="height" secondItem="Sh4-8n-Axa" secondAttribute="height" multiplier="0.4" id="xSp-ol-j0s"/>
+                <constraint firstItem="Sh4-8n-Axa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mSe-Nc-KTb"/>
+                <constraint firstAttribute="trailing" secondItem="Sh4-8n-Axa" secondAttribute="trailing" id="xEy-Fh-Yeb"/>
             </constraints>
             <connections>
                 <outlet property="interest" destination="Sh4-8n-Axa" id="wy3-X1-8V3"/>
@@ -44,8 +42,8 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="blueColor">
+            <color red="0.0" green="0.11764705882352941" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
