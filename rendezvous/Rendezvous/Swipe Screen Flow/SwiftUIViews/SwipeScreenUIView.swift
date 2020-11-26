@@ -82,7 +82,7 @@ struct Home : View {
 
             GeometryReader{g in
                 ZStack{
-                    ForEach(profileViewModel.profiles.reversed()) { profile in
+                    ForEach(self.profileViewModel.profiles.reversed()) { profile in
                         ProfileView(profile: profile, frame: g.frame(in: .global))
                     }
                 }
@@ -154,7 +154,7 @@ struct ProfileView: View {
                     
                     Button(action: {
                         withAnimation(Animation.easeIn(duration: 0.8)) {
-                            profile.offset = -500
+                            self.profile.offset = -500
                         }
                     }, label: {
                         Image(systemName: "xmark")
@@ -167,7 +167,7 @@ struct ProfileView: View {
                     
                     Button(action: {
                         withAnimation(Animation.easeIn(duration: 0.8)) {
-                            profile.offset = 500
+                            self.profile.offset = 500
                         }
                     }, label: {
                         Image(systemName: "checkmark")
@@ -191,19 +191,19 @@ struct ProfileView: View {
             DragGesture()
                 .onChanged({ (value) in
                     withAnimation(.default) {
-                        profile.offset = value.translation.width
+                        self.profile.offset = value.translation.width
                     }
                 })
                 .onEnded({ (value) in
                     withAnimation(.easeIn) {
-                        if profile.offset > 150 {
-                            profile.offset = 500
+                        if self.profile.offset > 150 {
+                            self.profile.offset = 500
                         }
-                        else if profile.offset < -150 {
-                            profile.offset = -500
+                        else if self.profile.offset < -150 {
+                            self.profile.offset = -500
                         }
                         else{
-                            profile.offset = 0
+                            self.profile.offset = 0
                         }
                     }
                 })
