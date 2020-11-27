@@ -16,6 +16,7 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
     
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet weak var welcomeText: UILabel!
     let columnLayout = CustomViewFlowLayout()
     
     //BING: it works fine with the list hardcoded here, so you don't need to retrieve from database if you don't want. 
@@ -47,6 +48,7 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
             columnLayout.estimatedItemSize = CGSize(width: 128, height: 20)
         }
         collectionView.collectionViewLayout = columnLayout
+        welcomeText.text!="welcome, " + currentUser.firstName + "!"
     }
     
     func getInterest(for indexPath: IndexPath) -> String {
