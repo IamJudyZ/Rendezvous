@@ -58,38 +58,31 @@ struct Home : View {
     var body: some View {
         VStack{
             HStack(spacing: 15){
-                Button(action: {}, label: {
-                    Image("menu")
-                        .renderingMode(.template)
-                })
-                
+                Spacer();
                 Image("r").resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 20.0, height: 20.0, alignment: .center)
+                    .frame(width: 30.0, height: 30.0, alignment: .center)
 
                 Spacer(minLength: 0)
-                
-                Button(action: {}, label: {
-                    Image("noti")
-                        .renderingMode(.template)
-                })
             }
             .foregroundColor(.black)
             .padding()
             .onAppear() {
-                self.profileViewModel.getProfiles()
+                profileViewModel.getProfiles()
             }
-
             GeometryReader{g in
-                ZStack{
-                    ForEach(self.profileViewModel.profiles.reversed()) { profile in
-                        ProfileView(profile: profile, frame: g.frame(in: .global))
+                ForEach(profileViewModel.profiles) { p in
+                    ZStack{
+                        ProfileView(profile: p, frame: g.frame(in: .global))
                     }
                 }
             }
             .padding([.horizontal,.bottom])
         }
         .background(rendezvousYellow.edgesIgnoringSafeArea(.all))
+        .onAppear() {
+            profileViewModel.getProfiles()
+        }
     }
 }
 
@@ -112,7 +105,7 @@ struct ProfileView: View {
                 .frame(width: frame.width,height: frame.height, alignment: Alignment(horizontal: .center, vertical: .center))
            
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
-                (profile.offset > 0 ? Color.green : Color("Color"))
+                (profile.offset > 0 ? Color.green : Color.red)
                     .opacity(profile.offset != 0 ? 0.7 : 0)
                 
                 HStack{
@@ -154,7 +147,7 @@ struct ProfileView: View {
                     
                     Button(action: {
                         withAnimation(Animation.easeIn(duration: 0.8)) {
-                            self.profile.offset = -500
+                            self.profile.offset = -700
                         }
                     }, label: {
                         Image(systemName: "xmark")
@@ -167,7 +160,7 @@ struct ProfileView: View {
                     
                     Button(action: {
                         withAnimation(Animation.easeIn(duration: 0.8)) {
-                            self.profile.offset = 500
+                            self.profile.offset = 700
                         }
                     }, label: {
                         Image(systemName: "checkmark")
@@ -197,10 +190,10 @@ struct ProfileView: View {
                 .onEnded({ (value) in
                     withAnimation(.easeIn) {
                         if self.profile.offset > 150 {
-                            self.profile.offset = 500
+                            self.profile.offset = 700
                         }
                         else if self.profile.offset < -150 {
-                            self.profile.offset = -500
+                            self.profile.offset = -700
                         }
                         else{
                             self.profile.offset = 0
