@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseUI
 
 class MyProfileViewController: UIViewController {
 
@@ -29,16 +30,23 @@ class MyProfileViewController: UIViewController {
     var currentUser: User!
     let userID = Auth.auth().currentUser!.uid
     let db = Firestore.firestore()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.currentUser = UserHelper.userInfo(uid: userID)
+        getUserProfileImage()
         //RAMSES: The positioning of this next line is important, it may be necessary to write this some place else
-        self.initText();
-        setupViews()
+        //self.initText();
+        //setupViews()
         //getUserInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //self.currentUser = UserHelper.userInfo(uid: userID)
+        self.setupViews()
+        self.initText()
     }
     
     func setupViews() {
@@ -48,7 +56,14 @@ class MyProfileViewController: UIViewController {
         self.editButton.layer.cornerRadius = self.editButton.frame.size.height / 2
     }
     
+    func getUserProfileImage(){
+        
+        //let placeHolder = UIImage(named: "profilePic")
+        let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
+        profilePic.sd_setImage(with: imageRef)
+    }
     
+        
     //See UserHelper.swift
 //    func getUserInfo() {
 //        db.collection("users").document(userID).getDocument { (document, error) in
@@ -70,8 +85,8 @@ class MyProfileViewController: UIViewController {
 //    }
     
     func initText() {
-        //TODO: change profilePic to retrieve from backend
-        profilePic.image = UIImage(named: "profilePic")
+        //TODO: change profilePic to retrieve from backen
+        //profilePic.image = UIImage(named: "profilePic")
         nameText.text! = currentUser.firstName + " " + currentUser.lastName
         ageText.text! = currentUser.age
         locationText.text! = currentUser.city  + ", " + currentUser.state
@@ -80,5 +95,6 @@ class MyProfileViewController: UIViewController {
         //interest3Text.text! = currentUser.interests[2]
         professionHeightText.text! = currentUser.profession + " • " + currentUser.heightFeet + "\'" + currentUser.heightInch + "\""
         descriptionTextView.text! = currentUser.selfDescription
+        //getUserProfileImage(currentUser: currentUser)
     }
 }
