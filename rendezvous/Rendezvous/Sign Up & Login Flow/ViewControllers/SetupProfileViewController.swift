@@ -77,12 +77,7 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func setupProfile(_ sender: Any) {
         if checkFields() {
             updateUser()
-            do {
-                try db.collection("users").document(userID).setData(from:self.currentUser)
-            }
-            catch {
-                print("Unable to update user data on Firebase")
-            }
+            UserHelper.updateUser(user: self.currentUser, uid: userID)
             self.performSegue(withIdentifier: "interestsSegue", sender: nil)
         }
     }

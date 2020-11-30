@@ -35,4 +35,16 @@ class UserHelper {
         }
         return currentUser
     }
+    
+    static func updateUser(user: User, uid: String) {
+        let currentUser = user
+        let userID = uid
+        let db = Firestore.firestore()
+        do {
+            try db.collection("users").document(userID).setData(from:currentUser)
+        }
+        catch {
+            print("Unable to update user data on Firebase")
+        }
+    }
 }
