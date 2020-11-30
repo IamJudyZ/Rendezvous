@@ -36,17 +36,17 @@ class MyProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.currentUser = UserHelper.userInfo(uid: userID)
-        getUserProfileImage()
+        //getUserProfileImage()
         //RAMSES: The positioning of this next line is important, it may be necessary to write this some place else
         //self.initText();
         //setupViews()
-        //getUserInfo()
+        getUserInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         //self.currentUser = UserHelper.userInfo(uid: userID)
         self.setupViews()
-        self.initText()
+        //self.initText()
     }
     
     func setupViews() {
@@ -59,30 +59,31 @@ class MyProfileViewController: UIViewController {
     func getUserProfileImage(){
         
         //let placeHolder = UIImage(named: "profilePic")
-        let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
+        //let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
+        let imageRef = storage.reference().child(currentUser.profilePic)
         profilePic.sd_setImage(with: imageRef)
     }
     
         
     //See UserHelper.swift
-//    func getUserInfo() {
-//        db.collection("users").document(userID).getDocument { (document, error) in
-//            if let error = error {
-//                print(error)
-//                return
-//            }
-//            let result = Result {
-//                try document?.data(as: User.self)
-//            }
-//            switch result {
-//                case .success(let newUserFromDb):
-//                    self.currentUser = newUserFromDb
-//                    self.initText()
-//                case .failure(let error):
-//                    print(error)
-//            }
-//        }
-//    }
+    func getUserInfo() {
+        db.collection("users").document(userID).getDocument { (document, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            let result = Result {
+                try document?.data(as: User.self)
+            }
+            switch result {
+                case .success(let newUserFromDb):
+                    self.currentUser = newUserFromDb
+                    self.initText()
+                case .failure(let error):
+                    print(error)
+            }
+        }
+    }
     
     func initText() {
         //TODO: change profilePic to retrieve from backen
@@ -90,11 +91,11 @@ class MyProfileViewController: UIViewController {
         nameText.text! = currentUser.firstName + " " + currentUser.lastName
         ageText.text! = currentUser.age
         locationText.text! = currentUser.city  + ", " + currentUser.state
-        //interest1Text.text! = currentUser.interests[0]
-        //interest2Text.text! = currentUser.interests[1]
-        //interest3Text.text! = currentUser.interests[2]
+        interest1Text.text! = currentUser.interests[0]
+        interest2Text.text! = currentUser.interests[1]
+        interest3Text.text! = currentUser.interests[2]
         professionHeightText.text! = currentUser.profession + " • " + currentUser.heightFeet + "\'" + currentUser.heightInch + "\""
         descriptionTextView.text! = currentUser.selfDescription
-        //getUserProfileImage(currentUser: currentUser)
+        getUserProfileImage()
     }
 }
