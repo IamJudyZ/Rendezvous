@@ -86,8 +86,7 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
         
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCell {
             //BING: changing background color here doesn't work, changing it in the collection view cell (InterestCell.swift) doesn't work, changing it in storyboard doesn't work either
-            //cell.backgroundColor = UIColor.blue
-            
+        
             //BING: some sort of check so that user can only have 3 interests at a time if userInterests.size is less than 3, then add to userInterests
             userInterests.append(cell.getText()!)
         }

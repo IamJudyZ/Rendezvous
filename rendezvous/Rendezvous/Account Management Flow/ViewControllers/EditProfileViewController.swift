@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseUI
 
 class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -51,6 +52,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var currentUser: User!
     let userID = Auth.auth().currentUser!.uid
     let db = Firestore.firestore()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,14 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
     }
 
+    func getUserProfileImage(){
+        
+        //let placeHolder = UIImage(named: "profilePic")
+        //let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
+        let imageRef = storage.reference().child(currentUser.profilePic)
+        imageView1.sd_setImage(with: imageRef)
+    }
+    
     func getUserInfo() {
         db.collection("users").document(userID).getDocument { (document, error) in
             if let error = error {
@@ -112,6 +122,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
             }
         }
         interestsText.text! = interestText
+        getUserProfileImage()
     }
     
     @IBAction func saveChanges(_ sender: Any) {
