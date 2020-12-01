@@ -75,10 +75,22 @@ class ManageAccountViewController: UIViewController {
         self.performSegue(withIdentifier: "passwordSegue", sender: nil)
     }
     
+    @IBAction func logout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        transitionToLogin()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "passwordSegue") {
             let destinationVC = segue.destination as! ChangePasswordViewController
             destinationVC.currentUser = self.currentUser
         }
+    }
+    
+    func transitionToLogin() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "loginVC") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }

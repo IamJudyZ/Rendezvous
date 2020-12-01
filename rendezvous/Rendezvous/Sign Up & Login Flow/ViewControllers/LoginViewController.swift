@@ -26,6 +26,13 @@ class LoginViewController: UIViewController {
         setUpTextField(email)
         login.layer.cornerRadius = 15
         login.clipsToBounds = true
+        
+        //Keep user logged in
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                self.transitionToHomeScreen()
+            }
+        }
     }
     
     func setUpTextField(_ textField: UITextField) {

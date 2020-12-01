@@ -59,7 +59,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         createAgeList()
         getUserInfo()
         errorLabel.isHidden = true
-        //makeDashedBorder(imageView: imageView1)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView1.isUserInteractionEnabled = true
         imageView1.addGestureRecognizer(tapGestureRecognizer)
@@ -308,23 +307,11 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // leaves the screen to access photo library
         self.dismiss(animated: true, completion: nil)
     }
-    
-//    func makeDashedBorder(imageView: UIImageView) {
-//        let border = CAShapeLayer()
-//        border.strokeColor = UIColor.gray.cgColor
-//        border.lineDashPattern = [4, 4]
-//        border.lineWidth = 3
-//        border.cornerCurve = CALayerCornerCurve.circular
-//        border.frame = imageView.bounds
-//        border.fillColor = nil
-//        border.path = UIBezierPath(rect: imageView.bounds).cgPath
-//        imageView.layer.addSublayer(border)
-//    }
-    
+        
     func transitionToHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }

@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-rz-WCc" userLabel="editProfileStackView">
-                                        <rect key="frame" x="0.0" y="225" width="414" height="1205"/>
+                                        <rect key="frame" x="0.0" y="225" width="414" height="1155"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98g-gf-vb2" userLabel="errorLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -248,13 +248,6 @@
                                                     <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="qEd-m8-mos"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7R-Hy-r75" userLabel="placeholder">
-                                                <rect key="frame" x="0.0" y="1155" width="414" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
-                                                <color key="textColor" name="blueColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Ekm-aS-Ll8" secondAttribute="trailing" id="f67-2G-i27"/>
@@ -341,7 +334,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="qPt-GS-1Ng" userLabel="manageAccountStackView">
-                                <rect key="frame" x="0.0" y="258" width="414" height="295.5"/>
+                                <rect key="frame" x="0.0" y="258" width="414" height="325.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikW-JS-Zb9" userLabel="firstNameLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
@@ -390,10 +383,19 @@
                                             <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="bSu-Rh-ies"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC0-MP-JJy">
+                                        <rect key="frame" x="0.0" y="295.5" width="414" height="30"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="logout:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="WEW-K4-em6"/>
+                                            <action selector="logout:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="qFO-2A-SxL"/>
+                                            <action selector="manageAccount:" destination="mwp-HZ-Lp2" eventType="touchUpInside" id="z4Y-7P-DR1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-P8-FKn">
-                                <rect key="frame" x="103.5" y="568.5" width="207" height="45"/>
+                                <rect key="frame" x="103.5" y="598.5" width="207" height="45"/>
                                 <color key="backgroundColor" name="blueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="vis-O0-6r7"/>
@@ -407,7 +409,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9p-Dc-sN8" userLabel="errorLabel">
-                                <rect key="frame" x="0.0" y="623.5" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="653.5" width="414" height="33"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
                                 <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
