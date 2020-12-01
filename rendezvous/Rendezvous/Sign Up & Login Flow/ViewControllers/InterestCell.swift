@@ -15,22 +15,11 @@ class InterestCell: UICollectionViewCell {
     @IBOutlet var interest: UITextField!
     static let identifier = "InterestCell"
     
-    //var cachedSize: CGSize?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         interest.isUserInteractionEnabled = false
         self.layer.cornerRadius = self.frame.size.height / 6
-        
-//        let lightGrayView = UIView(frame: bounds)
-//        lightGrayView.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
-//        self.backgroundView = lightGrayView
-//
-//        let redView = UIView(frame: bounds)
-//        redView.backgroundColor = .red
-//        self.selectedBackgroundView = nil
-        self.layer.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
     }
     
     public func configure(with cellText: UITextField) {
@@ -62,7 +51,7 @@ class InterestCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.interest.layer.cornerRadius = self.frame.size.height/2
+        self.interest.layer.cornerRadius = self.frame.size.height / 2 
     }
 }
 

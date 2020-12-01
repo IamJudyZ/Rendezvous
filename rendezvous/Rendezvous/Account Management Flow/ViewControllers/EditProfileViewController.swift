@@ -62,6 +62,13 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView1.isUserInteractionEnabled = true
         imageView1.addGestureRecognizer(tapGestureRecognizer)
+        
+        interestsText.delegate = self
+        interestsText.addTarget(self, action: #selector(changeInterests), for: .touchDown)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getUserInfo()
     }
     
     func createAgeList() {
@@ -158,9 +165,24 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.performSegue(withIdentifier: "accountSegue", sender: nil)
     }
     
+    @objc func changeInterests(_ sender: Any) {
+        self.performSegue(withIdentifier: "interestsSegue", sender: nil)
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField.tag == 1 {
+            return false
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "accountSegue") {
             let destinationVC = segue.destination as! ManageAccountViewController
+            destinationVC.currentUser = self.currentUser
+        }
+        if (segue.identifier == "interestsSegue") {
+            let destinationVC = segue.destination as! ChangeInterestsViewController
             destinationVC.currentUser = self.currentUser
         }
     }
