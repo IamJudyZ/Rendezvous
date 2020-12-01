@@ -504,8 +504,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePassword:" destination="mo8-lA-seQ" eventType="touchUpInside" id="iet-jW-29V"/>
-                                    <action selector="updateUser:" destination="1oN-y5-ZGj" eventType="touchUpInside" id="SBf-eN-kxs"/>
+                                    <action selector="changePassword:" destination="mo8-lA-seQ" eventType="touchUpInside" id="KoE-VM-6oC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHi-FX-6aJ" userLabel="errorLabel">

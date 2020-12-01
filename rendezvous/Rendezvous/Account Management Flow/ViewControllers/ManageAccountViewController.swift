@@ -49,6 +49,19 @@ class ManageAccountViewController: UIViewController {
         errorLabel.isHidden = false;
     }
     
+    @IBAction func saveChanges(_ sender: Any) {
+        if checkFields() {
+            updateUser()
+            do {
+                try db.collection("users").document(userID).setData(from:self.currentUser)
+            }
+            catch {
+                print("Unable to update user data on Firebase")
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     func checkFields() -> Bool {
         //Ensure all fields filled out
         if firstNameText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -57,18 +70,6 @@ class ManageAccountViewController: UIViewController {
             return false
         }
         return true
-    }
-    
-    @IBAction func saveChanges(_ sender: Any) {
-        if (checkFields()) {
-            updateUser()
-            do {
-                try db.collection("users").document(userID).setData(from:self.currentUser)
-            } catch {
-                print("Unable to update user data on Firebase")
-            }
-            self.navigationController?.popViewController(animated: true)
-        }
     }
     
     @IBAction func changePassword(_ sender: Any) {
@@ -81,7 +82,7 @@ class ManageAccountViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "passwordSegue") {
+        if segue.identifier == "passwordSegue" {
             let destinationVC = segue.destination as! ChangePasswordViewController
             destinationVC.currentUser = self.currentUser
         }
