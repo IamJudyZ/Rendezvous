@@ -15,16 +15,26 @@ import FirebaseFirestore
 class SelectInterestsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet weak var welcomeText: UILabel!
+    //Number of interests user needs to pick to move on
+    var interestCount: Int = 3
+    
     let columnLayout = CustomViewFlowLayout()
     
-    //BING: it works fine with the list hardcoded here, so you don't need to retrieve from database if you don't want. 
     var interestsCatalog = ["vegan", "women in tech", "elections", "music", "gaming",
                             "running", "gym", "dogs", "cats", "technology",
                             "basketball", "football", "chinese food", "beach",
                             "traveling", "baseball", "italian food", "daredevil",
-                            "trivia", "cycling", "cars", "kids"]
+                            "trivia", "cycling", "cars", "kids", "marvel",
+                            "blockbusters", "arthouse", "rock climbing", "swimming",
+                            "rom coms", "sitcoms", "thriller", "science fiction",
+                            "classics", "classical music", "sustainability",
+                            "social justice", "US politics", "world politics",
+                            "photography", "art shows", "contemporary art",
+                            "art history", "history", "movies"]
     
     var userInterests = [String]()
     
@@ -48,7 +58,10 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
             columnLayout.estimatedItemSize = CGSize(width: 128, height: 20)
         }
         collectionView.collectionViewLayout = columnLayout
-        welcomeText.text!="welcome, " + currentUser.firstName + "!"
+        
+        errorLabel.isHidden = true
+        welcomeLabel.text! = "welcome, " + currentUser.firstName + "!"
+        instructionsLabel.text! = "select \(interestCount) topics you are interested in"
     }
     
     func getInterest(for indexPath: IndexPath) -> String {
@@ -73,23 +86,26 @@ class SelectInterestsViewController: UIViewController, UICollectionViewDelegate,
     }
     
     func checkFields() -> Bool {
-        //BING: user has to choose 3 interests before moving on
+        if userInterests.count != 3 {
+            callError(errorText: "Please select 3 topics you are interested in")
+            return false
+        }
         return true
     }
     
+    func callError(errorText: String) {
+        errorLabel.text = errorText
+        errorLabel.isHidden = false;
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //When an item is selected
-        //First deselect what was selected before
-        //collectionView.deselectItem(at: indexPath, animated: true)
-        // temporary sample action
-        print("you tapped me")
-        
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCell {
-            //BING: changing background color here doesn't work, changing it in the collection view cell (InterestCell.swift) doesn't work, changing it in storyboard doesn't work either
-            //cell.backgroundColor = UIColor.blue
-            
-            //BING: some sort of check so that user can only have 3 interests at a time if userInterests.size is less than 3, then add to userInterests
-            userInterests.append(cell.getText()!)
+            if userInterests.count < 3 {
+                userInterests.append(cell.getText()!)
+                interestCount = interestCount - 1
+                instructionsLabel.text! = "select \(interestCount) topics you are interested in"
+                errorLabel.isHidden = true;
+            }
         }
     }
     

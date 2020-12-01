@@ -59,10 +59,16 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         createAgeList()
         getUserInfo()
         errorLabel.isHidden = true
-        //makeDashedBorder(imageView: imageView1)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView1.isUserInteractionEnabled = true
         imageView1.addGestureRecognizer(tapGestureRecognizer)
+        
+        interestsText.delegate = self
+        interestsText.addTarget(self, action: #selector(changeInterests), for: .touchDown)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getUserInfo()
     }
     
     func createAgeList() {
@@ -115,11 +121,12 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func saveChanges(_ sender: Any) {
-        if (checkFields()) {
+        if checkFields() {
             updateUser()
             do {
                 try db.collection("users").document(userID).setData(from:self.currentUser)
-            } catch {
+            }
+            catch {
                 print("Unable to update user data on Firebase")
             }
             transitionToHomeScreen()
@@ -142,8 +149,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func checkFields() -> Bool {
         //BING: need to make sure there is a profile image
         //Ensure all fields filled out
-        if(genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || preferenceText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") {
+        if genderText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || preferenceText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || ageText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightFeetText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || heightInchText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cityText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || stateText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || professionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             callError(errorText: "One or more fields have been left empty")
             return false
         }
@@ -159,9 +165,24 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         self.performSegue(withIdentifier: "accountSegue", sender: nil)
     }
     
+    @objc func changeInterests(_ sender: Any) {
+        self.performSegue(withIdentifier: "interestsSegue", sender: nil)
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField.tag == 1 {
+            return false
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "accountSegue") {
             let destinationVC = segue.destination as! ManageAccountViewController
+            destinationVC.currentUser = self.currentUser
+        }
+        if (segue.identifier == "interestsSegue") {
+            let destinationVC = segue.destination as! ChangeInterestsViewController
             destinationVC.currentUser = self.currentUser
         }
     }
@@ -308,23 +329,11 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // leaves the screen to access photo library
         self.dismiss(animated: true, completion: nil)
     }
-    
-//    func makeDashedBorder(imageView: UIImageView) {
-//        let border = CAShapeLayer()
-//        border.strokeColor = UIColor.gray.cgColor
-//        border.lineDashPattern = [4, 4]
-//        border.lineWidth = 3
-//        border.cornerCurve = CALayerCornerCurve.circular
-//        border.frame = imageView.bounds
-//        border.fillColor = nil
-//        border.path = UIBezierPath(rect: imageView.bounds).cgPath
-//        imageView.layer.addSublayer(border)
-//    }
-    
+        
     func transitionToHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
