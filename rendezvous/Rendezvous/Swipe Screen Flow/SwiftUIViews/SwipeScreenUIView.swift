@@ -61,7 +61,7 @@ struct Home : View {
                 Spacer();
                 Image("r").resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 30.0, height: 30.0, alignment: .center)
+                    .frame(width: 25.0, height: 25.0, alignment: .center)
 
                 Spacer(minLength: 0)
             }
@@ -96,14 +96,14 @@ struct ProfileView: View {
     
     var body: some View {
         
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
             Color.white
-            
-            Image(profile.profilePic)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: frame.width,height: frame.height, alignment: Alignment(horizontal: .center, vertical: .center))
-           
+            VStack{
+                Image(profile.profilePic)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: frame.width,height: frame.width, alignment: Alignment(horizontal: .center, vertical: .center))
+            }
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
                 (profile.offset > 0 ? Color.green : Color.red)
                     .opacity(profile.offset != 0 ? 0.7 : 0)
@@ -125,24 +125,27 @@ struct ProfileView: View {
                     }
                 }
             })
-//            LinearGradient(gradient: .init(colors: [Color.black.opacity(0),Color.black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
-            
-            VStack(spacing: 20){
+//            LinearGradient(gradient: .init(colors: [Color.black.opacity(0),Color.black.opacity(0.4)]), startPoint: .center, endPoint: .bottom
+            VStack(){
                 HStack{
-                    VStack(alignment: .leading,spacing: 12){
+                    VStack(alignment: .leading,spacing: 5){
+                        Spacer(minLength: 0)
                         Text(profile.name)
                             .font(.title)
-                            .fontWeight(.bold).foregroundColor(.white)
+                            .fontWeight(.bold).foregroundColor(.black)
                         
-                        Text(profile.age + " +")
-                            .fontWeight(.bold)
+                        Text("Age: " + profile.age)
+                        .fontWeight(.bold)
+                        Text(profile.city + ", " + profile.state)
+                        Text(profile.selfDescription)
+                        .fontWeight(.light)
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(.gray)
                     
                     Spacer(minLength: 0)
-                }
+                }.padding(.bottom, 50)
                 
-                HStack(spacing: 35){
+                HStack(spacing: 25){
                     Spacer(minLength: 0)
                     
                     Button(action: {
