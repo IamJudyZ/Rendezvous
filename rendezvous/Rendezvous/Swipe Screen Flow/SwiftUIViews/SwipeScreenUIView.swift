@@ -68,10 +68,10 @@ struct Home : View {
             .foregroundColor(.black)
             .padding()
             .onAppear() {
-                profileViewModel.getProfiles()
+                self.profileViewModel.getProfiles()
             }
             GeometryReader{g in
-                ForEach(profileViewModel.profiles) { p in
+                ForEach(self.profileViewModel.profiles) { p in
                     ZStack{
                         ProfileView(profile: p, frame: g.frame(in: .global))
                     }
@@ -81,7 +81,7 @@ struct Home : View {
         }
         .background(rendezvousYellow.edgesIgnoringSafeArea(.all))
         .onAppear() {
-            profileViewModel.getProfiles()
+            self.profileViewModel.getProfiles()
         }
     }
 }

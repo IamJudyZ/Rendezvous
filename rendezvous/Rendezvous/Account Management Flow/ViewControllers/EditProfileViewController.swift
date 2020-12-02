@@ -69,14 +69,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         interestsText.addTarget(self, action: #selector(changeInterests), for: .touchDown)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getUserInfo()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
     func createAgeList() {
         for num in 18...65 {
             ageList.append(String(num))
