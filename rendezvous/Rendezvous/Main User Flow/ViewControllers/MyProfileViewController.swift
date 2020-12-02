@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 import FirebaseUI
+//import SDWebImage
 
 class MyProfileViewController: UIViewController {
 
@@ -35,19 +36,26 @@ class MyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.currentUser = UserHelper.userInfo(uid: userID)
         //getUserProfileImage()
         //RAMSES: The positioning of this next line is important, it may be necessary to write this some place else
         //self.initText();
         //setupViews()
+        //getUserInfo()
         getUserInfo()
+        getUserProfileImage()
+        self.setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //self.currentUser = UserHelper.userInfo(uid: userID)
-        self.setupViews()
-        //self.initText()
+        getUserProfileImage()
     }
+    
+    //override func viewWillAppear(_ animated: Bool) {
+        //self.currentUser = UserHelper.userInfo(uid: userID)
+        //self.currentUser = UserHelper.userInfo(uid: userID)
+        //getUserProfileImage()
+        //self.initText()
+    //}
     
     func setupViews() {
         //BackgroundCard round edges
@@ -57,10 +65,9 @@ class MyProfileViewController: UIViewController {
     }
     
     func getUserProfileImage(){
-        
-        //let placeHolder = UIImage(named: "profilePic")
-        //let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
-        let imageRef = storage.reference().child(currentUser.profilePic)
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk()
+        let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
         profilePic.sd_setImage(with: imageRef)
     }
     

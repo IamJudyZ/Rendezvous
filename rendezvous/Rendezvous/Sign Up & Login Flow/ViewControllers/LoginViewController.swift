@@ -27,11 +27,11 @@ class LoginViewController: UIViewController {
         login.layer.cornerRadius = 15
         login.clipsToBounds = true
         
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil{
-                self.transitionToHomeScreen()
-            }
-        }
+//        Auth.auth().addStateDidChangeListener { (auth, user) in
+//            if user != nil{
+//                self.transitionToHomeScreen()
+//            }
+//        }
         
     }
     

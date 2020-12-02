@@ -35,7 +35,7 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     @IBAction func setupProfile(_ sender: Any) {
         let storageRef = storage.reference()
         if checkFields() {
-            guard let image = imageView1.image, let data = image.jpegData(compressionQuality: 1.0) else { print("error")
+            guard let image = imageView1.image, let data = image.jpegData(compressionQuality: 0.25) else { print("error")
                 return
             }
             let imageName = "\(userID)Profile"
