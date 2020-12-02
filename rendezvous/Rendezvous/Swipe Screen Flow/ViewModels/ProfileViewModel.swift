@@ -44,10 +44,11 @@ class ProfileViewModel: ObservableObject {
                 
                 return Profile(name: name, gender: gender, preference: preference, age: age, heightFeet: heightFeet, heightInch: heightInch, city: city, state: state, profession: profession, selfDescription: selfDescription, interests: interests, profilePic: profilePic, offset: 0)
             }
-//            for i in self.profiles {
-//                let profile = i.name
-//                print(profile)
-//            }
+            for p in self.profiles{
+                let prof = p.name
+                print(prof)
+            }
         }
+        
     }
 }
