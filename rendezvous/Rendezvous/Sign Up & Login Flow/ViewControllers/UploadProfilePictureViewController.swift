@@ -51,11 +51,6 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
                         print(err.localizedDescription)
                         return
                     }
-                    guard let url = url else {
-                        print("Something went wrong here")
-                        return
-                    }
-                    let urlString = url.absoluteString
                 }
             }
             updateUser(reference: imagePath)

@@ -50,12 +50,6 @@ class MyProfileViewController: UIViewController {
         getUserProfileImage()
     }
     
-    //override func viewWillAppear(_ animated: Bool) {
-        //self.currentUser = UserHelper.userInfo(uid: userID)
-        //self.currentUser = UserHelper.userInfo(uid: userID)
-        //getUserProfileImage()
-        //self.initText()
-    //}
     
     func setupViews() {
         //BackgroundCard round edges
@@ -103,6 +97,5 @@ class MyProfileViewController: UIViewController {
         interest3Text.text! = currentUser.interests[2]
         professionHeightText.text! = currentUser.profession + " • " + currentUser.heightFeet + "\'" + currentUser.heightInch + "\""
         descriptionTextView.text! = currentUser.selfDescription
-        getUserProfileImage()
     }
 }

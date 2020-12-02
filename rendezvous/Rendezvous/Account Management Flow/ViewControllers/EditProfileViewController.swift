@@ -77,8 +77,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     func getUserProfileImage(){
         let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
-        //let imageRef = storage.reference().child(currentUser.profilePic)
-        //imageView1.sd_setImage(with: imageRef, placeholderImage: placeHolder)
         imageView1.sd_setImage(with: imageRef)
     }
     
@@ -152,11 +150,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         print(err.localizedDescription)
                         return
                     }
-                    guard let url = url else {
-                        print("Something went wrong here")
-                        return
-                    }
-                    let urlString = url.absoluteString
                 }
             }
             transitionToHomeScreen()
