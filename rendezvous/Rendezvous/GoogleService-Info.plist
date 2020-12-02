@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>996064928720-pcos27sbaahejhsjlqc8i7lifqfpqldk.apps.googleusercontent.com</string>
+	<string>196346411603-r4hr8lns4g23irjq0kumihv8m5rier52.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.996064928720-pcos27sbaahejhsjlqc8i7lifqfpqldk</string>
+	<string>com.googleusercontent.apps.196346411603-r4hr8lns4g23irjq0kumihv8m5rier52</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDinwK5ik5dJb4i0ZW9isGFJOdhOncXvMU</string>
+	<string>AIzaSyAsrAyrfV2r3WgDc79oR_YLYNQZRKMo2mU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>996064928720</string>
+	<string>196346411603</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>NYUiOS.Rendezvous</string>
 	<key>PROJECT_ID</key>
-	<string>rendezvousii</string>
+	<string>rendezvous-16189</string>
 	<key>STORAGE_BUCKET</key>
-	<string>rendezvousii.appspot.com</string>
+	<string>rendezvous-16189.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:996064928720:ios:3a7447205c42e4e2d94fd5</string>
+	<string>1:196346411603:ios:9b964853234964408864a6</string>
 	<key>DATABASE_URL</key>
-	<string>https://rendezvousii.firebaseio.com</string>
+	<string>https://rendezvous-16189.firebaseio.com</string>
 </dict>
 </plist>
