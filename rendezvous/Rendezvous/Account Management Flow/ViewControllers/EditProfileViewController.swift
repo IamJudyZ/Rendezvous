@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseUI
 
 class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -51,13 +52,14 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var currentUser: User!
     let userID = Auth.auth().currentUser!.uid
     let db = Firestore.firestore()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         createAgeList()
         getUserInfo()
+        getUserProfileImage()
         errorLabel.isHidden = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView1.isUserInteractionEnabled = true
@@ -71,12 +73,23 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         getUserInfo()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     func createAgeList() {
         for num in 18...65 {
             ageList.append(String(num))
         }
     }
 
+    func getUserProfileImage(){
+        let imageRef = storage.reference().child("ProfileImages/\(userID)Profile.jpg")
+        //let imageRef = storage.reference().child(currentUser.profilePic)
+        //imageView1.sd_setImage(with: imageRef, placeholderImage: placeHolder)
+        imageView1.sd_setImage(with: imageRef)
+    }
+    
     func getUserInfo() {
         db.collection("users").document(userID).getDocument { (document, error) in
             if let error = error {
@@ -118,6 +131,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
             }
         }
         interestsText.text! = interestText
+        //getUserProfileImage()
     }
     
     @IBAction func saveChanges(_ sender: Any) {
@@ -128,6 +142,30 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
             }
             catch {
                 print("Unable to update user data on Firebase")
+            }
+            
+            guard let image = imageView1.image, let data = image.jpegData(compressionQuality: 0.25) else { print("error")
+                return
+            }
+            let imageName = "\(userID)Profile"
+            let imagePath = "ProfileImages/\(imageName).jpg"
+            let imageRef = storage.reference().child(imagePath)
+            imageRef.putData(data, metadata: nil) { (metadata, err) in
+                if let err = err {
+                    print(err.localizedDescription)
+                    return
+                }
+                imageRef.downloadURL { (url, err) in
+                    if let err = err {
+                        print(err.localizedDescription)
+                        return
+                    }
+                    guard let url = url else {
+                        print("Something went wrong here")
+                        return
+                    }
+                    let urlString = url.absoluteString
+                }
             }
             transitionToHomeScreen()
         }
@@ -315,15 +353,12 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     //BING: Same as above
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         // check to see if uploaded image can be converted to a UIImage
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView1.image = image
             
-            // TODO
             }
         else {
-            // TODO
             print("error")
         }
         // leaves the screen to access photo library

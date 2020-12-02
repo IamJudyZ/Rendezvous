@@ -14,6 +14,8 @@ target 'Rendezvous' do
   pod 'FirebaseFirestoreSwift'
   pod 'MessageKit'
   pod 'SDWebImage'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
   
   target 'RendezvousTests' do
     inherit! :search_paths

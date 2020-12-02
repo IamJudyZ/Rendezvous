@@ -28,6 +28,7 @@
 		37B25E50256EE8BD0048AA83 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */; };
 		37B25E5B256EEB120048AA83 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */; };
 		37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */; };
+		9E57E3502574D93D00368569 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57E34F2574D93D00368569 /* UserHelper.swift */; };
 		9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AAF4D254FD4E200995C76 /* Login.storyboard */; };
 		9E9AAF54254FD7B800995C76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF53254FD7B800995C76 /* User.swift */; };
 		9E9AAF56254FFDB100995C76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AAF55254FFDB100995C76 /* LoginViewController.swift */; };
@@ -85,6 +86,7 @@
 		37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePictureViewController.swift; sourceTree = "<group>"; };
 		480DAFCC981B7E5F1670B36E /* Pods-Rendezvous-RendezvousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous-RendezvousUITests.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous-RendezvousUITests/Pods-Rendezvous-RendezvousUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4975D7CCF391A15AE7DC3008 /* Pods-Rendezvous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rendezvous.release.xcconfig"; path = "Target Support Files/Pods-Rendezvous/Pods-Rendezvous.release.xcconfig"; sourceTree = "<group>"; };
+		9E57E34F2574D93D00368569 /* UserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
 		9E9AAF4D254FD4E200995C76 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9E9AAF53254FD7B800995C76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9E9AAF55254FFDB100995C76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E57E34C2574D66C00368569 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9E57E34F2574D93D00368569 /* UserHelper.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		9E9AAF4C254FD4B300995C76 /* Sign Up & Login Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +272,7 @@
 		9EBE475F254744B20018F291 /* Rendezvous */ = {
 			isa = PBXGroup;
 			children = (
+				9E57E34C2574D66C00368569 /* Utility */,
 				37B25E2F256EE4880048AA83 /* Swipe Screen Flow */,
 				370C6CA5255F574C008F2E72 /* Account Management Flow */,
 				9EE9865725534E4E00540CD6 /* Messages Flow */,
@@ -573,6 +584,7 @@
 			files = (
 				370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */,
 				37B25E3B256EE5430048AA83 /* ProfileViewModel.swift in Sources */,
+				9E57E3502574D93D00368569 /* UserHelper.swift in Sources */,
 				37B25E50256EE8BD0048AA83 /* ChatViewController.swift in Sources */,
 				370C6CE3256378DE008F2E72 /* ChangeInterestsViewController.swift in Sources */,
 				9E9AAF58254FFDC400995C76 /* SignUpViewController.swift in Sources */,

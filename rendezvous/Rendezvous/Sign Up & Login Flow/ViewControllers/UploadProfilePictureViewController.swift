@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
 
 class UploadProfilePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var imageView1: UIImageView!
+    let storage = Storage.storage()
     
     var currentUser: User!
+    let userID = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +33,32 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     }
     
     @IBAction func setupProfile(_ sender: Any) {
+        let storageRef = storage.reference()
         if checkFields() {
+            guard let image = imageView1.image, let data = image.jpegData(compressionQuality: 0.25) else { print("error")
+                return
+            }
+            let imageName = "\(userID)Profile"
+            let imagePath = "ProfileImages/\(imageName).jpg"
+            let imageRef = storageRef.child(imagePath)
+            imageRef.putData(data, metadata: nil) { (metadata, err) in
+                if let err = err {
+                    print(err.localizedDescription)
+                    return
+                }
+                imageRef.downloadURL { (url, err) in
+                    if let err = err {
+                        print(err.localizedDescription)
+                        return
+                    }
+                    guard let url = url else {
+                        print("Something went wrong here")
+                        return
+                    }
+                    let urlString = url.absoluteString
+                }
+            }
+            updateUser(reference: imagePath)
             //BING
 //            updateUser()
 //            do {
@@ -36,13 +66,13 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
 //            } catch {
 //                print("Unable to update user data on Firebase")
 //            }
+            UserHelper.updateUser(user: self.currentUser, uid: userID)
             transitionToHomeScreen()
         }
     }
     
-    func updateUser() {
-        //BING: the below doesn't work, need type conversion
-        //currentUser.profilePic = imageView1.image
+    func updateUser(reference: String) {
+        currentUser.profilePic = reference
     }
     
     func checkFields() -> Bool {
@@ -67,11 +97,9 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         // check to see if uploaded image can be converted to a UIImage
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView1.image = image
-            
             // BING: This is where you send the image to firebase
             }
         else {
