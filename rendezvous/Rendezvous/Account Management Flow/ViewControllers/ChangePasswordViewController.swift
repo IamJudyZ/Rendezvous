@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-class ChangePasswordViewController: UIViewController {
+class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var oldPasswordText: UITextField!
     @IBOutlet weak var newPasswordText: UITextField!
@@ -34,6 +34,23 @@ class ChangePasswordViewController: UIViewController {
     func callError(errorText: String) {
         errorLabel.text = errorText
         errorLabel.isHidden = false;
+    }
+    
+    //Hide keyboard when user taps outside the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard when user press 'Return' key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        switch textField {
+            case oldPasswordText: newPasswordText.becomeFirstResponder()
+            case newPasswordText: confirmPasswordText.becomeFirstResponder()
+            case confirmPasswordText: self.changePassword((Any).self)
+            default: return true
+        }
+        return true
     }
     
     @IBAction func changePassword(_ sender: Any) {

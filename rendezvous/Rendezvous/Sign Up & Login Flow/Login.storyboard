@@ -58,6 +58,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Um3-MV-BFU" id="QT4-sD-vTs"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG3-eP-ZmD" userLabel="passwordLabel">
                                         <rect key="frame" x="0.0" y="75.333333333333314" width="270" height="34.666666666666657"/>
@@ -70,6 +73,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Um3-MV-BFU" id="yJC-9q-YW6"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -174,6 +180,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ujN-mo-ai4" id="1n0-I6-TYa"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ8-5p-Wjn" userLabel="lastNameLabel">
                                         <rect key="frame" x="0.0" y="60" width="270" height="27"/>
@@ -186,6 +195,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ujN-mo-ai4" id="yNT-Do-hCW"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-v8-jE6" userLabel="emailLabel">
                                         <rect key="frame" x="0.0" y="120.33333333333337" width="270" height="27"/>
@@ -198,6 +210,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ujN-mo-ai4" id="PfT-bb-Ifh"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nh-tP-vXI" userLabel="passwordLabel">
                                         <rect key="frame" x="0.0" y="180.66666666666669" width="270" height="26.666666666666657"/>
@@ -210,6 +225,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ujN-mo-ai4" id="ePR-eI-DPD"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confirm password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM7-fv-SKN" userLabel="password2Label">
                                         <rect key="frame" x="0.0" y="240.66666666666669" width="270" height="27"/>
@@ -222,6 +240,9 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ujN-mo-ai4" id="DRb-Tq-mgL"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -385,24 +406,36 @@
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Drq-fc-Wl0" id="cLc-hR-TXO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-SW-F9a" userLabel="stateText">
                                         <rect key="frame" x="0.0" y="238.66666666666663" width="270" height="32.666666666666686"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="address-level1"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Drq-fc-Wl0" id="9i0-PC-VZN"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="profession" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-Ck-cAc" userLabel="professionText">
                                         <rect key="frame" x="0.0" y="286.33333333333331" width="270" height="32.666666666666686"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" textContentType="organization-title"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Drq-fc-Wl0" id="y5n-V4-Gp5"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="describe yourself..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-bS-RYw" userLabel="descriptionText">
                                         <rect key="frame" x="0.0" y="333.99999999999994" width="270" height="33"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Drq-fc-Wl0" id="faR-1G-4pJ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -495,6 +528,30 @@
                                     <constraint firstAttribute="height" constant="400" id="rj2-lH-b7q"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7A-xT-Zyc" userLabel="welcomeLabel">
+                                <rect key="frame" x="187.66666666666666" y="276.33333333333331" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
+                                <color key="textColor" name="blueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-F6-Gvw" userLabel="instructionsLabel">
+                                <rect key="frame" x="187.66666666666666" y="286.33333333333331" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
+                                <color key="textColor" name="blueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-1h-umm" userLabel="interestsLabel">
+                                <rect key="frame" x="187.66666666666666" y="296.33333333333331" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
+                                <color key="textColor" name="blueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZr-mA-Euk" userLabel="errorLabel">
+                                <rect key="frame" x="154" y="296.33333333333331" width="67.333333333333314" height="33"/>
+                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
+                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-aW-o3V">
                                 <rect key="frame" x="52.666666666666657" y="329.33333333333337" width="270" height="293.33333333333337"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
@@ -517,24 +574,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7A-xT-Zyc" userLabel="welcomeLabel">
-                                <rect key="frame" x="187.66666666666666" y="286.33333333333331" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="25"/>
-                                <color key="textColor" name="blueColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-1h-umm" userLabel="instructionsLabel">
-                                <rect key="frame" x="187.66666666666666" y="296.33333333333331" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
-                                <color key="textColor" name="blueColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZr-mA-Euk" userLabel="errorLabel">
-                                <rect key="frame" x="154" y="296.33333333333331" width="67.333333333333314" height="33"/>
-                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
-                                <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soZ-9U-QzX" userLabel="next &gt;&gt;">
                                 <rect key="frame" x="130" y="632.66666666666663" width="115" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.1176470588" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -551,7 +590,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-vG-Q8g">
-                                <rect key="frame" x="93.666666666666671" y="166" width="187.66666666666663" height="110.33333333333331"/>
+                                <rect key="frame" x="93.666666666666671" y="156" width="187.66666666666663" height="110.33333333333331"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="tzs-8H-NRc">
                                 <rect key="frame" x="200" y="623.66666666666663" width="400" height="400"/>
@@ -567,7 +606,7 @@
                         <constraints>
                             <constraint firstItem="yMN-aW-o3V" firstAttribute="centerX" secondItem="iA4-22-Qxg" secondAttribute="centerX" id="1Bs-60-2sf"/>
                             <constraint firstItem="u7A-xT-Zyc" firstAttribute="top" secondItem="aAx-vG-Q8g" secondAttribute="bottom" constant="10" id="1eg-b6-5Oi"/>
-                            <constraint firstItem="D66-1h-umm" firstAttribute="top" secondItem="u7A-xT-Zyc" secondAttribute="bottom" constant="10" id="296-Ak-nP3"/>
+                            <constraint firstItem="D66-1h-umm" firstAttribute="top" secondItem="Cqx-F6-Gvw" secondAttribute="bottom" constant="10" id="296-Ak-nP3"/>
                             <constraint firstItem="uZr-mA-Euk" firstAttribute="top" secondItem="D66-1h-umm" secondAttribute="bottom" id="6Q7-HW-gKK"/>
                             <constraint firstItem="yMN-aW-o3V" firstAttribute="centerY" secondItem="iA4-22-Qxg" secondAttribute="centerY" constant="70" id="7Wm-rc-bji"/>
                             <constraint firstItem="u7A-xT-Zyc" firstAttribute="centerX" secondItem="iA4-22-Qxg" secondAttribute="centerX" id="9BH-Dx-tee"/>
@@ -577,6 +616,7 @@
                             <constraint firstItem="aAx-vG-Q8g" firstAttribute="centerX" secondItem="iA4-22-Qxg" secondAttribute="centerX" id="GwQ-Nt-hXW"/>
                             <constraint firstItem="tzs-8H-NRc" firstAttribute="top" secondItem="yMN-aW-o3V" secondAttribute="bottom" constant="1" id="Mqi-ao-nmU"/>
                             <constraint firstItem="uZr-mA-Euk" firstAttribute="centerX" secondItem="iA4-22-Qxg" secondAttribute="centerX" id="OkQ-Xq-Xqk"/>
+                            <constraint firstItem="Cqx-F6-Gvw" firstAttribute="centerX" secondItem="iA4-22-Qxg" secondAttribute="centerX" id="Qpp-xI-LV7"/>
                             <constraint firstItem="soZ-9U-QzX" firstAttribute="top" secondItem="yMN-aW-o3V" secondAttribute="bottom" constant="10" id="Rk8-Ai-78a"/>
                             <constraint firstItem="aAx-vG-Q8g" firstAttribute="height" secondItem="wtP-8v-Hbz" secondAttribute="height" multiplier="0.15" id="X4s-c4-aaZ"/>
                             <constraint firstItem="uZr-mA-Euk" firstAttribute="bottom" secondItem="yMN-aW-o3V" secondAttribute="top" id="Zaa-ks-wtN"/>
@@ -585,13 +625,15 @@
                             <constraint firstItem="tzs-8H-NRc" firstAttribute="leading" secondItem="wtP-8v-Hbz" secondAttribute="leading" constant="200" id="dtN-sv-7Bd"/>
                             <constraint firstItem="WEY-F8-0NC" firstAttribute="top" secondItem="soZ-9U-QzX" secondAttribute="bottom" constant="30" id="f9T-Kg-aJQ"/>
                             <constraint firstItem="WEY-F8-0NC" firstAttribute="leading" secondItem="iA4-22-Qxg" secondAttribute="leadingMargin" constant="-30" id="g92-UI-qxZ"/>
+                            <constraint firstItem="Cqx-F6-Gvw" firstAttribute="top" secondItem="u7A-xT-Zyc" secondAttribute="bottom" constant="10" id="jd7-TY-aeS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lh2-E9-eVD"/>
                     <connections>
                         <outlet property="collectionView" destination="yMN-aW-o3V" id="wa2-NC-LZp"/>
                         <outlet property="errorLabel" destination="uZr-mA-Euk" id="HvR-9Z-X13"/>
-                        <outlet property="instructionsLabel" destination="D66-1h-umm" id="ubG-Ak-NeQ"/>
+                        <outlet property="instructionsLabel" destination="Cqx-F6-Gvw" id="gWq-rz-5IL"/>
+                        <outlet property="interestsLabel" destination="D66-1h-umm" id="eLh-oF-u8x"/>
                         <outlet property="welcomeLabel" destination="u7A-xT-Zyc" id="UWa-Is-H5Y"/>
                         <segue destination="w05-6b-AGm" kind="presentation" identifier="uploadSegue" modalPresentationStyle="fullScreen" id="PMX-fx-Tys"/>
                     </connections>

@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -45,9 +45,18 @@ class SignUpViewController: UIViewController {
          textField.layer.addSublayer(bottomLine)
      }
     
-    //Hide keyboard when user taps 'return' on keyboard
-    func textFieldShouldReturn(_textField: UITextField) -> Bool {
-        _textField.resignFirstResponder();
+    //Move text entry to next field when user press 'Return'
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        switch textField {
+            case firstName: lastName.becomeFirstResponder()
+            case lastName: email.becomeFirstResponder()
+            case email: password.becomeFirstResponder()
+            case password: confirmPassword.becomeFirstResponder()
+            case confirmPassword: self.signUp((Any).self)
+            default: return true
+        }
+        return true
     }
     
     //Hide keyboard when user taps outside the keyboard

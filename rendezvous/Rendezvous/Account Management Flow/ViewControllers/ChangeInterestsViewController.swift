@@ -16,6 +16,7 @@ class ChangeInterestsViewController: UIViewController, UICollectionViewDelegate,
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var interestsLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
     
     //Number of interests user needs to pick to move on
@@ -43,7 +44,7 @@ class ChangeInterestsViewController: UIViewController, UICollectionViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionView.register(InterestCell.nib(), forCellWithReuseIdentifier: InterestCell.identifier)
         
         collectionView.delegate = self
@@ -59,7 +60,7 @@ class ChangeInterestsViewController: UIViewController, UICollectionViewDelegate,
         collectionView.collectionViewLayout = columnLayout
         
         errorLabel.isHidden = true
-        instructionsLabel.text! = "select \(interestCount) topics you are interested in"
+        instructionsLabel.text! = "Select \(interestCount) topics you are interested in"
     }
     
     func getInterest(for indexPath: IndexPath) -> String {
@@ -98,12 +99,27 @@ class ChangeInterestsViewController: UIViewController, UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? InterestCell {
-            if userInterests.count < 3 {
-                userInterests.append(cell.getText()!)
-                interestCount = interestCount - 1
-                instructionsLabel.text! = "select \(interestCount) topics you are interested in"
-                errorLabel.isHidden = true;
+            let interest = cell.getText()!
+            
+            //If interest already selected, deselect it
+            if userInterests.contains(interest) {
+                guard let index = userInterests.firstIndex(of: interest) else {
+                    return
+                }
+                userInterests.remove(at: index)
+                interestCount = interestCount + 1
             }
+            else {
+                if userInterests.count < 3 {
+                    userInterests.append(cell.getText()!)
+                    interestCount = interestCount - 1
+                }
+            }
+            
+            //Update text display to reflect change
+            interestsLabel.text! = UserHelper.formatInterestsString(userInterests: userInterests)
+            instructionsLabel.text! = "Select \(interestCount) topics you are interested in"
+            errorLabel.isHidden = true;
         }
     }
     

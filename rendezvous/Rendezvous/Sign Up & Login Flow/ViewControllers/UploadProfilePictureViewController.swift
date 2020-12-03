@@ -23,7 +23,7 @@ class UploadProfilePictureViewController: UIViewController, UIImagePickerControl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeDashedBorder(imageView: imageView1)
+        //makeDashedBorder(imageView: imageView1)
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView1.isUserInteractionEnabled = true

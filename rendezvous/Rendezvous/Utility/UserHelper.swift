@@ -47,4 +47,40 @@ class UserHelper {
             print("Unable to update user data on Firebase")
         }
     }
+    
+    static func formatInterestsString(userInterests: [String]) -> String {
+        let numOfInterests = userInterests.count
+        var interestsString: String = "You've selected "
+        for item in userInterests {
+            let index = userInterests.firstIndex(of: item)
+            if numOfInterests == 1 {
+                interestsString = interestsString + item + "."
+            }
+            else if numOfInterests == 2 {
+                if index == 0 {
+                    interestsString = interestsString + item + " and "
+                }
+                else if index == 1 {
+                    interestsString = interestsString + item + "."
+                }
+            }
+            else if numOfInterests == 3 {
+                if index == 0 {
+                    interestsString = interestsString + item + ", "
+                }
+                else if index == 1 {
+                    interestsString = interestsString + item + ", and "
+                }
+                else if index == 2 {
+                    interestsString = interestsString + item + "."
+                }
+            }
+        }
+        if numOfInterests != 0 {
+            return interestsString
+        }
+        else {
+            return ""
+        }
+    }
 }
