@@ -87,7 +87,6 @@ class MyProfileViewController: UIViewController {
     }
     
     func initText() {
-        //TODO: change profilePic to retrieve from backen
         //profilePic.image = UIImage(named: "profilePic")
         nameText.text! = currentUser.firstName + " " + currentUser.lastName
         ageText.text! = currentUser.age

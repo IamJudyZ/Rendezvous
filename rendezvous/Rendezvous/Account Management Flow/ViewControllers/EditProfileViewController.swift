@@ -67,6 +67,9 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         interestsText.delegate = self
         interestsText.addTarget(self, action: #selector(changeInterests), for: .touchDown)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
     func createAgeList() {
@@ -100,7 +103,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func initText() {
-        //BING: Need to initialize imageView1 with the photo stored as profile picture in database
         genderText.text! = currentUser.gender
         preferenceText.text! = currentUser.preference
         ageText.text! = currentUser.age
@@ -122,6 +124,24 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
         interestsText.text! = interestText
         //getUserProfileImage()
+    }
+    
+    //Hide keyboard when user taps outside the keyboard
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        genderText.resignFirstResponder()
+        preferenceText.resignFirstResponder()
+        ageText.resignFirstResponder()
+        heightFeetText.resignFirstResponder()
+        heightInchText.resignFirstResponder()
+        cityText.resignFirstResponder()
+        stateText.resignFirstResponder()
+        professionText.resignFirstResponder()
+        descriptionText.resignFirstResponder()
+    }
+    
+    //Hide keyboard when user press 'Return' key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
     
     @IBAction func saveChanges(_ sender: Any) {
@@ -297,27 +317,34 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 if selectedRow != selectedGenderRow {
                     pickerView.selectRow(selectedGenderRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case preferenceText:
                 if selectedRow != selectedPreferenceRow {
                     pickerView.selectRow(selectedPreferenceRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case ageText:
                 if selectedRow != selectedAgeRow {
                     pickerView.selectRow(selectedAgeRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case heightFeetText:
                 if selectedRow != selectedHeightFeetRow {
                     pickerView.selectRow(selectedHeightFeetRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case heightInchText:
                 if selectedRow != selectedHeightInchRow {
                     pickerView.selectRow(selectedHeightInchRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             default: print(selectedRow)
         }
-        
-        createPickerView(textField: currentTextField)
-        dismissPickerView(textField: currentTextField)
     }
     
     //BING: you will need to copy over what you did for the upload image from login/register

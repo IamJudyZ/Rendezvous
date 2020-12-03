@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-class ManageAccountViewController: UIViewController {
+class ManageAccountViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstNameText: UITextField!
     @IBOutlet weak var lastNameText: UITextField!
@@ -47,6 +47,16 @@ class ManageAccountViewController: UIViewController {
     func callError(errorText: String) {
         errorLabel.text = errorText
         errorLabel.isHidden = false;
+    }
+    
+    //Hide keyboard when user taps outside the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard when user press 'Return' key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
     
     @IBAction func saveChanges(_ sender: Any) {

@@ -69,9 +69,17 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.view.endEditing(true)
     }
     
-    //Hide keyboard when user taps 'return' on keyboard
-    func textFieldShouldReturn(_textField: UITextField) -> Bool {
-        _textField.resignFirstResponder();
+    //Move text entry to next field when user press 'Return'
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        switch textField {
+            case cityText: stateText.becomeFirstResponder()
+            case stateText: professionText.becomeFirstResponder()
+            case professionText: descriptionText.becomeFirstResponder()
+            case descriptionText: self.setupProfile((Any).self)
+            default: return true
+        }
+        return true
     }
     
     @IBAction func setupProfile(_ sender: Any) {
@@ -203,26 +211,33 @@ class SetupProfileViewController: UIViewController, UIPickerViewDelegate, UIPick
                 if selectedRow != selectedGenderRow {
                     pickerView.selectRow(selectedGenderRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case preferenceText:
                 if selectedRow != selectedPreferenceRow {
                     pickerView.selectRow(selectedPreferenceRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case ageText:
                 if selectedRow != selectedAgeRow {
                     pickerView.selectRow(selectedAgeRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case heightFeetText:
                 if selectedRow != selectedHeightFeetRow {
                     pickerView.selectRow(selectedHeightFeetRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             case heightInchText:
                 if selectedRow != selectedHeightInchRow {
                     pickerView.selectRow(selectedHeightInchRow, inComponent: 0, animated: false)
                 }
+                createPickerView(textField: currentTextField)
+                dismissPickerView(textField: currentTextField)
             default: print(selectedRow)
         }
-        
-        createPickerView(textField: currentTextField)
-        dismissPickerView(textField: currentTextField)
     }
 }
