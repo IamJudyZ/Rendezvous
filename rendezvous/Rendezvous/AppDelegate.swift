@@ -13,11 +13,12 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    typealias PermissionBlock = (Bool) -> Void
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure();
+        //AppController.shared.show(in: UIWindow(frame: UIScreen.main.bounds))
+        AppController.shared.show(in: UIWindow(frame: UIScreen.main.bounds))
         return true
     }
 
