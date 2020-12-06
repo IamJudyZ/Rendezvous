@@ -189,7 +189,6 @@
 		37B25E41256EE8390048AA83 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +214,7 @@
 				3711109A256C3D890057EAFC /* MyProfileViewController.swift */,
 				37B25E3C256EE5990048AA83 /* SwipeScreenViewController.swift */,
 				37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */,
+				37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
