@@ -239,28 +239,18 @@
         <!--Conversations View Controller-->
         <scene sceneID="kvv-dZ-9ip">
             <objects>
-                <viewController id="OvY-SY-Cic" userLabel="Conversations View Controller" customClass="ConversationsViewController" sceneMemberID="viewController">
+                <viewController id="OvY-SY-Cic" userLabel="Conversations View Controller" customClass="ConversationsViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4tm-Qz-enm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Br-jO-hch">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9bA-GH-hft"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="hYf-Bk-s41"/>
-                    <connections>
-                        <outlet property="tableView" destination="8Br-jO-hch" id="orQ-KD-OXb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XS-KA-EP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740.57971014492762" y="1524.7767857142856"/>
+            <point key="canvasLocation" x="783" y="1525"/>
         </scene>
         <!--Swipe Screen Navigation Controller-->
         <scene sceneID="4CG-Qc-gea">
@@ -284,8 +274,8 @@
             <objects>
                 <navigationController id="Fta-tp-N6N" userLabel="Conversations Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="message.circle" catalog="system" selectedImage="message.circle" id="GK6-Qc-pgQ"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FER-r6-ISU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FER-r6-ISU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

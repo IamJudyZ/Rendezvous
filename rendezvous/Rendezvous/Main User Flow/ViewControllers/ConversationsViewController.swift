@@ -6,16 +6,15 @@
 //
 
 import UIKit
-import FirebaseAuth
+//import FirebaseAuth
 
 class ConversationsViewController: UIViewController {
     
-    //@IBOutlet weak var tableView: UITableView!
     
-    importante
+    //importante
     private let tableView: UITableView = {
         let table = UITableView()
-        table.isHidden = true
+        table.isHidden = false
         table.register(UITableViewCell.self,
                        forCellReuseIdentifier: "cell")
         return table
@@ -40,7 +39,7 @@ class ConversationsViewController: UIViewController {
         view.addSubview(tableView)
         //view.addSubview(noConversationsLabel)
         setupTableView()
-        fetchConversations()
+        //fetchConversations()
     }
     
     
@@ -48,13 +47,13 @@ class ConversationsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //validateAuth()
-        
-    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        validateAuth()
+//
+//    }
     
 //    //shows loginpage if auth is nil
 //    private func validateAuth() {
@@ -72,15 +71,15 @@ class ConversationsViewController: UIViewController {
         tableView.dataSource = self
     }
 
-    private func fetchConversations() {
-        // fetches from firebase
-        //either shows label, or the table view
-        
-        
-        //GET THIS FROM BACKEND
-        
-        tableView.isHidden = false
-    }
+//    private func fetchConversations() {
+//        // fetches from firebase
+//        //either shows label, or the table view
+//
+//
+//        //GET THIS FROM BACKEND
+//
+//        tableView.isHidden = false
+//    }
 }
 
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
