@@ -81,6 +81,7 @@ class ChannelsViewController: UITableViewController {
                                                         action: #selector(addButtonPressed))
 
     
+    /*
     toolBarItems = [
       UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(signOut)),
       UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
@@ -88,6 +89,7 @@ class ChannelsViewController: UITableViewController {
       UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
       UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed)),
     ]
+ */
     toolbarLabel.text = AppSettings.displayName
     
     

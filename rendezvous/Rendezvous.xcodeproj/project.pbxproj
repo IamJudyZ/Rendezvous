@@ -11,13 +11,15 @@
 		091656EA2579D17D000E78EB /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 091656E92579D17D000E78EB /* Extensions */; };
 		091656EF2579D187000E78EB /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 091656EE2579D187000E78EB /* Models */; };
 		091656F42579D18E000E78EB /* View Controllers in Resources */ = {isa = PBXBuildFile; fileRef = 091656F32579D18E000E78EB /* View Controllers */; };
+		095011A7257CB57100371DC1 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095011A6257CB57100371DC1 /* Channel.swift */; };
+		095011A8257CB57100371DC1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095011A4257CB57100371DC1 /* Message.swift */; };
+		095011A9257CB57100371DC1 /* DatabaseRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095011A5257CB57100371DC1 /* DatabaseRepresentation.swift */; };
 		09AA701F257A0224006E7E40 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA701D257A0224006E7E40 /* AppSettings.swift */; };
 		09AA7020257A0224006E7E40 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA701E257A0224006E7E40 /* AppController.swift */; };
 		09AA7028257A0257006E7E40 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7024257A0257006E7E40 /* UIImage+Additions.swift */; };
 		09AA7029257A0257006E7E40 /* UICollectionView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7026257A0257006E7E40 /* UICollectionView+Additions.swift */; };
 		09AA702A257A0257006E7E40 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7027257A0257006E7E40 /* UIView+Additions.swift */; };
 		09AA702B257A0257006E7E40 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7025257A0257006E7E40 /* UIColor+Additions.swift */; };
-		09AA7032257A0269006E7E40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7031257A0269006E7E40 /* LoginViewController.swift */; };
 		09AA7033257A0269006E7E40 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA7030257A0269006E7E40 /* ChannelsViewController.swift */; };
 		09AA7034257A0269006E7E40 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA702F257A0268006E7E40 /* ChatViewController.swift */; };
 		18015989C19DFFD00FDF59FC /* Pods_RendezvousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC7435199AF1267124D8D3 /* Pods_RendezvousTests.framework */; };
@@ -76,6 +78,9 @@
 		091656E92579D17D000E78EB /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
 		091656EE2579D187000E78EB /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		091656F32579D18E000E78EB /* View Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "View Controllers"; sourceTree = "<group>"; };
+		095011A4257CB57100371DC1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		095011A5257CB57100371DC1 /* DatabaseRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentation.swift; sourceTree = "<group>"; };
+		095011A6257CB57100371DC1 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		09AA701D257A0224006E7E40 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		09AA701E257A0224006E7E40 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		09AA7024257A0257006E7E40 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
@@ -84,7 +89,6 @@
 		09AA7027257A0257006E7E40 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		09AA702F257A0268006E7E40 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		09AA7030257A0269006E7E40 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
-		09AA7031257A0269006E7E40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		14FC7435199AF1267124D8D3 /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		209574BF33E0946C344B608D /* Pods_Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
@@ -336,7 +340,9 @@
 				09AA701D257A0224006E7E40 /* AppSettings.swift */,
 				09AA7030257A0269006E7E40 /* ChannelsViewController.swift */,
 				09AA702F257A0268006E7E40 /* ChatViewController.swift */,
-				09AA7031257A0269006E7E40 /* LoginViewController.swift */,
+				095011A6257CB57100371DC1 /* Channel.swift */,
+				095011A5257CB57100371DC1 /* DatabaseRepresentation.swift */,
+				095011A4257CB57100371DC1 /* Message.swift */,
 				091656F32579D18E000E78EB /* View Controllers */,
 				091656EE2579D187000E78EB /* Models */,
 				091656E92579D17D000E78EB /* Extensions */,
@@ -605,7 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AA7032257A0269006E7E40 /* LoginViewController.swift in Sources */,
+				095011A7257CB57100371DC1 /* Channel.swift in Sources */,
 				370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */,
 				09AA702B257A0257006E7E40 /* UIColor+Additions.swift in Sources */,
 				37B25E3B256EE5430048AA83 /* ProfileViewModel.swift in Sources */,
@@ -624,6 +630,7 @@
 				9E9AAF56254FFDB100995C76 /* LoginViewController.swift in Sources */,
 				370C6CD025632870008F2E72 /* ManageAccountViewController.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
+				095011A8257CB57100371DC1 /* Message.swift in Sources */,
 				370C6CC825632861008F2E72 /* EditProfileViewController.swift in Sources */,
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				37B25E33256EE5000048AA83 /* SwipeScreenUIView.swift in Sources */,
@@ -634,6 +641,7 @@
 				3711109B256C3D890057EAFC /* MyProfileViewController.swift in Sources */,
 				09AA7034257A0269006E7E40 /* ChatViewController.swift in Sources */,
 				370C6CDE2563624D008F2E72 /* ChangePasswordViewController.swift in Sources */,
+				095011A9257CB57100371DC1 /* DatabaseRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
