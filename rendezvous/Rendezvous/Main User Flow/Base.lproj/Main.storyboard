@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -239,7 +239,7 @@
         <!--Conversations View Controller-->
         <scene sceneID="kvv-dZ-9ip">
             <objects>
-                <viewController id="OvY-SY-Cic" userLabel="Conversations View Controller" customClass="ConversationsViewController" sceneMemberID="viewController">
+                <viewController id="OvY-SY-Cic" userLabel="Conversations View Controller" customClass="ConversationsViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4tm-Qz-enm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XS-KA-EP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="1525"/>
+            <point key="canvasLocation" x="783" y="1525"/>
         </scene>
         <!--Swipe Screen Navigation Controller-->
         <scene sceneID="4CG-Qc-gea">
@@ -274,8 +274,8 @@
             <objects>
                 <navigationController id="Fta-tp-N6N" userLabel="Conversations Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="message.circle" catalog="system" selectedImage="message.circle" id="GK6-Qc-pgQ"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FER-r6-ISU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FER-r6-ISU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

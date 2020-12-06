@@ -23,8 +23,6 @@
 		37B25E33256EE5000048AA83 /* SwipeScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E32256EE5000048AA83 /* SwipeScreenUIView.swift */; };
 		37B25E3B256EE5430048AA83 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E3A256EE5430048AA83 /* ProfileViewModel.swift */; };
 		37B25E3D256EE5990048AA83 /* SwipeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E3C256EE5990048AA83 /* SwipeScreenViewController.swift */; };
-		37B25E43256EE84D0048AA83 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E42256EE84D0048AA83 /* Chat.swift */; };
-		37B25E4B256EE8860048AA83 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E4A256EE8860048AA83 /* Message.swift */; };
 		37B25E50256EE8BD0048AA83 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */; };
 		37B25E5B256EEB120048AA83 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */; };
 		37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */; };
@@ -79,8 +77,6 @@
 		37B25E32256EE5000048AA83 /* SwipeScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeScreenUIView.swift; sourceTree = "<group>"; };
 		37B25E3A256EE5430048AA83 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = "../../Swipe Screen Flow/ViewModels/ProfileViewModel.swift"; sourceTree = "<group>"; };
 		37B25E3C256EE5990048AA83 /* SwipeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeScreenViewController.swift; sourceTree = "<group>"; };
-		37B25E42256EE84D0048AA83 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
-		37B25E4A256EE8860048AA83 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		37B952692554BBA600D4AB05 /* UploadProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePictureViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 		37B25E41256EE8390048AA83 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +210,7 @@
 				3711109A256C3D890057EAFC /* MyProfileViewController.swift */,
 				37B25E3C256EE5990048AA83 /* SwipeScreenViewController.swift */,
 				37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */,
+				37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -319,8 +315,6 @@
 		9EE9865725534E4E00540CD6 /* Messages Flow */ = {
 			isa = PBXGroup;
 			children = (
-				37B25E42256EE84D0048AA83 /* Chat.swift */,
-				37B25E4A256EE8860048AA83 /* Message.swift */,
 				37B25E41256EE8390048AA83 /* ViewControllers */,
 			);
 			path = "Messages Flow";
@@ -590,7 +584,6 @@
 				9E9AAF58254FFDC400995C76 /* SignUpViewController.swift in Sources */,
 				37B9526A2554BBA600D4AB05 /* UploadProfilePictureViewController.swift in Sources */,
 				37B25E3D256EE5990048AA83 /* SwipeScreenViewController.swift in Sources */,
-				37B25E4B256EE8860048AA83 /* Message.swift in Sources */,
 				9EBE476B254744B20018F291 /* Rendezvous.xcdatamodeld in Sources */,
 				370884D62554ADC700F151A7 /* InterestCell.swift in Sources */,
 				376F1B20255BA3D1002A98B4 /* CustomViewFlowLayout.swift in Sources */,
@@ -598,7 +591,6 @@
 				370C6CD025632870008F2E72 /* ManageAccountViewController.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
 				370C6CC825632861008F2E72 /* EditProfileViewController.swift in Sources */,
-				37B25E43256EE84D0048AA83 /* Chat.swift in Sources */,
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				37B25E33256EE5000048AA83 /* SwipeScreenUIView.swift in Sources */,
 				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,
