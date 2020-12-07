@@ -102,7 +102,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
         let num = indexPath.row
         if num == 1 {
             let vc = ChatViewController()
-            vc.title = "Jenny Smith"
+            vc.title = "Edward Cullen"
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
         }
