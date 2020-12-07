@@ -10,6 +10,7 @@ import UIKit
 
 class ConversationsViewController: UIViewController {
     
+    let data = ["Bing Chen", "Edward Cullen"]
     
     //importante
     private let tableView: UITableView = {
@@ -85,12 +86,12 @@ class ConversationsViewController: UIViewController {
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World"
+        cell.textLabel?.text = data[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -98,10 +99,24 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = ChatViewController()
-        vc.title = "Jenny Smith"
-        vc.navigationItem.largeTitleDisplayMode = .never
-        navigationController?.pushViewController(vc, animated: true)
+        let num = indexPath.row
+        if num == 1 {
+            let vc = ChatViewController()
+            vc.title = "Jenny Smith"
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        if num == 0 {
+            let vid = VideoChatViewController()
+            vid.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vid, animated: true)
+
+        }
+        
+//        let vc = ChatViewController()
+//        vc.title = "Jenny Smith"
+//        vc.navigationItem.largeTitleDisplayMode = .never
+//        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

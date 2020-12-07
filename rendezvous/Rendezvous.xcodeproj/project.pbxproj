@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09960F41257DCB5700D0A1F1 /* VideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09960F40257DCB5700D0A1F1 /* VideoChatViewController.swift */; };
+		09960F46257DCCCE00D0A1F1 /* VideoChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09960F45257DCCCE00D0A1F1 /* VideoChat.storyboard */; };
 		18015989C19DFFD00FDF59FC /* Pods_RendezvousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FC7435199AF1267124D8D3 /* Pods_RendezvousTests.framework */; };
 		2A7D9BB5AD0CB6FAD18747C3 /* Pods_Rendezvous_RendezvousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0C0BAEF78442A5447A9029 /* Pods_Rendezvous_RendezvousUITests.framework */; };
 		370884B725546F4100F151A7 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370884B625546F4100F151A7 /* SetupProfileViewController.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09960F40257DCB5700D0A1F1 /* VideoChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoChatViewController.swift; sourceTree = "<group>"; };
+		09960F45257DCCCE00D0A1F1 /* VideoChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoChat.storyboard; sourceTree = "<group>"; };
 		14FC7435199AF1267124D8D3 /* Pods_RendezvousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RendezvousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		209574BF33E0946C344B608D /* Pods_Rendezvous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rendezvous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370884B625546F4100F151A7 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				37B25E3C256EE5990048AA83 /* SwipeScreenViewController.swift */,
 				37B25E5A256EEB120048AA83 /* ConversationsViewController.swift */,
 				37B25E4F256EE8BD0048AA83 /* ChatViewController.swift */,
+				09960F40257DCB5700D0A1F1 /* VideoChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			children = (
 				9EBE4766254744B20018F291 /* Main.storyboard */,
 				37E2A4B6255350E100CE5BB6 /* ViewControllers */,
+				09960F45257DCCCE00D0A1F1 /* VideoChat.storyboard */,
 			);
 			path = "Main User Flow";
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 			files = (
 				370884D72554ADC700F151A7 /* InterestCell.xib in Resources */,
 				9E9AAF5A255009A200995C76 /* GoogleService-Info.plist in Resources */,
+				09960F46257DCCCE00D0A1F1 /* VideoChat.storyboard in Resources */,
 				370C6CA8255F5767008F2E72 /* Settings.storyboard in Resources */,
 				9E9AAF4E254FD4E200995C76 /* Login.storyboard in Resources */,
 				9EBE4770254744B30018F291 /* LaunchScreen.storyboard in Resources */,
@@ -591,6 +598,7 @@
 				370C6CD025632870008F2E72 /* ManageAccountViewController.swift in Sources */,
 				9EBE4761254744B20018F291 /* AppDelegate.swift in Sources */,
 				370C6CC825632861008F2E72 /* EditProfileViewController.swift in Sources */,
+				09960F41257DCB5700D0A1F1 /* VideoChatViewController.swift in Sources */,
 				9E9AAF54254FD7B800995C76 /* User.swift in Sources */,
 				37B25E33256EE5000048AA83 /* SwipeScreenUIView.swift in Sources */,
 				370884D02554A9E900F151A7 /* SelectInterestsViewController.swift in Sources */,

@@ -15,7 +15,6 @@ struct Message: MessageType {
     var sentDate: Date
     var kind: MessageKind
     
-    
 }
 
 struct Sender: SenderType {
@@ -28,9 +27,10 @@ class ChatViewController: MessagesViewController {
 
     private var messages = [Message]()
     
-    private let selfSender = Sender(photoURL: "",
+    private let selfSender = Sender(photoURL: "https://img.buzzfeed.com/buzzfeed-static/static/2020-08/7/6/asset/b583a57efe7f/sub-buzz-821-1596782285-21.jpg?output-quality=auto&output-format=auto&downsize=640:*",
                                     senderId: "1",
                                     displayName: "Joe Smith")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +38,13 @@ class ChatViewController: MessagesViewController {
         messages.append(Message(sender: selfSender,
                                 messageId: "1",
                                 sentDate: Date(),
-                                kind: .text("Hello World message")))
+                                kind: .text("Hi There!")))
         messages.append(Message(sender: selfSender,
                                 messageId: "1",
                                 sentDate: Date(),
-                                kind: .text("Hello World message, Hello World message")))
+                                kind: .text("Do you want to grab coffe in Washington Square sometime?")))
 
-        view.backgroundColor = .yellow
+        //view.backgroundColor = .yellow
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
