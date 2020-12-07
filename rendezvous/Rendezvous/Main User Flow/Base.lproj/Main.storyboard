@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Es-uT-YSt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Es-uT-YSt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,25 +67,25 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiveBars" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-jv-tsA" userLabel="fiveBars">
-                                <rect key="frame" x="20.5" y="154" width="373" height="3"/>
+                                <rect key="frame" x="20.5" y="154" width="373" height="6"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="Nxi-fi-Izb">
-                                <rect key="frame" x="20.5" y="162" width="373" height="300"/>
+                                <rect key="frame" x="20.5" y="165" width="373" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="tNc-tp-Zyb"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TpL-hB-MLt" userLabel="Name Age Stack View">
-                                <rect key="frame" x="35.5" y="462" width="343" height="54"/>
+                                <rect key="frame" x="35.5" y="465" width="343" height="53"/>
                                 <subviews>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isA-8o-257" userLabel="nameText">
-                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="53"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-EL-AeQ" userLabel="ageText">
-                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="54"/>
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="53"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -95,13 +93,13 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwB-zy-5HP" userLabel="locationText">
-                                <rect key="frame" x="37.5" y="501" width="339" height="32.5"/>
-                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <rect key="frame" x="37.5" y="503" width="339" height="31"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qay-c8-1xb" userLabel="Interests Stack View">
-                                <rect key="frame" x="35.5" y="543.5" width="343" height="20"/>
+                                <rect key="frame" x="35.5" y="544" width="343" height="20"/>
                                 <subviews>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vby-zv-jde" userLabel="interest1">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
@@ -136,14 +134,14 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cnd-35-YTZ" userLabel="professionHeightText">
-                                <rect key="frame" x="35.5" y="573.5" width="343" height="32.5"/>
+                                <rect key="frame" x="35.5" y="574" width="343" height="31"/>
                                 <color key="textColor" name="blueColor"/>
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-Sn-uUM" userLabel="descriptionTextView">
-                                <rect key="frame" x="32" y="601" width="350" height="75"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="32" y="600" width="350" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="rsZ-mZ-sj4"/>
                                 </constraints>
@@ -151,8 +149,8 @@
                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBT-na-Qn2" userLabel="edit">
-                                <rect key="frame" x="309" y="686" width="74.5" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBT-na-Qn2" userLabel="edit">
+                                <rect key="frame" x="309" y="685" width="74.5" height="20"/>
                                 <color key="backgroundColor" name="lightblueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="1dG-pI-vem"/>
@@ -167,8 +165,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Klx-2Q-Dpa"/>
-                        <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.90946382280000004" blue="0.63135957720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oRa-jv-tsA" firstAttribute="width" secondItem="JHA-sg-XEh" secondAttribute="width" id="2bs-2L-hkf"/>
                             <constraint firstItem="TpL-hB-MLt" firstAttribute="width" secondItem="JHA-sg-XEh" secondAttribute="width" multiplier="0.92" id="5GO-sW-3UX"/>
@@ -200,6 +197,7 @@
                             <constraint firstItem="oRa-jv-tsA" firstAttribute="centerX" secondItem="6yM-6I-kLi" secondAttribute="centerX" id="qHO-bP-B9o"/>
                             <constraint firstItem="zaJ-Sn-uUM" firstAttribute="width" secondItem="JHA-sg-XEh" secondAttribute="width" multiplier="0.94" id="vWM-Zh-KH7"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Klx-2Q-Dpa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="3bX-r9-Fel"/>
                     <connections>
@@ -227,8 +225,8 @@
                     <view key="view" contentMode="scaleToFill" id="PaA-jU-4QU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Esj-bp-Uuf"/>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.84313725490196079" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Esj-bp-Uuf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rendezvous" id="CT6-ZT-VDK"/>
                 </viewController>
@@ -243,8 +241,8 @@
                     <view key="view" contentMode="scaleToFill" id="4tm-Qz-enm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.90946382280000004" blue="0.63135957720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9bA-GH-hft"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="hYf-Bk-s41"/>
                 </viewController>
@@ -289,10 +287,10 @@
     </scenes>
     <resources>
         <image name="fiveBars" width="348" height="3"/>
-        <image name="message.circle" catalog="system" width="128" height="121"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="message.circle" catalog="system" width="64" height="60"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
         <image name="profilePic" width="256" height="256"/>
-        <image name="r.circle" catalog="system" width="128" height="121"/>
+        <image name="r.circle" catalog="system" width="64" height="60"/>
         <namedColor name="blueColor">
             <color red="0.0" green="0.11764705882352941" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -302,11 +300,5 @@
         <namedColor name="lightblueColor">
             <color red="0.7803921568627451" green="0.88627450980392153" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

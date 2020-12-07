@@ -11,6 +11,7 @@ import UIKit
 class ConversationsViewController: UIViewController {
     
     let data = ["Bing Chen", "Edward Cullen"]
+    let backgroundOrange = UIColor.init(red: 255/255, green: 232/255, blue: 161/255, alpha: 1)
     
     //importante
     private let tableView: UITableView = {
@@ -70,6 +71,7 @@ class ConversationsViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = backgroundOrange
     }
 
 //    private func fetchConversations() {
@@ -93,6 +95,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
         cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = backgroundOrange
         return cell
     }
     
