@@ -16,7 +16,13 @@ class VideoChatViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func hangUpClicked(_ sender: Any) {
+        let vc = ConversationsViewController()
+        navigationController?.pushViewController(vc, animated: true)
 
+        
+    }
+    
     /*
     // MARK: - Navigation
 
