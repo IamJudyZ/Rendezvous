@@ -109,7 +109,7 @@ struct Home : View {
             .padding()
             GeometryReader{g in
                 ZStack{
-                    ForEach(profiles.reversed()) { p in
+                    ForEach(self.profiles.reversed()) { p in
                         ProfileView(profile: p, frame: g.frame(in: .global))
                     }
                 }
