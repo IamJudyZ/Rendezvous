@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testPicture" translatesAutoresizingMaskIntoConstraints="NO" id="65e-8G-EhR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ramses" translatesAutoresizingMaskIntoConstraints="NO" id="65e-8G-EhR">
                                 <rect key="frame" x="119" y="290" width="176" height="176"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="JY1-dF-fcu"/>
@@ -87,10 +87,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Ramses" width="750" height="750"/>
         <image name="greenCircle" width="700" height="700"/>
         <image name="orangeCircle" width="700" height="700"/>
         <image name="r" width="375" height="375"/>
-        <image name="testPicture" width="1280" height="853"/>
         <namedColor name="backgroundColor">
             <color red="1" green="0.90588235294117647" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

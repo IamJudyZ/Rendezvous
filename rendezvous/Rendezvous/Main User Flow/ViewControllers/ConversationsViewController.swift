@@ -10,7 +10,7 @@ import UIKit
 
 class ConversationsViewController: UIViewController {
     
-    let data = ["Bing Chen", "Edward Cullen"]
+    let data = ["Ramses Sanchez Hernandez", "Edward Cullen"]
     
     //importante
     private let tableView: UITableView = {

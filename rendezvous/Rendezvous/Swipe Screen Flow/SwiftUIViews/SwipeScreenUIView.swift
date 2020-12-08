@@ -52,20 +52,20 @@ struct Home : View {
     @State var profiles = [
         
         
-//        Profile(id:0, name:"Judy Zhang", profilePic:"JudyZhang",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "Worked on chat and video call functionality. Loves rock climbing and knitting. Looking for someone to move to Montana with :)", offset: 0),
-        Profile(id:1, name:"Bing Chen", profilePic:"BingChen",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"FL", selfDescription: "Scrum master, and worked on profiles", offset: 0),
-        Profile(id:2, name:"Diego Mendoza", profilePic:"DiegoMendoza",age:"21", heightFeet:"6", heightInch:"0", city:"San Antonio", state:"TX",selfDescription: "Howdy, worked on the swipe cards (what you're looking at right now)", offset: 0),
-        Profile(id:3, name:"Francis Zhan", profilePic:"profilePic",age:"21", heightFeet:"6", heightInch:"1", city:"Vancouver", state:"BC", selfDescription: "I like to sleep", offset: 0),
-        Profile(id:4, name:"Yash Singh", profilePic:"YashSingh",age:"22", heightFeet:"5", heightInch:"10", city:"New York City", state:"NY", selfDescription: "Worked on chat and inital set up", offset: 0),
-        Profile(id:5, name:"Ramses Hernandez", profilePic:"profilePic",age:"21", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "Worked on backend", offset: 0),
-        Profile(id:6, name:"Evan Korth", profilePic:"profilePic",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"NY", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
-        Profile(id:7, name:"Nolan Filter", profilePic:"profilePic",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"NY", selfDescription: "I love Game Design!", offset: 0),
+//        Profile(id:0, name:"Judy Zhang", profilePic:"JudyZhang",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "Product owner of Rendezvous. Worked on chat and video call functionality. Loves rock climbing and knitting. Looking for someone to move to Montana with :)", offset: 0),
+        Profile(id:1, name:"Bing Chen", profilePic:"BingChen",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"FL", selfDescription: "Scrum master, and worked on profiles.", offset: 0),
+        Profile(id:2, name:"Diego Mendoza", profilePic:"DiegoMendoza",age:"21", heightFeet:"6", heightInch:"0", city:"San Antonio", state:"TX",selfDescription: "Howdy, worked on the swipe cards (what you're looking at right now).", offset: 0),
+        Profile(id:3, name:"Francis Zhan", profilePic:"Francis",age:"21", heightFeet:"6", heightInch:"1", city:"Vancouver", state:"BC", selfDescription: "Worked on the swipe screen and UI, when wasn't asleep.", offset: 0),
+        Profile(id:4, name:"Yash Singh", profilePic:"YashSingh",age:"22", heightFeet:"5", heightInch:"10", city:"New York City", state:"NY", selfDescription: "Worked on chat and inital set up. My favorite game on Houseparty is the drawing one.", offset: 0),
+        Profile(id:5, name:"Ramses Hernandez", profilePic:"Ramses",age:"21", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "Worked on backend, mostly at night :) hmu after 1am", offset: 0),
+        Profile(id:6, name:"Evan Korth", profilePic:"EvanKorth",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"NY", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
+        Profile(id:7, name:"Nolan Filter", profilePic:"NolanFilter",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"NY", selfDescription: "I love Game Design and Batman. I'm also young and tall.", offset: 0),
         
         
         
-//        Profile(id:8, name:"Neil Patrick Harris", profilePic:"profilePic",age:"47", heightFeet:"6", heightInch:"0", city:"Albuquerque", state:"New Mexico", selfDescription: "I am an American actor, singer, comedian, writer, producer, and magician.", offset: 0),
-//        Profile(id:9, name:"Winston Schmidt", profilePic:"profilePic",age:"33", heightFeet:"5", heightInch:"11", city:"Los Angeles", state:"CA", selfDescription: "Schmidty!", offset: 0),
-//        Profile(id:10, name:"Evan Korth", profilePic:"profilePic",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"New York", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
+        Profile(id:8, name:"Neil Patrick Harris", profilePic:"NPH",age:"47", heightFeet:"6", heightInch:"0", city:"Albuquerque", state:"NM", selfDescription: "I am an American actor, singer, comedian, writer, producer, and magician.", offset: 0),
+        Profile(id:9, name:"Zeve Sanderson", profilePic:"Zeve",age:"33", heightFeet:"5", heightInch:"11", city:"Los Angeles", state:"CA", selfDescription: "I am Judy's boss and did not plan on showing up on this application.", offset: 0),
+//        Profile(id:10, name:"Evan Korth", profilePic:"profilePic",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"CA", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
 //        Profile(id:11, name:"Judy Zhang", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "hello!", offset: 0),
 //        Profile(id:12, name:"Bing Chen", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"Florida", selfDescription: "Hi!", offset: 0),
 //        Profile(id:13, name:"Nolan Filter", profilePic:"profilePic",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"New York", selfDescription: "I am Nolan Filter and I love Game Design!", offset: 0),
@@ -163,7 +163,7 @@ struct ProfileView: View {
 //            LinearGradient(gradient: .init(colors: [Color.black.opacity(0),Color.black.opacity(0.4)]), startPoint: .center, endPoint: .bottom
             VStack(){
                 HStack{
-                    VStack(alignment: .leading,spacing: 10){
+                    VStack(alignment: .leading,spacing: 5){
                         Spacer(minLength: 0)
                         Text(profile.name)
                             .font(.title)
@@ -178,7 +178,7 @@ struct ProfileView: View {
                     .foregroundColor(.gray)
                     
                     Spacer(minLength: 0)
-                }
+                } .padding(.bottom, 50)
                 
                 HStack(){
                     Spacer(minLength: 0)

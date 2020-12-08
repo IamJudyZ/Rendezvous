@@ -175,8 +175,8 @@
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Judy" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-st-92a" userLabel="firstNameText">
-                                        <rect key="frame" x="0.0" y="29.666666666666686" width="270" height="27.666666666666671"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-st-92a" userLabel="firstNameText">
+                                        <rect key="frame" x="0.0" y="29.666666666666686" width="270" height="27.333333333333329"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -185,13 +185,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ8-5p-Wjn" userLabel="lastNameLabel">
-                                        <rect key="frame" x="0.0" y="60.333333333333364" width="270" height="26.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="60" width="270" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Zhang" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-Se-8i0" userLabel="lastNameText">
-                                        <rect key="frame" x="0.0" y="90" width="270" height="28"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-Se-8i0" userLabel="lastNameText">
+                                        <rect key="frame" x="0.0" y="90" width="270" height="27.333333333333329"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -200,13 +200,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-v8-jE6" userLabel="emailLabel">
-                                        <rect key="frame" x="0.0" y="121.00000000000001" width="270" height="26.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="120.33333333333337" width="270" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jz@email.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxz-h0-uGk" userLabel="emailText">
-                                        <rect key="frame" x="0.0" y="150.66666666666669" width="270" height="27.666666666666657"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxz-h0-uGk" userLabel="emailText">
+                                        <rect key="frame" x="0.0" y="150.33333333333337" width="270" height="27.333333333333343"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -215,13 +215,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nh-tP-vXI" userLabel="passwordLabel">
-                                        <rect key="frame" x="0.0" y="181.33333333333337" width="270" height="26.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="180.66666666666669" width="270" height="26.666666666666657"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukK-sd-th9" userLabel="passwordText">
-                                        <rect key="frame" x="0.0" y="211" width="270" height="27.333333333333343"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukK-sd-th9" userLabel="passwordText">
+                                        <rect key="frame" x="0.0" y="210.33333333333337" width="270" height="27.333333333333343"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -230,13 +230,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confirm password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM7-fv-SKN" userLabel="password2Label">
-                                        <rect key="frame" x="0.0" y="241.33333333333337" width="270" height="26.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="240.66666666666669" width="270" height="27"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <color key="textColor" name="blueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5b-tL-63J" userLabel="password2Text">
-                                        <rect key="frame" x="0.0" y="271.00000000000006" width="270" height="18.333333333333314"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5b-tL-63J" userLabel="password2Text">
+                                        <rect key="frame" x="0.0" y="270.66666666666669" width="270" height="18.666666666666686"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -351,7 +351,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ix4-5h-vPU" userLabel="setupProfileStackView">
                                 <rect key="frame" x="52.666666666666657" y="272.66666666666669" width="270" height="367.00000000000006"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Woman" borderStyle="roundedRect" placeholder="gender" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-54-cbj" userLabel="genderText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="gender" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-54-cbj" userLabel="genderText">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="32.666666666666664"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -360,7 +360,7 @@
                                             <outlet property="delegate" destination="Drq-fc-Wl0" id="rFy-21-ZiE"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Man" borderStyle="roundedRect" placeholder="preference" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nih-kf-J3I" userLabel="preferenceText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="preference" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nih-kf-J3I" userLabel="preferenceText">
                                         <rect key="frame" x="0.0" y="47.666666666666629" width="270" height="32.666666666666657"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -369,7 +369,7 @@
                                             <outlet property="delegate" destination="Drq-fc-Wl0" id="Xb4-xa-Ibc"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="22" borderStyle="roundedRect" placeholder="age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-EW-r9T" userLabel="ageText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-EW-r9T" userLabel="ageText">
                                         <rect key="frame" x="0.0" y="95.333333333333314" width="270" height="32.666666666666657"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -381,7 +381,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-J3-W8w" userLabel="heightStackView">
                                         <rect key="frame" x="0.0" y="143" width="270" height="33"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" placeholder="feet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-ey-b2Z" userLabel="heightFeetText">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="feet" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-ey-b2Z" userLabel="heightFeetText">
                                                 <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="33"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -390,7 +390,7 @@
                                                     <outlet property="delegate" destination="Drq-fc-Wl0" id="hRl-0F-B40"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" placeholder="inches" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFJ-Ge-PZ6" userLabel="heightInchText">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="inches" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFJ-Ge-PZ6" userLabel="heightInchText">
                                                 <rect key="frame" x="137.33333333333337" y="0.0" width="132.66666666666663" height="33"/>
                                                 <color key="textColor" name="blueColor"/>
                                                 <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -401,7 +401,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Los Angeles" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-1c-v9Q" userLabel="cityText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JD-1c-v9Q" userLabel="cityText">
                                         <rect key="frame" x="0.0" y="191" width="270" height="32.666666666666657"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -410,7 +410,7 @@
                                             <outlet property="delegate" destination="Drq-fc-Wl0" id="cLc-hR-TXO"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="California" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-SW-F9a" userLabel="stateText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-SW-F9a" userLabel="stateText">
                                         <rect key="frame" x="0.0" y="238.66666666666663" width="270" height="32.666666666666686"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -419,7 +419,7 @@
                                             <outlet property="delegate" destination="Drq-fc-Wl0" id="9i0-PC-VZN"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Student" borderStyle="roundedRect" placeholder="profession" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-Ck-cAc" userLabel="professionText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="profession" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-Ck-cAc" userLabel="professionText">
                                         <rect key="frame" x="0.0" y="286.33333333333331" width="270" height="32.666666666666686"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="18"/>
@@ -428,7 +428,7 @@
                                             <outlet property="delegate" destination="Drq-fc-Wl0" id="y5n-V4-Gp5"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello!" borderStyle="roundedRect" placeholder="describe yourself..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-bS-RYw" userLabel="descriptionText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="describe yourself..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZZ-bS-RYw" userLabel="descriptionText">
                                         <rect key="frame" x="0.0" y="333.99999999999994" width="270" height="33"/>
                                         <color key="textColor" name="blueColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>

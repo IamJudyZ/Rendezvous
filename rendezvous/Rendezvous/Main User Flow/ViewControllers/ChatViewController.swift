@@ -27,7 +27,7 @@ class ChatViewController: MessagesViewController {
 
     private var messages = [Message]()
     
-    private let selfSender = Sender(photoURL: "https://img.buzzfeed.com/buzzfeed-static/static/2020-08/7/6/asset/b583a57efe7f/sub-buzz-821-1596782285-21.jpg?output-quality=auto&output-format=auto&downsize=640:*",
+    private let selfSender = Sender(photoURL: "",
                                     senderId: "1",
                                     displayName: "Joe Smith")
     
@@ -45,7 +45,7 @@ class ChatViewController: MessagesViewController {
         messages.append(Message(sender: selfSender,
                                 messageId: "1",
                                 sentDate: Date(),
-                                kind: .text("Do you want to grab coffe in Washington Square sometime?")))
+                                kind: .text("Do you want to grab covfefe in Washington Square sometime?")))
 
         //view.backgroundColor = .yellow
         
