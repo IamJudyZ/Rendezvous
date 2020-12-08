@@ -10,18 +10,23 @@ import UIKit
 
 class VideoChatViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.layer.cornerRadius = self.imageView.frame.size.height/2
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func hangUpClicked(_ sender: Any) {
-        let vc = ConversationsViewController()
-        navigationController?.pushViewController(vc, animated: true)
-
-        
-    }
+//    @IBAction func hangUpClicked(_ sender: Any) {
+////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////        let vc = storyboard.instantiateViewController(identifier: "conversationsVC") as UIViewController
+////        vc.modalPresentationStyle = .fullScreen
+////        self.present(vc, animated: true, completion: nil)
+////
+//    }
+    
+    
     
     /*
     // MARK: - Navigation

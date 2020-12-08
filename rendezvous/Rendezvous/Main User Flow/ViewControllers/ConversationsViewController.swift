@@ -81,6 +81,8 @@ class ConversationsViewController: UIViewController {
 //
 //        tableView.isHidden = false
 //    }
+    
+    
 }
 
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -107,16 +109,40 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
             navigationController?.pushViewController(vc, animated: true)
         }
         if num == 0 {
-            let vid = VideoChatViewController()
-            vid.navigationItem.largeTitleDisplayMode = .never
-            navigationController?.pushViewController(vid, animated: true)
+            self.performSegue(withIdentifier: "VideoChatSegue", sender: nil)
+
+//            let vid = VideoChatViewController()
+//            vid.navigationItem.largeTitleDisplayMode = .never
+//            navigationController?.pushViewController(vid, animated: true)
+            
+//            let storyboard = UIStoryboard(name: "VideoChat", bundle: nil)
+//            let vc = storyboard.instantiateViewController(identifier: "VideoChatVC") as UIViewController
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
+
+            
 
         }
+        
+        
+        
         
 //        let vc = ChatViewController()
 //        vc.title = "Jenny Smith"
 //        vc.navigationItem.largeTitleDisplayMode = .never
 //        navigationController?.pushViewController(vc, animated: true)
+    }
+//    func transitionToHomeScreen() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "homeVC") as UIViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VideoChatSegue" {
+            _ = segue.destination as! VideoChatViewController
+            //destinationVC.currentUser = self.user
+        }
     }
 }
 

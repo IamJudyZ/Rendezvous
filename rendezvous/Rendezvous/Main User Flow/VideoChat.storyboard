@@ -12,46 +12,90 @@
         <!--Video Chat View Controller-->
         <scene sceneID="rsV-jm-q6r">
             <objects>
-                <viewController id="sds-Fr-2rL" customClass="VideoChatViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoChatVC" id="sds-Fr-2rL" customClass="VideoChatViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ev-ZT-aVQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="65e-8G-EhR">
-                                <rect key="frame" x="101" y="342" width="213" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testPicture" translatesAutoresizingMaskIntoConstraints="NO" id="65e-8G-EhR">
+                                <rect key="frame" x="119" y="290" width="176" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="JY1-dF-fcu"/>
+                                    <constraint firstAttribute="width" secondItem="65e-8G-EhR" secondAttribute="height" multiplier="1:1" id="erB-P9-kLz"/>
+                                    <constraint firstAttribute="width" constant="176" id="pdQ-8J-dcX"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calling..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-nv-ot1">
-                                <rect key="frame" x="174" y="533" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Lp3-IN-rx3">
+                                <rect key="frame" x="207" y="-102" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="88r-n5-U85"/>
+                                    <constraint firstAttribute="width" secondItem="Lp3-IN-rx3" secondAttribute="height" multiplier="1:1" id="HNy-zb-L89"/>
+                                    <constraint firstAttribute="width" constant="400" id="gA5-4p-pkT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calling..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-nv-ot1">
+                                <rect key="frame" x="174" y="492" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="blueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cx-3Y-ytk">
-                                <rect key="frame" x="192" y="611" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <action selector="hangUpClicked:" destination="sds-Fr-2rL" eventType="touchUpInside" id="33n-ph-ytt"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-Uc-p55">
+                                <rect key="frame" x="19.5" y="102" width="375" height="73.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="igz-mR-31X"/>
+                                    <constraint firstAttribute="height" constant="73.670000000000002" id="wBR-23-1E1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="R92-u2-Twt">
+                                <rect key="frame" x="-93" y="548" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="4ik-LS-lfm"/>
+                                    <constraint firstAttribute="height" constant="400" id="BH0-1W-QyY"/>
+                                    <constraint firstAttribute="width" secondItem="R92-u2-Twt" secondAttribute="height" multiplier="1:1" id="WLX-7A-WUY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="bay-65-Ujg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="cad-Ld-Hw3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ERW-ZU-ZMJ"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QIe-nv-ot1" firstAttribute="top" secondItem="65e-8G-EhR" secondAttribute="bottom" constant="26" id="0Kw-EW-5Ij"/>
+                            <constraint firstItem="Lp3-IN-rx3" firstAttribute="width" secondItem="Lp3-IN-rx3" secondAttribute="height" multiplier="1:1" id="1eO-dA-z2z"/>
+                            <constraint firstItem="65e-8G-EhR" firstAttribute="centerX" secondItem="2ev-ZT-aVQ" secondAttribute="centerX" id="3Tu-hc-shH"/>
+                            <constraint firstItem="QIe-nv-ot1" firstAttribute="centerX" secondItem="2ev-ZT-aVQ" secondAttribute="centerX" id="3wV-8I-asF"/>
+                            <constraint firstItem="R92-u2-Twt" firstAttribute="centerX" secondItem="2ev-ZT-aVQ" secondAttribute="centerX" constant="-100" id="B9C-Lb-TOV"/>
+                            <constraint firstItem="R92-u2-Twt" firstAttribute="centerY" secondItem="2ev-ZT-aVQ" secondAttribute="centerY" constant="300" id="BGg-MO-Iun"/>
+                            <constraint firstItem="ONq-Uc-p55" firstAttribute="centerX" secondItem="2ev-ZT-aVQ" secondAttribute="centerX" id="JWh-jB-6uY"/>
+                            <constraint firstItem="R92-u2-Twt" firstAttribute="width" secondItem="R92-u2-Twt" secondAttribute="height" multiplier="1:1" id="Mrt-4F-GnZ"/>
+                            <constraint firstItem="65e-8G-EhR" firstAttribute="centerY" secondItem="2ev-ZT-aVQ" secondAttribute="centerY" constant="-70" id="Q0t-Aa-V89"/>
+                            <constraint firstItem="ONq-Uc-p55" firstAttribute="top" secondItem="ERW-ZU-ZMJ" secondAttribute="top" constant="14" id="V7W-CC-Rcs"/>
+                            <constraint firstItem="Lp3-IN-rx3" firstAttribute="centerX" secondItem="2ev-ZT-aVQ" secondAttribute="centerX" constant="200" id="bob-Rv-Uk6"/>
+                            <constraint firstItem="Lp3-IN-rx3" firstAttribute="centerY" secondItem="2ev-ZT-aVQ" secondAttribute="centerY" constant="-350" id="kru-0a-1d6"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="65e-8G-EhR" id="ioP-Y9-hh5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnK-Hs-JIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="105.80357142857143"/>
+            <point key="canvasLocation" x="-162.31884057971016" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>
+        <image name="greenCircle" width="700" height="700"/>
+        <image name="orangeCircle" width="700" height="700"/>
+        <image name="r" width="375" height="375"/>
+        <image name="testPicture" width="1280" height="853"/>
         <namedColor name="backgroundColor">
             <color red="1" green="0.90588235294117647" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blueColor">
+            <color red="0.0" green="0.11764705882352941" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

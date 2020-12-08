@@ -35,6 +35,9 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Call", style: .plain, target: self, action: #selector(startCall))
+
+        
         messages.append(Message(sender: selfSender,
                                 messageId: "1",
                                 sentDate: Date(),
@@ -50,8 +53,21 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
     }
+    
+    @objc private func startCall() {
+//        let vc = VideoChatViewController()
+//        vc.title = "Call"
+//        navigationController?.pushViewController(vc, animated: true)
+        //self.performSegue(withIdentifier: "VideoChatSegue", sender: nil)
+    }
 
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "VideoChatSegue" {
+//            _ = segue.destination as! VideoChatViewController
+//            //destinationVC.currentUser = self.user
+//        }
+//    }
 
 }
 
