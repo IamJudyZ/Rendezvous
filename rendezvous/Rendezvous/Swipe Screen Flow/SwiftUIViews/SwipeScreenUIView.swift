@@ -19,8 +19,10 @@ import FirebaseFirestoreSwift
 import FirebaseFirestore
 
 let rendezvousBlue = Color.init(red: 0/255, green: 30/255, blue: 80/255)
-
 let rendezvousYellow = Color.init(red: 255/255, green: 232/255, blue: 164/255)
+let darkYellow = Color.init(red: 254/255, green: 189/255, blue: 97/255)
+
+
 
 struct SwipeScreen: View {
     var body: some View {
@@ -53,46 +55,20 @@ struct Home : View {
         
         
 //        Profile(id:0, name:"Judy Zhang", profilePic:"JudyZhang",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "Product owner of Rendezvous. Worked on chat and video call functionality. Loves rock climbing and knitting. Looking for someone to move to Montana with :)", offset: 0),
-        Profile(id:1, name:"Bing Chen", profilePic:"BingChen",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"FL", selfDescription: "Scrum master, and worked on profiles.", offset: 0),
-        Profile(id:2, name:"Diego Mendoza", profilePic:"DiegoMendoza",age:"21", heightFeet:"6", heightInch:"0", city:"San Antonio", state:"TX",selfDescription: "Howdy, worked on the swipe cards (what you're looking at right now).", offset: 0),
-        Profile(id:3, name:"Francis Zhan", profilePic:"Francis",age:"21", heightFeet:"6", heightInch:"1", city:"Vancouver", state:"BC", selfDescription: "Worked on the swipe screen and UI, when wasn't asleep.", offset: 0),
-        Profile(id:4, name:"Yash Singh", profilePic:"YashSingh",age:"22", heightFeet:"5", heightInch:"10", city:"New York City", state:"NY", selfDescription: "Worked on chat and inital set up. My favorite game on Houseparty is the drawing one.", offset: 0),
-        Profile(id:5, name:"Ramses Hernandez", profilePic:"Ramses",age:"21", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "Worked on backend, mostly at night :) hmu after 1am", offset: 0),
-        Profile(id:6, name:"Evan Korth", profilePic:"EvanKorth",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"NY", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
-        Profile(id:7, name:"Nolan Filter", profilePic:"NolanFilter",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"NY", selfDescription: "I love Game Design and Batman. I'm also young and tall.", offset: 0),
-        
-        
-        
-        Profile(id:8, name:"Neil Patrick Harris", profilePic:"NPH",age:"47", heightFeet:"6", heightInch:"0", city:"Albuquerque", state:"NM", selfDescription: "I am an American actor, singer, comedian, writer, producer, and magician.", offset: 0),
-        Profile(id:9, name:"Zeve Sanderson", profilePic:"Zeve",age:"33", heightFeet:"5", heightInch:"11", city:"Los Angeles", state:"CA", selfDescription: "I am Judy's boss and did not plan on showing up on this application.", offset: 0),
+        Profile(id:1, name:"Bing Chen", profilePic:"BingChen",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"FL", selfDescription: "Scrum master, and worked on profiles.", profession: "Software Engineer", interest1: "vegan", interest2: "women in tech", interest3: "elections", offset: 0),
+        Profile(id:2, name:"Diego Mendoza", profilePic:"DiegoMendoza",age:"21", heightFeet:"6", heightInch:"0", city:"San Antonio", state:"TX",selfDescription: "Howdy, worked on the swipe cards (what you're looking at right now).", profession: "Student", interest1: "vegan", interest2: "women in tech", interest3: "elcetions", offset: 0),
+        Profile(id:3, name:"Francis Zhan", profilePic:"Francis",age:"21", heightFeet:"6", heightInch:"1", city:"Vancouver", state:"BC", selfDescription: "Worked on the swipe screen and UI, when wasn't asleep.", profession: "Software Engineer", interest1: "vegan", interest2: "women in tech", interest3: "elections", offset: 0),
+        Profile(id:4, name:"Yash Singh", profilePic:"YashSingh",age:"22", heightFeet:"5", heightInch:"10", city:"New York City", state:"NY", selfDescription: "Worked on chat and inital set up. My favorite game on Houseparty is the drawing one.", profession: "Software Engineer", interest1: "vegan", interest2: "women in tech", interest3: "cars", offset: 0),
+        Profile(id:5, name:"Ramses Hernandez", profilePic:"Ramses",age:"21", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "Worked on backend, mostly at night :) hmu after 1am", profession: "Software Engineer", interest1: "vegan", interest2: "women in tech", interest3: "sitcoms", offset: 0),
+        Profile(id:6, name:"Evan Korth", profilePic:"EvanKorth",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"NY", selfDescription: "I am the professor of this class and I totally sanction this.", profession: "Professor", interest1: "vegan", interest2: "rock climbing", interest3: "italian food", offset: 0),
+        Profile(id:7, name:"Nolan Filter", profilePic:"NolanFilter",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"NY", selfDescription: "I love Game Design and Batman. I'm also young and tall.", profession: "Game Designer", interest1: "vegan", interest2: "marvel", interest3: "beach", offset: 0),
+        Profile(id:8, name:"Neil Patrick Harris", profilePic:"NPH",age:"47", heightFeet:"6", heightInch:"0", city:"Albuquerque", state:"NM", selfDescription: "I am an American actor, singer, comedian, writer, producer, and magician.", profession: "Actor", interest1: "rom coms", interest2: "marvel", interest3: "blockbusters", offset: 0),
+        Profile(id:9, name:"Zeve Sanderson", profilePic:"Zeve",age:"33", heightFeet:"5", heightInch:"11", city:"Los Angeles", state:"CA", selfDescription: "I am Judy's boss and did not plan on showing up on this application.", profession: "Boss", interest1: "history", interest2: "music", interest3: "gaming", offset: 0),
 //        Profile(id:10, name:"Evan Korth", profilePic:"profilePic",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"CA", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
 //        Profile(id:11, name:"Judy Zhang", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "hello!", offset: 0),
 //        Profile(id:12, name:"Bing Chen", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"Florida", selfDescription: "Hi!", offset: 0),
 //        Profile(id:13, name:"Nolan Filter", profilePic:"profilePic",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"New York", selfDescription: "I am Nolan Filter and I love Game Design!", offset: 0),
 //        Profile(id:14, name:"John Johnson", profilePic:"profilePic",age:"35", heightFeet:"6", heightInch:"1", city:"Johnstown", state:"Alaska", selfDescription: "I craft", offset: 0),
-//        Profile(id:15, name:"Theodore Mosby", profilePic:"profilePic",age:"33", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "I’m an intellectual I swear", offset: 0),
-//        Profile(id:16, name:"Hubert Hue", profilePic:"profilePic",age:"25", heightFeet:"7", heightInch:"1", city:"Kansas City", state:"Kansas", selfDescription: "Game", offset: 0),
-//        Profile(id:17, name:"Leonardo DiCaprio", profilePic:"profilePic",age:"46", heightFeet:"6", heightInch:"0", city:"Los Angeles", state:"California", selfDescription: "I’m the famous guy from the Titanic.", offset: 0),
-//        Profile(id:18, name:"Jennifer Lawrence", profilePic:"profilePic",age:"30", heightFeet:"5", heightInch:"7", city:"Indian Hills", state:"Kentucky", selfDescription: "I love alcohol!", offset: 0),
-//        Profile(id:19, name:"Edward Cullen", profilePic:"profilePic",age:"65", heightFeet:"6", heightInch:"2", city:"Forks", state:"WA", selfDescription: "here to find Bella", offset: 0),
-//        Profile(id:20, name:"Miley Cyrus", profilePic:"profilePic",age:"28", heightFeet:"5", heightInch:"3", city:"Los Angeles", state:"CA", selfDescription: "Music!!!", offset: 0),
-//        Profile(id:21, name:"Jacob Black", profilePic:"profilePic",age:"27", heightFeet:"6", heightInch:"6", city:"Forks", state:"WA", selfDescription: "hello", offset: 0),
-//        Profile(id:22, name:"Francis Zhan", profilePic:"profilePic",age:"21", heightFeet:"6", heightInch:"1", city:"Vancouver", state:"BC", selfDescription: "I like to sleep", offset: 0),
-//        Profile(id:23, name:"Alexa Taylor", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"10", city:"New York City", state:"New York", selfDescription: "Energetic city girl, looking for. Good chat! Interested in people who share my passion for diversifying tech. Let’s grab avo toast once the pandemic is over!", offset: 0),
-//        Profile(id:24, name:"Albert Liu", profilePic:"profilePic",age:"21", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "Hi!", offset: 0),
-//        Profile(id:25, name:"Chris Kyle", profilePic:"profilePic",age:"51", heightFeet:"6", heightInch:"2", city:"Dallas", state:"Texas", selfDescription: "Worker", offset: 0),
-//        Profile(id:26, name:"Hubert Alexander", profilePic:"profilePic",age:"64", heightFeet:"3", heightInch:"2", city:"New York", state:"NY", selfDescription: "hello", offset: 0),
-//        Profile(id:27, name:"Neil Patrick Harris", profilePic:"profilePic",age:"47", heightFeet:"6", heightInch:"0", city:"Albuquerque", state:"New Mexico", selfDescription: "I am an American actor, singer, comedian, writer, producer, and magician.", offset: 0),
-//        Profile(id:28, name:"Winston Schmidt", profilePic:"profilePic",age:"33", heightFeet:"5", heightInch:"11", city:"Los Angeles", state:"CA", selfDescription: "Schmidty!", offset: 0),
-//        Profile(id:29, name:"Evan Korth", profilePic:"profilePic",age:"34", heightFeet:"6", heightInch:"0", city:"New York City", state:"New York", selfDescription: "I am the professor of this class and I totally sanction this.", offset: 0),
-//        Profile(id:30, name:"Judy Zhang", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"4", city:"Los Angeles", state:"CA", selfDescription: "hello!", offset: 0),
-//        Profile(id:31, name:"Bing Chen", profilePic:"profilePic",age:"22", heightFeet:"5", heightInch:"3", city:"Brandon", state:"Florida", selfDescription: "Hi!", offset: 0),
-//        Profile(id:32, name:"Nolan Filter", profilePic:"profilePic",age:"25", heightFeet:"6", heightInch:"1", city:"New York City", state:"New York", selfDescription: "I am Nolan Filter and I love Game Design!", offset: 0),
-//        Profile(id:33, name:"John Johnson", profilePic:"profilePic",age:"35", heightFeet:"6", heightInch:"1", city:"Johnstown", state:"Alaska", selfDescription: "I craft", offset: 0),
-//        Profile(id:34, name:"Theodore Mosby", profilePic:"profilePic",age:"33", heightFeet:"5", heightInch:"8", city:"New York", state:"NY", selfDescription: "I’m an intellectual I swear", offset: 0),
-//        Profile(id:35, name:"Hubert Hue", profilePic:"profilePic",age:"25", heightFeet:"7", heightInch:"1", city:"Kansas City", state:"Kansas", selfDescription: "Game", offset: 0),
-//        Profile(id:36, name:"Leonardo DiCaprio", profilePic:"profilePic",age:"46", heightFeet:"6", heightInch:"0", city:"Los Angeles", state:"California", selfDescription: "I’m the famous guy from the Titanic.", offset: 0),
-//        Profile(id:37, name:"Jennifer Lawrence", profilePic:"profilePic",age:"30", heightFeet:"5", heightInch:"7", city:"Indian Hills", state:"Kentucky", selfDescription: "I love alcohol!", offset: 0),
     ]
     
     var body: some View {
@@ -172,13 +148,36 @@ struct ProfileView: View {
                         Text("Age: " + profile.age)
                         .fontWeight(.bold)
                         Text(profile.city + ", " + profile.state)
+                        HStack{
+                            Text(profile.interest1)
+                                .foregroundColor(.black)
+                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                                .background(darkYellow)
+                                .cornerRadius(10)
+                            Text(profile.interest2)
+                                .foregroundColor(.black)
+                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                                .background(darkYellow)
+                                .cornerRadius(10)
+                            Text(profile.interest3)
+                                .foregroundColor(.black)
+                                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                                .background(darkYellow)
+                                .cornerRadius(10)
+                        }
+                        HStack{
+                            Text(profile.profession)
+                            Text("•")
+                            Text(profile.heightFeet + "'" + profile.heightInch + "\"")
+                        }
+                        //Text(profile.profession + " , " + profile.heightFeet + "'" + profile.heightInch)
                         Text(profile.selfDescription)
                         .fontWeight(.light)
                     }
                     .foregroundColor(.gray)
                     
                     Spacer(minLength: 0)
-                } .padding(.bottom, 50)
+                } .padding(.bottom, 5)
                 
                 HStack(){
                     Spacer(minLength: 0)
@@ -255,5 +254,10 @@ struct Profile : Identifiable {
     var city: String
     var state: String
     var selfDescription: String
+    var profession: String
+    var interest1: String
+    var interest2: String
+    var interest3: String
     var offset: CGFloat
+
 }
